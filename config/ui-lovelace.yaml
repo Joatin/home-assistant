@@ -1,0 +1,45 @@
+title: Casita
+views:
+  - badges: []
+    cards:
+      - cards:
+          - cards:
+              - aspect_ratio: 0%
+                entity: person.joatin
+                image: 'https://demo.home-assistant.io/stub_config/bedroom.png'
+                show_name: false
+                show_state: true
+                type: picture-entity
+              - aspect_ratio: 0%
+                entity: switch.i_c_e_update_switch
+                image: 'https://demo.home-assistant.io/stub_config/bedroom.png'
+                type: picture-entity
+            type: horizontal-stack
+          - entity: weather.smhi_home
+            type: weather-forecast
+          - entity: media_player.living_room
+            type: media-control
+        type: vertical-stack
+      - cards:
+          - entities:
+              - entity: lock.i_c_e_door_lock
+              - entity: binary_sensor.i_c_e_charger_sensor
+              - entity: climate.i_c_e_hvac_climate_system
+            show_name: false
+            title: I.C.E
+            type: glance
+          - entity: sensor.i_c_e_battery_sensor
+            graph: line
+            hours_to_show: 72
+            type: sensor
+        type: vertical-stack
+      - entity: script.sonos_say
+        hold_action:
+          action: more-info
+        show_icon: true
+        show_name: true
+        show_state: true
+        tap_action:
+          action: toggle
+        type: button
+    title: Overview

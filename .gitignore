@@ -1,0 +1,13 @@
+.idea/
+
+config/.HA_VERSION
+config/tts/
+config/deps/
+config/.storage/
+config/.cloud/
+config/home-assistant_v2.db
+config/home-assistant.log
+config/secrets.yaml
+.DS_Store
+.gitsecret/keys/random_seed
+!*.secret

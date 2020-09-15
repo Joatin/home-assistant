@@ -1,0 +1,51 @@
+homeassistant:
+  name: Home
+  longitude: 17.790621
+  latitude: 59.197543
+  unit_system: metric
+  time_zone: Europe/Stockholm
+  internal_url: http://192.168.1.239:8123
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Text to speech
+tts:
+  - platform: amazon_polly
+    aws_access_key_id: !secret aws_access_key_id
+    aws_secret_access_key: !secret aws_secret_access_key
+    region_name: eu-west-1
+    voice: Joanna
+    sample_rate: 22050
+    engine: neural
+    text_type: ssml
+lovelace:
+  mode: yaml
+icloud:
+  - username: !secret icloud_joatin_username
+    password: !secret icloud_joatin_password
+  - username: !secret icloud_caroline_username
+    password: !secret icloud_caroline_password
+tesla:
+  username: !secret tesla_username
+  password: !secret tesla_password
+sonos:
+  media_player:
+    hosts:
+      - 192.168.1.143
+    advertise_addr: 192.168.1.239
+    interface_addr: 192.168.1.239
+verisure:
+  username: !secret verisure_username
+  password: !secret verisure_password
+
+sensor:
+  - platform: openweathermap
+    api_key: !secret openweathermap_key
+    monitored_conditions:
+      - weather
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
