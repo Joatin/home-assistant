@@ -47,4 +47,15 @@ sonos_play_list:
         entity_id: all
         media_content_id: 'x-sonos-spotify:spotify%3atrack%3a4jC0Qm0RMIJDKLjh0DrTY1?sid=9&flags=8224&sn=1'
         media_content_type: music
+    - service: media_player.shuffle_set
+      data_template:
+        entity_id: all
+        shuffle: true
+    - service: media_player.shuffle_set
+      data_template:
+        entity_id: all
+        shuffle: true
+    - service: media_player.media_next_track
+      data_template:
+        entity_id: all
 
