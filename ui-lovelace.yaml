@@ -7,13 +7,15 @@ views:
           - cards:
               - aspect_ratio: 0%
                 entity: person.joatin
-                image: 'https://demo.home-assistant.io/stub_config/bedroom.png'
+                image: local/images/joatin.jpeg
                 show_name: false
                 show_state: true
                 type: picture-entity
               - aspect_ratio: 0%
-                entity: switch.i_c_e_update_switch
-                image: 'https://demo.home-assistant.io/stub_config/bedroom.png'
+                entity: person.caroline
+                image: local/images/caroline.jpeg
+                show_name: false
+                show_state: true
                 type: picture-entity
             type: horizontal-stack
           - entity: weather.smhi_home
