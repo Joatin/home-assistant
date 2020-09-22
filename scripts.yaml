@@ -28,8 +28,11 @@ sonos_say:
 heat_tesla:
   alias: "Heat Tesla"
   sequence:
+    - servie: climate.set_preset_mode
+      data:
+        entity_id: climate.i_c_e_hvac_climate_system
+        preset_mode: defrost
     - service: climate.set_temperature
       data:
         entity_id: climate.i_c_e_hvac_climate_system
-        temperature: 25
-        hvac_mode: defrost
+        temperature: 26
