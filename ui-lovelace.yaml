@@ -36,6 +36,15 @@ views:
               green: 100
               yellow: 40
               red: 0
+          - type: button
+            name: Heat Tesla
+            show_state: false
+            tap_action:
+              action: call-service
+              service: script.heat_tesla
+            hold_action:
+              action: toggle
+            entity: climate.i_c_e_hvac_climate_system
           - entities:
               - entity: lock.i_c_e_door_lock
               - entity: binary_sensor.i_c_e_charger_sensor

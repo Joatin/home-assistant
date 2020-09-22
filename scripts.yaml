@@ -25,3 +25,11 @@ sonos_say:
       data_template:
         entity_id:
           - "{{ sonos_entity }}"
+heat_tesla:
+  alias: "Heat Tesla"
+  sequence:
+    - service: climate.set_temperature
+      data:
+        entity_id: climate.i_c_e_hvac_climate_system
+        temperature: 25
+        hvac_mode: defrost

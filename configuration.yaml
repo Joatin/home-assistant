@@ -26,9 +26,10 @@ lovelace:
 icloud:
   - username: !secret icloud_joatin_username
     password: !secret icloud_joatin_password
-    gps_accuracy_threshold: 50
+    gps_accuracy_threshold: 100
   - username: !secret icloud_caroline_username
     password: !secret icloud_caroline_password
+    gps_accuracy_threshold: 100
 tesla:
   username: !secret tesla_username
   password: !secret tesla_password
