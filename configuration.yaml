@@ -49,7 +49,7 @@ ios:
             destructive: false
             behavior: 'default'
 smhi:
-
+upnp:
 sensor:
   - platform: openweathermap
     api_key: !secret openweathermap_key
