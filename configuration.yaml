@@ -7,7 +7,7 @@ homeassistant:
 
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
-  
+
 recorder:
   db_url: mysql://homeassistant:password@core-mariadb/homeassistant?charset=utf8
 # Text to speech
@@ -48,6 +48,7 @@ ios:
             authenticationRequired: true
             destructive: false
             behavior: 'default'
+smhi:
 
 sensor:
   - platform: openweathermap
