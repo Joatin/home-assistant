@@ -32,11 +32,6 @@ tesla:
   password: !secret tesla_password
   scan_interval: 60
 sonos:
-  media_player:
-    hosts:
-      - 192.168.1.143
-    advertise_addr: 192.168.1.239
-    interface_addr: 192.168.1.239
 verisure:
   username: !secret verisure_username
   password: !secret verisure_password
