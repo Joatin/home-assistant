@@ -70,4 +70,4 @@ views:
                   green: 100
                   yellow: 40
                   red: 0
-              type: vertical-stack
+            type: vertical-stack
