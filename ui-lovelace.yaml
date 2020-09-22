@@ -1,6 +1,7 @@
 title: Casita
 views:
   - badges: []
+    title: Overview
     cards:
       - cards:
           - cards:
@@ -33,13 +34,3 @@ views:
             hours_to_show: 72
             type: sensor
         type: vertical-stack
-      - entity: script.sonos_say
-        hold_action:
-          action: more-info
-        show_icon: true
-        show_name: true
-        show_state: true
-        tap_action:
-          action: toggle
-        type: button
-    title: Overview
