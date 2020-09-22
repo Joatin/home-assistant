@@ -4,7 +4,6 @@ homeassistant:
   latitude: 59.197543
   unit_system: metric
   time_zone: Europe/Stockholm
-  internal_url: http://192.168.1.239:8123
 
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
