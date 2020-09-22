@@ -23,6 +23,7 @@ tts:
     text_type: ssml
 lovelace:
   mode: yaml
+speedtestdotnet:
 icloud:
   - username: !secret icloud_joatin_username
     password: !secret icloud_joatin_password

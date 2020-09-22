@@ -39,3 +39,12 @@ heat_tesla:
     - service: climate.turn_on
       data:
         entity_id: climate.i_c_e_hvac_climate_system
+sonos_play_list:
+  alias: "Play Sonos Playlist"
+  sequence:
+    - service: media_player.play_media
+      data_template:
+        entity_id: all
+        media_content_id: 'x-sonos-spotify:spotify%3atrack%3a4jC0Qm0RMIJDKLjh0DrTY1?sid=9&flags=8224&sn=1'
+        media_content_type: music
+
