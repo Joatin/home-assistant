@@ -21,6 +21,9 @@ views:
           - entity: media_player.living_room
             type: media-control
         type: vertical-stack
+  - badges: []
+    title: Tesla
+    cards:
       - cards:
           - entities:
               - entity: lock.i_c_e_door_lock
@@ -44,30 +47,3 @@ views:
               yellow: 40
               red: 0
         type: vertical-stack
-  - badges: []
-    title: Tesla
-    cards:
-      - cards:
-          - cards:
-              - entities:
-                  - entity: lock.i_c_e_door_lock
-                  - entity: binary_sensor.i_c_e_charger_sensor
-                  - entity: climate.i_c_e_hvac_climate_system
-                show_name: false
-                title: I.C.E
-                type: glance
-              - entity: sensor.i_c_e_battery_sensor
-                graph: line
-                hours_to_show: 72
-                type: sensor
-              - entity: sensor.i_c_e_range_sensor
-                type: gauge
-                name: Range
-                unit: km
-                min: 0
-                max: 560
-                severity:
-                  green: 100
-                  yellow: 40
-                  red: 0
-            type: vertical-stack
