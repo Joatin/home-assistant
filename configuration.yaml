@@ -48,7 +48,8 @@ ios:
             authenticationRequired: true
             destructive: false
             behavior: 'default'
-smhi:
+weather:
+  - platform: smhi
 upnp:
 sensor:
   - platform: openweathermap
