@@ -24,11 +24,13 @@ lovelace:
 icloud:
   - username: !secret icloud_joatin_username
     password: !secret icloud_joatin_password
+    gps_accuracy_threshold: 50
   - username: !secret icloud_caroline_username
     password: !secret icloud_caroline_password
 tesla:
   username: !secret tesla_username
   password: !secret tesla_password
+  scan_interval: 60
 sonos:
   media_player:
     hosts:
@@ -38,12 +40,29 @@ sonos:
 verisure:
   username: !secret verisure_username
   password: !secret verisure_password
+ios:
+  push:
+    categories:
+      - name: Open I.C.E
+        identifier: 'open_ice'
+        actions:
+          - identifier: 'OPEN_CAR'
+            title: 'Open Car'
+            activationMode: 'background'
+            authenticationRequired: true
+            destructive: false
+            behavior: 'default'
 
 sensor:
   - platform: openweathermap
     api_key: !secret openweathermap_key
     monitored_conditions:
       - weather
+
+input_boolean:
+  guest_mode:
+    name: Guest Mode
+    icon: mdi:user
 
 group: !include groups.yaml
 automation: !include automations.yaml

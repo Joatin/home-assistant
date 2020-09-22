@@ -1,0 +1,171 @@
+- alias: 'test'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.mytest
+  action:
+    - service: script.sonos_say
+      data:
+        sonos_entity: 'media_player.living_room'
+        volume: 0.5
+        message: |
+          <speak>
+            'Caroline, your husband loves you very very much!'
+          </speak>
+        delay: '00:00:05'
+- alias: Home Assistant Restart Notification
+  trigger:
+    platform: homeassistant
+    event: start
+  action:
+    - delay: '00:00:05'
+    - service: script.sonos_say
+      data:
+        sonos_entity: 'media_player.living_room'
+        volume: 0.5
+        message: |
+          <speak>
+            <amazon:domain name="conversational">
+              The home automation system has just restarted.
+              Everything will be up and running again within a few moments
+            </amazon:domain>
+          </speak>
+        delay: '00:00:07'
+- alias: Morning News Briefing
+  trigger:
+    platform: time
+    at: "08:00:00"
+  action:
+    - service: script.sonos_say
+      data_template:
+        sonos_entity: 'media_player.living_room'
+        volume: 0.5
+        message: |
+          <speak>
+            <amazon:domain name="conversational">
+              Good morning sunshines! The clock is <say-as interpret-as="time" format="hms24">
+              {{now().hour}}:{{now().minute}}</say-as>. The weather today will be {{ states('sensor.owm_condition') }}, with
+              temperatures reaching <say-as interpret-as="cardinal">
+              {{ state_attr('weather.smhi_home', 'temperature') }}</say-as> degrees celsius.
+            </amazon:domain>
+          </speak>
+        delay: '00:00:10'
+        cache: false
+- alias: Send Open I.C.E Notification
+  trigger:
+    platform: event
+    event_type: state_changed
+  condition:
+    condition: and
+    conditions:
+      - condition: template
+        value_template: >
+          {{ distance('device_tracker.i_c_e_location_tracker', 'device_tracker.iphone') < 0.010 }}
+      - condition: template
+        value_template: "{{ is_state('binary_sensor.i_c_e_parking_brake_sensor', 'on') }}"
+      - condition: template
+        value_template: "{{((as_timestamp(now()) - as_timestamp(states.automation.send_open_i_c_e_notification.attributes.last_triggered)) / 60) | int > 30 }}"
+  action:
+    - service: notify.mobile_app_iphone
+      data:
+        title: Unlock I.C.E
+        message: "Do you wish to unlock I.C.E?"
+        data:
+          push:
+            category: "open_ice"
+          apns_headers:
+            'apns-collapse-id': 'open_ice'
+- alias: Open I.C.E
+  trigger:
+    platform: event
+    event_type: ios.notification_action_fired
+    event_data:
+      actionName: OPEN_CAR
+  action:
+    - service: lock.unlock
+      data:
+        entity_id: lock.i_c_e_door_lock
+- alias: Charge Silver
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.silver_battery_state
+    below: 20
+  action:
+    - service: script.sonos_say
+      data_template:
+        sonos_entity: 'media_player.living_room'
+        volume: 0.5
+        message: |
+          <speak>
+            <amazon:domain name="conversational">
+              Joatin, your MacBook Pro is running low on energy. Perhaps you should consider connecting it to a charger?
+            </amazon:domain>
+          </speak>
+        delay: '00:00:10'
+- alias: "Charge Joatin's Iphone"
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.iphone_battery_level
+    below: 20
+  action:
+    - service: script.sonos_say
+      data_template:
+        sonos_entity: 'media_player.living_room'
+        volume: 0.5
+        message: |
+          <speak>
+            <amazon:domain name="conversational">
+              Joatin, your Iphone is running low on energy. Don't forget to charge it.
+            </amazon:domain>
+          </speak>
+        delay: '00:00:10'
+- alias: Morning reminder
+  trigger:
+    platform: time
+    at: "08:05:00"
+  action:
+    - service: script.sonos_say
+      data_template:
+        sonos_entity: 'media_player.living_room'
+        volume: 0.5
+        message: |
+          <speak>
+            <amazon:domain name="conversational">
+              Joatin, dont forget your vitamins.
+            </amazon:domain>
+          </speak>
+        delay: '00:00:04'
+- alias: Evening reminder
+  trigger:
+    platform: time
+    at: "19:30:00"
+  action:
+    - service: script.sonos_say
+      data_template:
+        sonos_entity: 'media_player.living_room'
+        volume: 0.5
+        message: |
+          <speak>
+            <amazon:domain name="conversational">
+              Joatin, dont forget your vitamins.
+            </amazon:domain>
+          </speak>
+        delay: '00:00:04'
+- alias: I.C.E Opened Notification
+  trigger:
+    platform: event
+    event_type: state_changed
+  condition:
+    condition: template
+    value_template: "{{ is_state('lock.i_c_e_door_lock', 'opened') }}"
+  action:
+    - service: script.sonos_say
+      data_template:
+        sonos_entity: 'media_player.living_room'
+        volume: 0.5
+        message: |
+          <speak>
+            <amazon:domain name="conversational">
+              Your car Ice was opened
+            </amazon:domain>
+          </speak>
+        delay: '00:00:06'
