@@ -25,6 +25,17 @@ views:
     title: Tesla
     cards:
       - cards:
+          - entity: sensor.i_c_e_range_sensor
+            type: gauge
+            name: Range
+            title: I.C.E Battery Range
+            unit: km
+            min: 0
+            max: 560
+            severity:
+              green: 100
+              yellow: 40
+              red: 0
           - entities:
               - entity: lock.i_c_e_door_lock
               - entity: binary_sensor.i_c_e_charger_sensor
@@ -36,14 +47,4 @@ views:
             graph: line
             hours_to_show: 72
             type: sensor
-          - entity: sensor.i_c_e_range_sensor
-            type: gauge
-            name: Range
-            unit: km
-            min: 0
-            max: 560
-            severity:
-              green: 100
-              yellow: 40
-              red: 0
         type: vertical-stack
