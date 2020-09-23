@@ -25,6 +25,7 @@ views:
           - type: button
             name: Party Time
             show_state: false
+            icon: mdi:laugh-beam
             tap_action:
               action: call-service
               service: script.party
