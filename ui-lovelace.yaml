@@ -1,4 +1,7 @@
 title: Casita
+resources:
+  - url: https://cdn.jsdelivr.net/gh/bramkragten/weather-card/dist/weather-card.min.js
+    type: module
 views:
   - badges: []
     title: Overview
@@ -21,7 +24,7 @@ views:
           - entity: media_player.living_room
             type: media-control
           - entity: weather.smhi_home
-            type: weather-forecast
+            type: custom:weather-card
         type: vertical-stack
       - cards:
           - type: button
