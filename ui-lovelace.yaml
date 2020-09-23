@@ -6,10 +6,22 @@ resources:
     type: module
   - url: local/lovelace/sidebar-card.js?v=0.0.1
     type: module
-custom_header:
-  compact_mode: true
 sidebar:
-  title: "Sidebar title"
+  title: "Casita"
+  digitalClock: true
+  date: true
+  sidebarMenu: true
+  style: |
+    :host {
+        --sidebar-background: #FFF;
+        --sidebar-text-color: #000;
+        --face-color: #FFF;
+        --face-border-color: #FFF;
+        --clock-hands-color: #000;
+        --clock-seconds-hand-color: #FF4B3E;
+        --clock-middle-background: #FFF;
+        --clock-middle-border: #000;
+    }
 views:
   - badges: []
     title: Overview
