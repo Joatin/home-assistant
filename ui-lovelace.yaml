@@ -24,13 +24,13 @@ views:
           - cards:
               - aspect_ratio: '1:1'
                 entity: person.joatin
-                image: local/images/joatin.jpeg
+                image: local/images/joatin.jpeg?v=1
                 show_name: false
                 show_state: true
                 type: picture-entity
               - aspect_ratio: '1:1'
                 entity: person.caroline
-                image: local/images/caroline.jpeg
+                image: local/images/caroline.jpeg?v=1
                 show_name: false
                 show_state: true
                 type: picture-entity
