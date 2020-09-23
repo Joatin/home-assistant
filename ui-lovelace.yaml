@@ -27,7 +27,8 @@ views:
           - type: button
             name: Party Time
             show_state: false
-            icon: fas:fa-laugh-beam
+            show_icon: true
+            icon: fas:laugh-beam
             tap_action:
               action: call-service
               service: script.party
