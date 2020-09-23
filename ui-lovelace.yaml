@@ -37,7 +37,6 @@ views:
               service: script.party
         type: vertical-stack
   - badges: []
-    panel: true
     title: Tesla
     cards:
       - cards:
