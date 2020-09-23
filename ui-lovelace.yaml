@@ -26,7 +26,7 @@ views:
           - entity: media_player.living_room
             type: media-control
           - entity: weather.smhi_home
-            type: weather-forecast
+            type: custom:weather-card
         type: vertical-stack
       - cards:
           - type: button
@@ -41,7 +41,7 @@ views:
             name: Chill
             show_state: false
             show_icon: true
-            icon: mdi:laugh
+            icon: mdi:human-female-dance
             tap_action:
               action: call-service
               service: script.party
