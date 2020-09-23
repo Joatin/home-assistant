@@ -5,23 +5,29 @@ views:
     cards:
       - cards:
           - cards:
-              - aspect_ratio: 0%
+              - aspect_ratio: 16:9
                 entity: person.joatin
                 image: local/images/joatin.jpeg
                 show_name: false
                 show_state: true
                 type: picture-entity
-              - aspect_ratio: 0%
+              - aspect_ratio: 16:9
                 entity: person.caroline
                 image: local/images/caroline.jpeg
                 show_name: false
                 show_state: true
                 type: picture-entity
             type: horizontal-stack
-          - entity: weather.smhi_home
-            type: weather-forecast
           - entity: media_player.living_room
             type: media-control
+          - entity: weather.smhi_home
+            type: weather-forecast
+          - type: button
+            name: Party Time
+            show_state: false
+            tap_action:
+              action: call-service
+              service: script.party
         type: vertical-stack
   - badges: []
     title: Tesla
