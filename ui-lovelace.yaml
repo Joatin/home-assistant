@@ -8,6 +8,8 @@ resources:
     type: module
 custom_header:
   compact_mode: true
+sidebar:
+  title: "Sidebar title"
 views:
   - badges: []
     title: Overview
