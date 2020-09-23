@@ -17,7 +17,7 @@ sidebar:
     tablet: 25
     desktop: 20
   template: |
-    Hello World
+    <li>Hello World</li>
   style: |
     :host {
         --sidebar-background: #000;
