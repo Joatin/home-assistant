@@ -2,6 +2,8 @@ title: Casita
 resources:
   - url: https://cdn.jsdelivr.net/gh/bramkragten/weather-card/dist/weather-card.min.js
     type: module
+  - url: local/lovelace/custom-header.js
+    type: module
 views:
   - badges: []
     title: Overview
@@ -39,7 +41,7 @@ views:
             name: Chill
             show_state: false
             show_icon: true
-            icon: fas:laugh-beam
+            icon: mdi:laugh
             tap_action:
               action: call-service
               service: script.party
