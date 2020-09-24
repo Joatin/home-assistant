@@ -123,6 +123,10 @@ views:
         type: vertical-stack
       - *download_mbit
   - badges: []
+    title: Lights
+    icon: mdi:lamp
+    cards:
+  - badges: []
     title: Tesla
     icon: mdi:car
     cards:
