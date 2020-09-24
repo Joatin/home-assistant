@@ -52,6 +52,15 @@ ios:
             authenticationRequired: true
             destructive: false
             behavior: 'default'
+      - name: Home Assistant
+        identifier: 'home_assistant'
+        actions:
+          - identifier: 'HOME_ASSISTANT'
+            title: Home Assistant
+            activationMode: 'background'
+            authenticationRequired: false
+            destructive: false
+            behavior: 'default'
 weather:
   - platform: smhi
 upnp:

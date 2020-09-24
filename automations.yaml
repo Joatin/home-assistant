@@ -169,3 +169,17 @@
             </amazon:domain>
           </speak>
         delay: '00:00:06'
+- alias: Config Reloaded
+  trigger:
+    platform: event
+    event_type: core_config_updated
+  action:
+    - service: notify.mobile_app_iphone
+      data:
+        title: Config Reload
+        message: Home Assistant configuration was just reloaded
+        data:
+          push:
+            category: "home_assistant"
+          apns_headers:
+            'apns-collapse-id': 'config_reload'
