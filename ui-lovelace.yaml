@@ -5,13 +5,6 @@ profile_card: &profile_card
   show_name: false
   show_state: true
   type: picture-entity
-  tap_action:
-    action: call-service
-    service: browser_mod.popup
-    service_data:
-      deviceID:
-        - this
-        - dashboard
 
 
 title: Casita
@@ -30,6 +23,8 @@ views:
                 entity: person.joatin
                 image: local/images/joatin.jpeg?v=1
                 tap_action:
+                  action: call-service
+                  service: browser_mod.popup
                   service_data:
                     title: Joatin
                     card:
@@ -39,6 +34,9 @@ views:
                         - sensor.joatins_ipad_battery_level
                         - sensor.silver_battery_state
                         - sensor.joatins_apple_watch_battery_state
+                    deviceID:
+                      - this
+                      - dashboard
               - aspect_ratio: '1:1'
                 entity: person.caroline
                 state_filter:
