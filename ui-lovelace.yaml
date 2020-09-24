@@ -32,8 +32,8 @@ views:
               - aspect_ratio: '1:1'
                 entity: person.joatin
                 state_filter:
-                  "on": brightness(110%) saturate(1.2)
-                  "off": brightness(50%) hue-rotate(45deg)
+                  "on": 'brightness(110%) saturate(1.2)'
+                  "off": 'brightness(50%) hue-rotate(45deg)'
                 entities:
                   - type: divider
                   - entity: person.joatin
