@@ -32,7 +32,8 @@ views:
               - aspect_ratio: '1:1'
                 entity: person.joatin
                 entities:
-                  - person.joatin
+                  - entity: person.joatin
+                    show_state: true
                 image: local/images/joatin.jpeg?v=1
                 show_name: false
                 show_state: false
