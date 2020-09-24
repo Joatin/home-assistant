@@ -13,16 +13,11 @@ views:
               - aspect_ratio: '1:1'
                 entity: person.joatin
                 state_filter:
-                  "home": 'brightness(110%) saturate(1.2)'
-                  "not_home": 'brightness(50%) hue-rotate(45deg)'
-                entities:
-                  - entity: person.joatin
-                    show_state: true
-                    icon: null
+                  "not_home": grayscale(50%)
                 image: local/images/joatin.jpeg?v=1
                 show_name: false
-                show_state: false
-                type: picture-glance
+                show_state: true
+                type: picture-entity
                 tap_action:
                   action: call-service
                   service: browser_mod.popup
@@ -36,6 +31,8 @@ views:
                       - dashboard
               - aspect_ratio: '1:1'
                 entity: person.caroline
+                state_filter:
+                  "not_home": grayscale(50%)
                 image: local/images/caroline.jpeg?v=1
                 show_name: false
                 show_state: true
