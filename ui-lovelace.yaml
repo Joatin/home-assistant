@@ -37,14 +37,23 @@ views:
                     deviceID:
                       - this
                       - dashboard
-              - aspect_ratio: '1:1'
+              - <<: *profile_card
                 entity: person.caroline
-                state_filter:
-                  "not_home": grayscale(50%)
                 image: local/images/caroline.jpeg?v=1
-                show_name: false
-                show_state: true
-                type: picture-entity
+                tap_action:
+                  action: call-service
+                  service: browser_mod.popup
+                  service_data:
+                    title: Caroline
+                    card:
+                      type: entities
+                      entities:
+                        - sensor.carolines_iphone_battery_level
+                        - sensor.carolines_apple_watch_battery_state
+                        - sensor.carolines_macbook_pro_battery_state
+                    deviceID:
+                      - this
+                      - dashboard
             type: horizontal-stack
           - entity: media_player.living_room
             type: media-control
