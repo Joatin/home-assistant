@@ -9,10 +9,6 @@ profile_card: &profile_card
     action: call-service
     service: browser_mod.popup
     service_data:
-      title: Popup example
-      card:
-        entity: weather.smhi_home
-        type: custom:weather-card
       deviceID:
         - this
         - dashboard
@@ -33,6 +29,16 @@ views:
               - <<: *profile_card
                 entity: person.joatin
                 image: local/images/joatin.jpeg?v=1
+                tap_action:
+                  service_data:
+                    title: Joatin
+                    card:
+                      type: entities
+                      entities:
+                        - sensor.iphone_battery_level_2
+                        - sensor.joatins_ipad_battery_level
+                        - sensor.silver_battery_state
+                        - sensor.joatins_apple_watch_battery_state
               - aspect_ratio: '1:1'
                 entity: person.caroline
                 state_filter:
