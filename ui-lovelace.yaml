@@ -69,6 +69,19 @@ tesla_heat: &tesla_heat
     action: toggle
   entity: climate.i_c_e_hvac_climate_system
 
+download_mbit: &download_mbit
+  entity: sensor.speedtest_download
+  type: gauge
+  name: Download
+  title: Download Mbit/s
+  unit: mbit/s
+  min: 0
+  max: 100
+  severity:
+    green: 40
+    yellow: 10
+    red: 0
+
 title: Casita
 resources:
   - url: https://cdn.jsdelivr.net/gh/bramkragten/weather-card/dist/weather-card.min.js
@@ -84,6 +97,7 @@ views:
       - entity: media_player.living_room
         type: media-control
       - type: horizontal-stack
+        title: Tesla
         cards:
           - *tesla_range
           - *tesla_heat
@@ -107,6 +121,7 @@ views:
               action: call-service
               service: script.party
         type: vertical-stack
+      - *download_mbit
   - badges: []
     title: Tesla
     icon: mdi:car
