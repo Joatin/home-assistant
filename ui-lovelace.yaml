@@ -31,10 +31,12 @@ views:
           - cards:
               - aspect_ratio: '1:1'
                 entity: person.joatin
+                entities:
+                  - person.joatin
                 image: local/images/joatin.jpeg?v=1
                 show_name: false
-                show_state: true
-                type: picture-entity
+                show_state: false
+                type: picture-glance
                 tap_action:
                   action: call-service
                   service: browser_mod.popup
