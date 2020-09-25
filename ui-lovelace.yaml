@@ -54,8 +54,8 @@ tesla_range: &tesla_range
   min: 0
   max: 560
   severity:
-    green: 100
-    yellow: 40
+    green: 112
+    yellow: 56
     red: 0
 
 tesla_heat: &tesla_heat
