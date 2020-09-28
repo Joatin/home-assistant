@@ -30,7 +30,6 @@ profile_cards: &profile_cards
                 entities:
                   - type: button
                     name: Find iPhone
-                    show_state: true
                     icon: mdi:home
                     tap_action:
                       action: call-service
@@ -40,7 +39,6 @@ profile_cards: &profile_cards
                         device_name: iphone
                   - type: button
                     name: Find iPad
-                    show_state: true
                     icon: mdi:home
                     tap_action:
                       action: call-service
@@ -50,7 +48,6 @@ profile_cards: &profile_cards
                         device_name: Joatin's iPad
                   - type: button
                     name: Find Watch
-                    show_state: true
                     icon: mdi:home
                     tap_action:
                       action: call-service
