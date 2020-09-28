@@ -32,6 +32,7 @@ profile_cards: &profile_cards
                     name: Find iPhone
                     show_state: false
                     icon: mdi:cellphone
+                    icon_height: 2em
                     tap_action:
                       action: call-service
                       service: icloud.play_sound
@@ -42,6 +43,7 @@ profile_cards: &profile_cards
                     name: Find iPad
                     show_state: false
                     icon: mdi:tablet-ipad
+                    icon_height: 2em
                     tap_action:
                       action: call-service
                       service: icloud.play_sound
@@ -52,6 +54,7 @@ profile_cards: &profile_cards
                     name: Find Watch
                     show_state: false
                     icon: mdi:watch
+                    icon_height: 2em
                     tap_action:
                       action: call-service
                       service: icloud.play_sound
