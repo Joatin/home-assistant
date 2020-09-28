@@ -27,12 +27,11 @@ profile_cards: &profile_cards
                   - sensor.silver_battery_state
                   - sensor.joatins_apple_watch_battery_state
               - type: horizontal-stack
-                title: Find My
                 cards:
                   - type: button
-                    name: iPhone
+                    name: Find iPhone
                     show_state: false
-                    icon: mdi:home
+                    icon: mdi:cellphone
                     tap_action:
                       action: call-service
                       service: icloud.play_sound
@@ -40,9 +39,9 @@ profile_cards: &profile_cards
                         account: granlundjoatin@icloud.com
                         device_name: iphone
                   - type: button
-                    name: iPad
+                    name: Find iPad
                     show_state: false
-                    icon: mdi:home
+                    icon: mdi:tablet-ipad
                     tap_action:
                       action: call-service
                       service: icloud.play_sound
@@ -50,9 +49,9 @@ profile_cards: &profile_cards
                         account: granlundjoatin@icloud.com
                         device_name: Joatin's iPad
                   - type: button
-                    name: Watch
+                    name: Find Watch
                     show_state: false
-                    icon: mdi:home
+                    icon: mdi:watch
                     tap_action:
                       action: call-service
                       service: icloud.play_sound
