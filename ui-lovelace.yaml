@@ -18,12 +18,17 @@ profile_cards: &profile_cards
         service_data:
           title: Joatin
           card:
-            type: entities
-            entities:
-              - sensor.iphone_battery_level_2
-              - sensor.joatins_ipad_battery_level
-              - sensor.silver_battery_state
-              - sensor.joatins_apple_watch_battery_state
+            type: vertical-stack
+            cards:
+              - type: entities
+                entities:
+                  - sensor.iphone_battery_level_2
+                  - sensor.joatins_ipad_battery_level
+                  - sensor.silver_battery_state
+                  - sensor.joatins_apple_watch_battery_state
+              - type: glance
+                entities:
+                  
           deviceID:
             - this
             - dashboard
