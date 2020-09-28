@@ -28,7 +28,7 @@ profile_cards: &profile_cards
                   - sensor.joatins_apple_watch_battery_state
               - type: glance
                 entities:
-                  
+
           deviceID:
             - this
             - dashboard
