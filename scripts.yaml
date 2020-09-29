@@ -36,6 +36,8 @@ heat_tesla:
       data:
         entity_id: climate.i_c_e_hvac_climate_system
         temperature: 26
+        target_temp_high: 26
+        target_temp_low: 26
     - service: climate.turn_on
       data:
         entity_id: climate.i_c_e_hvac_climate_system

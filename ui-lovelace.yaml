@@ -113,7 +113,7 @@ download_mbit: &download_mbit
   title: Download Mbit/s
   unit: mbit/s
   min: 0
-  max: 100
+  max: 60
   severity:
     green: 40
     yellow: 10
@@ -134,7 +134,6 @@ views:
       - entity: media_player.living_room
         type: media-control
       - type: horizontal-stack
-        title: Tesla
         cards:
           - *tesla_range
           - *tesla_heat
