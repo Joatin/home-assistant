@@ -125,6 +125,8 @@ resources:
     type: module
   - url: local/lovelace/custom-header.js?v=1.7.9
     type: module
+  - url: local/lovelace/button-card.js?v=0.0.1
+    type: module
 views:
   - badges: []
     title: Overview
@@ -133,6 +135,14 @@ views:
       - *profile_cards
       - entity: media_player.living_room
         type: media-control
+      - type: custom:button-card
+        entity: input_boolean.guest_mode
+        icon: mdi:human-greeting
+        color_type: card
+        show_name: false
+        show_state: true
+        tap_action:
+          action: toggle
       - type: horizontal-stack
         cards:
           - *tesla_range

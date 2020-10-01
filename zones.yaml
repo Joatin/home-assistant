@@ -1,4 +1,4 @@
 - name: Home
-  latitude: 59.197543
-  longitude: 17.790621
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
   radius: 60

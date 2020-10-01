@@ -1,7 +1,7 @@
 homeassistant:
   name: Home
-  longitude: 17.790621
-  latitude: 59.197543
+  longitude: !secret home_longitude
+  latitude: !secret home_latitude
   unit_system: metric
   time_zone: Europe/Stockholm
 
