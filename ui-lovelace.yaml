@@ -141,7 +141,7 @@ views:
         type: custom:weather-card
       - cards:
           - type: button
-            name: Party Time
+            name: Party
             show_state: false
             show_icon: true
             icon: mdi:emoticon-excited
@@ -149,14 +149,22 @@ views:
               action: call-service
               service: script.party
           - type: button
-            name: Chill
+            name: Latin
             show_state: false
             show_icon: true
-            icon: mdi:human-female-dance
+            icon: mdi:creation
             tap_action:
               action: call-service
               service: script.party
-        type: vertical-stack
+          - type: button
+            name: Chill
+            show_state: false
+            show_icon: true
+            icon: mdi:grill
+            tap_action:
+              action: call-service
+              service: script.party
+        type: horizontal-stack
       - *download_mbit
   - badges: []
     title: Lights

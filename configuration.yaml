@@ -41,6 +41,15 @@ verisure:
   username: !secret verisure_username
   password: !secret verisure_password
 ios:
+  actions:
+    - name: party_time
+      background_color: "#000000"
+      label:
+        text: "Party"
+        color: "#ff0000"
+      icon:
+        icon: emoticon-excited
+        color: "#ffffff"
   push:
     categories:
       - name: Open I.C.E
