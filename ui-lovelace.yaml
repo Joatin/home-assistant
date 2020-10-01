@@ -201,6 +201,6 @@ views:
         type: vertical-stack
   - badges: []
     title: Extra
-    icon: mdi:gear
+    icon: mdi:cog
     cards:
       - *download_mbit
