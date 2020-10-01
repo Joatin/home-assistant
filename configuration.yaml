@@ -95,6 +95,17 @@ sensor:
     api_key: !secret openweathermap_key
     monitored_conditions:
       - weather
+  - platform: command_line
+    name: CPU Temperature
+    command: "cat /sys/class/thermal/thermal_zone0/temp"
+    # If errors occur, make sure configuration file is encoded as UTF-8
+    unit_of_measurement: "°C"
+    value_template: '{{ value | multiply(0.001) | round(1) }}'
+  - platform: systemmonitor
+    resources:
+      - type: disk_use_percent
+        arg: /home
+      - type: memory_free
 
 input_boolean:
   guest_mode:
