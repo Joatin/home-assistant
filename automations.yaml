@@ -188,7 +188,7 @@
     - platform: event
       event_type: ios.action_fired
       event_data:
-        actionName: 'Party Time'
+        actionName: 'party_time'
   action:
     - service: homeassistant.turn_on
       data:
