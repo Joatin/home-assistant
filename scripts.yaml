@@ -66,3 +66,15 @@ party:
     - service: script.sonos_play_list
       data:
         playlist: Party
+latin:
+  alias: Latin
+  sequence:
+    - service: script.sonos_play_list
+      data:
+        playlist: Latin
+chill:
+  alias: Chill
+  sequence:
+    - service: script.sonos_play_list
+      data:
+        playlist: Chill

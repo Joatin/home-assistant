@@ -42,13 +42,29 @@ verisure:
   password: !secret verisure_password
 ios:
   actions:
-    - name: party_time
+    - name: party
       background_color: "#000000"
       label:
-        text: "Party"
+        text: "Party Scene"
         color: "#ff0000"
       icon:
         icon: emoticon-excited
+        color: "#ffffff"
+    - name: latin
+      background_color: "#000000"
+      label:
+        text: "Latin Scene"
+        color: "#ff0000"
+      icon:
+        icon: creation
+        color: "#ffffff"
+    - name: chill
+      background_color: "#000000"
+      label:
+        text: "Chill Scene"
+        color: "#ff0000"
+      icon:
+        icon: grill
         color: "#ffffff"
   push:
     categories:
