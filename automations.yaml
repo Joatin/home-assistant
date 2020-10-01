@@ -183,13 +183,13 @@
             category: "home_assistant"
           apns_headers:
             'apns-collapse-id': 'config_reload'
-- alias: "Party Time"
-    initial_state: true
-    trigger:
-      - platform: event
-        event_type: ios.action_fired
-        event_data:
-          actionName: 'Party Time'
-    action:
-      service: homeassistant.turn_on
-      entity_id: script.party
+- alias: Party Time
+  trigger:
+    - platform: event
+      event_type: ios.action_fired
+      event_data:
+        actionName: 'Party Time'
+  action:
+    - service: homeassistant.turn_on
+      data:
+        entity_id: script.party
