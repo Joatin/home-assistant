@@ -89,6 +89,9 @@ ios:
 weather:
   - platform: smhi
 upnp:
+duckdns:
+  domain: !secret duckdns_domain
+  access_token: !secret duckdns_access_token
 sensor:
   - platform: cpuspeed
   - platform: openweathermap
