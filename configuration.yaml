@@ -91,7 +91,7 @@ weather:
 upnp:
 hue:
   bridges:
-    – host: 192.168.1.200
+    - host: 192.168.1.200
       allow_unreachable: true
       allow_hue_groups: false
 duckdns:
