@@ -89,6 +89,7 @@ ios:
 weather:
   - platform: smhi
 upnp:
+hue:
 duckdns:
   domain: !secret duckdns_domain
   access_token: !secret duckdns_access_token

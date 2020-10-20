@@ -1,35 +1,18 @@
-- alias: 'test'
-  trigger:
-    - platform: state
-      entity_id: input_boolean.mytest
-  action:
-    - service: script.sonos_say
-      data:
-        sonos_entity: 'media_player.living_room'
-        volume: 0.5
-        message: |
-          <speak>
-            'Caroline, your husband loves you very very much!'
-          </speak>
-        delay: '00:00:05'
 - alias: Home Assistant Restart Notification
   trigger:
     platform: homeassistant
     event: start
   action:
     - delay: '00:00:05'
-    - service: script.sonos_say
-      data:
-        sonos_entity: 'media_player.living_room'
-        volume: 0.5
-        message: |
-          <speak>
-            <amazon:domain name="conversational">
-              The home automation system has just restarted.
-              Everything will be up and running again within a few moments
-            </amazon:domain>
-          </speak>
-        delay: '00:00:07'
+    - service: notify.mobile_app_iphone
+        data:
+          title: Home Assistant Restart
+          message: Home Assistant was just restarted
+          data:
+            push:
+              category: "home_assistant"
+            apns_headers:
+              'apns-collapse-id': 'restart'
 - alias: Morning News Briefing
   trigger:
     platform: time
