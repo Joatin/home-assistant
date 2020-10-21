@@ -6,7 +6,24 @@ homeassistant:
   time_zone: Europe/Stockholm
 
 # Configure a default setup of Home Assistant (frontend, api, etc)
-default_config:
+config:
+frontend:
+history:
+image:
+input_number:
+input_select:
+logbook:
+map:
+media_source:
+mobile_app:
+person:
+ssdp:
+sun:
+system_health:
+tag:
+updater:
+zeroconf:
+
 browser_mod:
 recorder:
   db_url: mysql://homeassistant:password@core-mariadb/homeassistant?charset=utf8
@@ -84,8 +101,6 @@ ios:
             authenticationRequired: false
             destructive: false
             behavior: 'default'
-weather:
-  - platform: smhi
 upnp:
 hue:
   bridges:
