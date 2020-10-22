@@ -5,14 +5,14 @@
   action:
     - delay: '00:00:05'
     - service: notify.mobile_app_iphone
+      data:
+        title: Home Assistant Restart
+        message: Home Assistant was just restarted
         data:
-          title: Home Assistant Restart
-          message: Home Assistant was just restarted
-          data:
-            push:
-              category: "home_assistant"
-            apns_headers:
-              'apns-collapse-id': 'restart'
+          push:
+            category: "home_assistant"
+          apns_headers:
+            'apns-collapse-id': 'restart'
 - alias: Morning News Briefing
   trigger:
     platform: time
