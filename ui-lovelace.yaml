@@ -180,6 +180,10 @@ views:
     title: Lights
     icon: mdi:lamp
     cards:
+      - type: light
+        entity: light.hallway
+      - type: light
+        entity: light.staircase
   - badges: []
     title: Tesla
     icon: mdi:car

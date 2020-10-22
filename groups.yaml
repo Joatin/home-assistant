@@ -12,3 +12,5 @@ bath_room:
   name: Bath Room
 loundry_room:
   name: Loundry Room
+hallway:
+  name: Hallway
