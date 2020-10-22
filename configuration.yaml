@@ -24,6 +24,8 @@ tag:
 updater:
 zeroconf:
 
+tibber:
+  access_token: !secret tibber_access_token
 browser_mod:
 recorder:
   db_url: mysql://homeassistant:password@core-mariadb/homeassistant?charset=utf8
