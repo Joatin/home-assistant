@@ -7,24 +7,23 @@ description: |
   restores the lights to their previous state.
 mode: queued
 max: 5
-variabled:
-  entity_id: all
 fields:
   entity_id:
     description: The lights that should be affected
+    example: all
 sequence:
   - service: scene.create
-    data_template:
+    data:
       scene_id: light_sequence_before
-      snapshot_entities: {{entity_id}}
+      snapshot_entities: "{{ entity_id }}"
   - service: light.turn_off
-    data_template:
-      entity_id: {{entity_id}}
+    data:
+      entity_id: "{{ entity_id }}"
       flash: short
   - delay: 1
   - service: light.turn_on
-    data_template:
-      entity_id: {{entity_id}}
+    data:
+      entity_id: "{{ entity_id }}"
       color_name: red
       brightness: 100
   - delay: 1
