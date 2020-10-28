@@ -11,7 +11,7 @@ fields:
   entity_id:
     description: The lights that should be affected
     example: all
-sequence:
+sequence: >
   - service: scene.create
     data:
       scene_id: light_sequence_before
