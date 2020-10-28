@@ -15,7 +15,7 @@ sequence:
   - service: scene.create
     data:
       scene_id: light_sequence_before
-      entities: "{{ expand(entity_id) }}"
+      snapshot_entities: "{{ entity_id }}"
   - service: light.turn_off
     data:
       entity_id: "{{ entity_id }}"
