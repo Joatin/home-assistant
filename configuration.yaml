@@ -135,6 +135,9 @@ input_boolean:
     name: Guest Mode
     icon: mdi:user
 
+binary_sensor:
+  - platform: iss
+
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml

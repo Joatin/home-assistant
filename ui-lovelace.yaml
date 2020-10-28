@@ -186,6 +186,12 @@ views:
         entity: light.hallway
       - type: light
         entity: light.staircase
+      - type: light
+        entity: light.kitchen
+      - type: light
+        entity: light.bedroom
+      - type: light
+        entity: light.office
   - badges: []
     title: Tesla
     icon: mdi:car
