@@ -6,6 +6,11 @@
     event: start
   action:
     - delay: '00:00:05'
+    - service: script.light_sequence
+      data:
+        entity_id:
+          - light.office
+        color: green
     - service: notify.mobile_app_iphone
       data:
         title: Home Assistant Restart
