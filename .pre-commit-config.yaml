@@ -9,11 +9,9 @@ repos:
       - id: end-of-file-fixer
         exclude: config/homeassistant/.HA_VERSION
       - id: check-added-large-files
-      - id: check-json
       - id: check-merge-conflict
       - id: check-symlinks
       - id: mixed-line-ending
-      - id: check-xml
       - id: check-yaml
         args: [--unsafe]
       - id: sort-simple-yaml
