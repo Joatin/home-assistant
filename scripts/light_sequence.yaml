@@ -1,7 +1,7 @@
 ---
 
 alias: Light Sequence
-icon: bulb
+icon: mdi:bulb
 description: |
   Flashes the lights in the provided sequence. Afterwards it
   restores the lights to their previous state.
