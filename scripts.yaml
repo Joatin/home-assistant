@@ -1,3 +1,4 @@
+---
 sonos_say:
   alias: "Sonos TTS script"
   sequence:
@@ -78,3 +79,4 @@ chill:
     - service: script.sonos_play_list
       data:
         playlist: Chill
+light_sequence: !include scripts/light_sequence.yaml

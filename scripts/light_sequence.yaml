@@ -1,0 +1,31 @@
+---
+
+alias: Light Sequence
+icon: bulb
+description: |
+  Flashes the lights in the provided sequence. Afterwards it
+  restores the lights to their previous state.
+mode: queued
+max: 5
+fields:
+  entities:
+    description: The lights that should be affected
+sequence:
+  - service: scene.create
+    data_template:
+      scene_id: light_sequence_before
+      snapshot_entities: {{entities}}
+  - service: light.turn_off
+    data_template:
+      entity_id: {{entities}}
+      flash: short
+  - delay: 1
+  - service: light.turn_on
+    data_template:
+      entity_id: {{entities}}
+      color_name: red
+      brightness: 100
+  - delay: 1
+  - service: scene.turn_on
+    data:
+      entity_id: light_sequence_before
