@@ -200,3 +200,4 @@
     - service: homeassistant.turn_on
       data:
         entity_id: script.chill
+- !include automations/light_turn_on_morning.yaml

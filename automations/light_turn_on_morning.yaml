@@ -1,0 +1,14 @@
+alias: Turn on lights in the morning
+trigger:
+  platform: time
+  at: "06:45:00"
+action:
+  service: light.turn_on
+  data:
+    entity_id:
+      - light.hallway
+      - light.kitchen
+      - light.bedroom
+      - light.office
+    profile: bright
+    transistion: 900
