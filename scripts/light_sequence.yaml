@@ -20,12 +20,12 @@ sequence:
     data:
       entity_id: "{{ entity_id }}"
       flash: short
-  - delay: 1
   - service: light.turn_on
     data:
       entity_id: "{{ entity_id }}"
       color_name: red
       brightness: 255
+      flash: short
   - delay: 1
   - service: scene.turn_on
     data:
