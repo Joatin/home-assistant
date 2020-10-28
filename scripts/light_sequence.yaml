@@ -29,21 +29,21 @@ sequence:
       entity_id: "{{ entity_id }}"
       color_name: "{{ color }}"
       brightness: 255
-      transition: 0
+      flash: short
   - delay: 3
   - service: light.turn_on
     data:
       entity_id: "{{ entity_id }}"
       color_name: white
       brightness: 255
-      transition: 0
+      flash: short
   - delay: 3
   - service: light.turn_on
     data:
       entity_id: "{{ entity_id }}"
       color_name: "{{ color }}"
       brightness: 255
-      transition: 0
+      flash: short
   - delay: 3
   - service: scene.turn_on
     data:
