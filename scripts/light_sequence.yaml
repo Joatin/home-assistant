@@ -8,9 +8,9 @@ description: |
 mode: queued
 max: 5
 fields:
-  rgb_color:
+  color:
     description: The color to cycle through
-    example: "[100, 100, 255]"
+    example: blue
   entity_id:
     description: The lights that should be affected
     example: all
@@ -26,19 +26,19 @@ sequence:
   - service: light.turn_on
     data:
       entity_id: "{{ entity_id }}"
-      rgb_color: "{{ rgb_color }}"
+      color_name: "{{ color }}"
       brightness: 255
       flash: short
   - service: light.turn_on
     data:
       entity_id: "{{ entity_id }}"
-      rgb_color: [255, 255, 255]
+      color_name: white
       brightness: 255
       flash: short
   - service: light.turn_on
     data:
       entity_id: "{{ entity_id }}"
-      rgb_color: "{{ rgb_color }}"
+      color_name: "{{ color }}"
       brightness: 255
       flash: short
   - delay: 1
