@@ -8,10 +8,13 @@ description: |
 mode: queued
 max: 5
 fields:
+  color:
+    description: The color to cycle through
+    example: add8e6
   entity_id:
     description: The lights that should be affected
     example: all
-sequence: >
+sequence:
   - service: scene.create
     data:
       scene_id: light_sequence_before
@@ -23,7 +26,19 @@ sequence: >
   - service: light.turn_on
     data:
       entity_id: "{{ entity_id }}"
-      color_name: red
+      color_hex: "{{ color }}"
+      brightness: 255
+      flash: short
+  - service: light.turn_on
+    data:
+      entity_id: "{{ entity_id }}"
+      color_hex: "000000"
+      brightness: 255
+      flash: short
+  - service: light.turn_on
+    data:
+      entity_id: "{{ entity_id }}"
+      color_hex: "{{ color }}"
       brightness: 255
       flash: short
   - delay: 1
