@@ -29,4 +29,5 @@ sequence:
   - delay: 1
   - service: scene.turn_on
     data:
-      entity_id: light_sequence_before
+      entity_id:
+        - light_sequence_before
