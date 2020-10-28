@@ -115,10 +115,10 @@ download_mbit: &download_mbit
   title: Download Mbit/s
   unit: mbit/s
   min: 0
-  max: 60
+  max: 500
   severity:
-    green: 40
-    yellow: 10
+    green: 450
+    yellow: 100
     red: 0
 
 title: Casita
