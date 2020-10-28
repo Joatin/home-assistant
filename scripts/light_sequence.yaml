@@ -19,32 +19,24 @@ sequence:
     data:
       scene_id: light_sequence_before
       snapshot_entities: "{{ entity_id }}"
-  - service: light.turn_off
+  - service: light.turn_on
     data:
       entity_id: "{{ entity_id }}"
-      flash: short
+      color_name: "{{ color }}"
+      brightness: 255
+  - delay: 2
+  - service: light.turn_on
+    data:
+      entity_id: "{{ entity_id }}"
+      color_name: white
+      brightness: 255
   - delay: 2
   - service: light.turn_on
     data:
       entity_id: "{{ entity_id }}"
       color_name: "{{ color }}"
       brightness: 255
-      flash: short
-  - delay: 3
-  - service: light.turn_on
-    data:
-      entity_id: "{{ entity_id }}"
-      color_name: white
-      brightness: 255
-      flash: short
-  - delay: 3
-  - service: light.turn_on
-    data:
-      entity_id: "{{ entity_id }}"
-      color_name: "{{ color }}"
-      brightness: 255
-      flash: short
-  - delay: 3
+  - delay: 2
   - service: scene.turn_on
     data:
       entity_id: scene.light_sequence_before
