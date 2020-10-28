@@ -10,7 +10,7 @@ max: 5
 fields:
   rgb_color:
     description: The color to cycle through
-    example: [100, 100, 255]
+    example: "[100, 100, 255]"
   entity_id:
     description: The lights that should be affected
     example: all
