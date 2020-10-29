@@ -12,3 +12,4 @@ action:
       - light.office
     profile: bright
     transistion: 900
+    brightness: 255

@@ -1,31 +1,5 @@
 ---
-sonos_say:
-  alias: "Sonos TTS script"
-  sequence:
-    - service: sonos.snapshot
-      data_template:
-        entity_id:
-          - "{{ sonos_entity }}"
-    - service: sonos.unjoin
-      data_template:
-        entity_id:
-          - "{{ sonos_entity }}"
-    - service: media_player.volume_set
-      data_template:
-        entity_id:
-          - "{{ sonos_entity }}"
-        volume_level: "{{ volume }}"
-    - service: tts.amazon_polly_say
-      data_template:
-        entity_id:
-          - "{{ sonos_entity }}"
-        message: "{{ message }}"
-        cache: "{{ cache|default(true) }}"
-    - delay: "{{ delay }}"
-    - service: sonos.restore
-      data_template:
-        entity_id:
-          - "{{ sonos_entity }}"
+
 heat_tesla:
   alias: "Heat Tesla"
   sequence:
@@ -42,31 +16,6 @@ heat_tesla:
     - service: climate.turn_on
       data:
         entity_id: climate.i_c_e_hvac_climate_system
-sonos_play_list:
-  alias: "Play Sonos Playlist"
-  sequence:
-    - service: media_player.volume_set
-      data_template:
-        entity_id: all
-        volume_level: "{{ volume|default(0.3) }}"
-    - service: media_player.play_media
-      data_template:
-        entity_id: all
-        media_content_id: "{{ playlist }}"
-        media_content_type: playlist
-    - service: media_player.shuffle_set
-      data:
-        entity_id: all
-        shuffle: true
-    - service: media_player.media_next_track
-      data:
-        entity_id: all
-party:
-  alias: Party
-  sequence:
-    - service: script.sonos_play_list
-      data:
-        playlist: Party
 latin:
   alias: Latin
   sequence:
@@ -80,3 +29,6 @@ chill:
       data:
         playlist: Chill
 light_sequence: !include scripts/light_sequence.yaml
+scene_party: !include scripts/scene_party.yaml
+sonos_play_list: !include scripts/sonos_play_list.yaml
+sonos_say: !include scripts/sonos_say.yaml

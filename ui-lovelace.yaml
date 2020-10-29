@@ -121,6 +121,19 @@ download_mbit: &download_mbit
     yellow: 100
     red: 0
 
+internet_latency: &internet_latency
+  entity: sensor.speedtest_ping
+  type: gauge
+  name: Latency
+  title: Latancy ms
+  unit: ms
+  min: 0
+  max: 10
+  severity:
+    green: 0
+    yellow: 5
+    red: 6
+
 title: Casita
 resources:
   - url: |
@@ -154,7 +167,7 @@ views:
             icon: mdi:emoticon-excited
             tap_action:
               action: call-service
-              service: script.party
+              service: script.scene_party
           - type: button
             name: Latin
             show_state: false
@@ -219,3 +232,10 @@ views:
     icon: mdi:cog
     cards:
       - *download_mbit
+      - *internet_latency
+      - type: entity
+        entity: binary_sensor.verisure_ethernet_status
+      - type: entity
+        entity: sensor.unifi_dream_machine_b_sent
+      - type: entity
+        entity: sensor.unifi_dream_machine_b_received
