@@ -187,4 +187,5 @@
         entity_id: script.chill
 - !include automations/enable_guest_mode_when_guest_arrives.yaml
 - !include automations/home_assistant_restart.yaml
+- !include automations/light_turn_off_when_nobody_is_home.yaml
 - !include automations/light_turn_on_morning.yaml
