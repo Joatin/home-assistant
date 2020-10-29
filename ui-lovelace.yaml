@@ -239,3 +239,5 @@ views:
         entity: sensor.unifi_dream_machine_b_sent
       - type: entity
         entity: sensor.unifi_dream_machine_b_received
+      - type: entity
+        entity: sensor.electricity_price_mosshagestigen_67
