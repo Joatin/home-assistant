@@ -22,6 +22,7 @@ system_health:
 tag:
 updater:
 zeroconf:
+person:
 
 tibber:
   access_token: !secret tibber_access_token
@@ -142,4 +143,3 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
 zone: !include zones.yaml
-person: !include persons.yaml
