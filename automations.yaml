@@ -1,24 +1,5 @@
 ---
 
-- alias: Home Assistant Restart Notification
-  trigger:
-    platform: homeassistant
-    event: start
-  action:
-    - delay: '00:00:05'
-    - service: script.light_sequence
-      data:
-        entity_id: light.hue_color_lamp_1_3
-        color: green
-    - service: notify.mobile_app_iphone
-      data:
-        title: Home Assistant Restart
-        message: Home Assistant was just restarted
-        data:
-          push:
-            category: "home_assistant"
-          apns_headers:
-            'apns-collapse-id': 'restart'
 - alias: Morning News Briefing
   trigger:
     platform: time
@@ -204,4 +185,6 @@
     - service: homeassistant.turn_on
       data:
         entity_id: script.chill
+- !include automations/enable_guest_mode_when_guest_arrives.yaml
+- !include automations/home_assistant_restart.yaml
 - !include automations/light_turn_on_morning.yaml

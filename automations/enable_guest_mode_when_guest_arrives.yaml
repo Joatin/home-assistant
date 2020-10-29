@@ -1,0 +1,14 @@
+alias: Enable guest mode when a guest arrives
+trigger:
+  platform: state
+  entity_id: all
+  # Optional
+  from: "not_home"
+  # Optional
+  to: "home"
+condition:
+  - condition: "{{ state_attr(trigger.to_state.entity_id, '_is_guest_by_uap') == true }}"
+action:
+  - service: input_boolean.turn_on
+    data:
+      entity_id: input_boolean.guest_mode
