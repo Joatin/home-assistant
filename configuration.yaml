@@ -16,7 +16,6 @@ logbook:
 map:
 media_source:
 mobile_app:
-person:
 ssdp:
 sun:
 system_health:
@@ -143,3 +142,4 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
 zone: !include zones.yaml
+person: !include persons.yaml
