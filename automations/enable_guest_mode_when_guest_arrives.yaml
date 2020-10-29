@@ -7,7 +7,8 @@ trigger:
   # Optional
   to: "home"
 condition:
-  - condition: "{{ (trigger.to_state.attributes._is_guest_by_uap == 'true') }}"
+  - condition: state
+    value_template: "{{ (trigger.to_state.attributes._is_guest_by_uap == 'true') }}"
 action:
   - service: input_boolean.turn_on
     data:
