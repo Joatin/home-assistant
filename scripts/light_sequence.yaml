@@ -25,35 +25,31 @@ sequence:
       color_name: "{{ color }}"
       brightness: 255
   - delay:
-      milliseconds: 300
-  - service: light.turn_on
+      milliseconds: 200
+  - service: scene.turn_on
     data:
-      entity_id: "{{ entity_id }}"
-      color_name: white
-      brightness: 255
+      entity_id: scene.light_sequence_before
   - delay:
-      milliseconds: 500
+      milliseconds: 300
   - service: light.turn_on
     data:
       entity_id: "{{ entity_id }}"
       color_name: "{{ color }}"
       brightness: 255
   - delay:
-      milliseconds: 300
-  - service: light.turn_on
+      milliseconds: 200
+  - service: scene.turn_on
     data:
-      entity_id: "{{ entity_id }}"
-      color_name: white
-      brightness: 255
+      entity_id: scene.light_sequence_before
   - delay:
-      milliseconds: 500
+      milliseconds: 300
   - service: light.turn_on
     data:
       entity_id: "{{ entity_id }}"
       color_name: "{{ color }}"
       brightness: 255
   - delay:
-      milliseconds: 300
+      milliseconds: 200
   - service: scene.turn_on
     data:
       entity_id: scene.light_sequence_before
