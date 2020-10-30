@@ -5,11 +5,7 @@ trigger:
 action:
   service: light.turn_on
   data:
-    entity_id:
-      - light.hallway
-      - light.kitchen
-      - light.bedroom
-      - light.office
+    entity_id: light.hallway,light.kitchen,light.bedroom,light.office
     profile: bright
     transistion: 900
     brightness: 255
