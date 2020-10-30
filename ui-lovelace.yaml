@@ -193,7 +193,6 @@ views:
         show_state: true
         tap_action:
           action: toggle
-      - *download_mbit
   - badges: []
     title: Lights
     icon: mdi:lamp
