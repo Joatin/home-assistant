@@ -128,11 +128,11 @@ internet_latency: &internet_latency
   title: Latancy ms
   unit: ms
   min: 0
-  max: 10
+  max: 20
   severity:
     green: 0
-    yellow: 5
-    red: 6
+    yellow: 10
+    red: 15
 
 title: Casita
 resources:
