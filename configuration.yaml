@@ -83,30 +83,33 @@ ios:
       icon:
         icon: grill
         color: "#ffffff"
-  push:
-    categories:
-      - name: Open I.C.E
-        identifier: 'open_ice'
-        actions:
-          - identifier: 'OPEN_CAR'
-            title: 'Open Car'
-            activationMode: 'background'
-            authenticationRequired: true
-            destructive: false
-            behavior: 'default'
-      - name: Home Assistant
-        identifier: 'home_assistant'
-        actions:
-          - identifier: 'HOME_ASSISTANT'
-            title: Home Assistant
-            activationMode: 'background'
-            authenticationRequired: false
-            destructive: false
-            behavior: 'default'
+#  push:
+#    categories:
+#      - name: Open I.C.E
+#        identifier: 'open_ice'
+#        actions:
+#          - identifier: 'OPEN_CAR'
+#            title: 'Open Car'
+#            activationMode: 'background'
+#            authenticationRequired: true
+#            destructive: false
+#            behavior: 'default'
+#      - name: Home Assistant
+#        identifier: 'home_assistant'
+#        actions:
+#          - identifier: 'HOME_ASSISTANT'
+#            title: Home Assistant
+#            activationMode: 'background'
+#            authenticationRequired: false
+#            destructive: false
+#            behavior: 'default'
 upnp:
 hue:
   bridges:
     - host: 192.168.1.200
+      allow_unreachable: true
+      allow_hue_groups: false
+    - host: 192.168.1.238
       allow_unreachable: true
       allow_hue_groups: false
 duckdns:
