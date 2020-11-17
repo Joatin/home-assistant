@@ -42,13 +42,6 @@ tts:
 lovelace:
   mode: yaml
 speedtestdotnet:
-icloud:
-  - username: !secret icloud_joatin_username
-    password: !secret icloud_joatin_password
-    gps_accuracy_threshold: 100
-  - username: !secret icloud_caroline_username
-    password: !secret icloud_caroline_password
-    gps_accuracy_threshold: 100
 tesla:
   username: !secret tesla_username
   password: !secret tesla_password
@@ -115,6 +108,11 @@ hue:
 duckdns:
   domain: !secret duckdns_domain
   access_token: !secret duckdns_access_token
+device_tracker:
+  - platform: icloud3
+    username: !secret icloud_joatin_username
+    password: !secret icloud_joatin_password
+    tracking_method: famshr
 sensor:
   - platform: cpuspeed
   - platform: openweathermap
