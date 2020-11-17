@@ -113,6 +113,11 @@ device_tracker:
     username: !secret icloud_joatin_username
     password: !secret icloud_joatin_password
     tracking_method: famshr
+    track_devices:
+      - silver
+      - joatins_ipad
+      - joatins_iphone
+      - joatins_apple_watch
 sensor:
   - platform: cpuspeed
   - platform: openweathermap
