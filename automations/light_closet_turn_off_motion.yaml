@@ -1,10 +1,10 @@
-alias: Turn off kitchen light 10 minutes after last movement
+alias: Turn off lights in closet when there is no motion
 trigger:
   platform: state
   entity_id: binary_sensor.hue_motion_sensor_1_motion
   to: 'off'
   for:
-    seconds: 60
+    seconds: 20
 action:
   service: light.turn_off
   entity_id: light.closet
