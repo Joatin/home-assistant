@@ -3,7 +3,8 @@ trigger:
   platform: state
   entity_id: binary_sensor.hue_motion_sensor_1_motion
   to: 'off'
-  for: '00:00:20'
+  for: '00:00:60'
 action:
-  service: light.turn_off
-  entity_id: light.closet
+  - service: scene.turn_on
+    data:
+      scene_id: light_closet_before

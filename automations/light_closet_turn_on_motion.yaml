@@ -4,5 +4,10 @@ trigger:
   entity_id: binary_sensor.hue_motion_sensor_1_motion
   to: 'on'
 action:
-  service: light.turn_on
-  entity_id: light.closet
+  - service: scene.create
+    data:
+      scene_id: light_closet_before
+      snapshot_entities: light.closet
+  - service: light.turn_on
+    entity_id: light.closet
+    profile: energize

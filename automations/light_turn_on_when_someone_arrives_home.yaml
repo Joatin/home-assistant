@@ -5,4 +5,4 @@ trigger:
 action:
   - service: light.turn_on
     data:
-      entity_id: light.kitchen,light.hallway,light.staircase,light.office,light.bedroom,light.guest_room
+      entity_id: light.kitchen,light.hallway,light.staircase,light.office,light.bedroom,light.guest_room,light.living_room
