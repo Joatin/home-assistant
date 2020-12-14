@@ -32,3 +32,4 @@ light_sequence: !include scripts/light_sequence.yaml
 scene_party: !include scripts/scene_party.yaml
 sonos_play_list: !include scripts/sonos_play_list.yaml
 sonos_say: !include scripts/sonos_say.yaml
+turn_off_lights: !include scripts/turn_off_lights.yaml

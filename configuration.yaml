@@ -144,6 +144,20 @@ input_boolean:
 binary_sensor:
   - platform: iss
 
+homekit:
+  - filter:
+      include_entities:
+        - light.kitchen
+        - light.hallway
+        - light.staircase
+        - light.living_room
+        - light.office
+        - light.guest_room
+        - light.bedroom
+        - light.closet
+        - sensor.i_c_e_temperature_sensor_inside
+        - sensor.i_c_e_mileage_sensor
+
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
