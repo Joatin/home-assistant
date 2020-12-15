@@ -13,7 +13,6 @@ fields:
     example: blue
   entity_id:
     description: The lights that should be affected
-    example: all
 sequence:
   - service: scene.create
     data:

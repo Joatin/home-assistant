@@ -9,9 +9,10 @@ action:
       scene_id: light_closet_before
       snapshot_entities: light.closet
   - service: light.turn_on
-    entity_id: light.closet
-    rgb_color:
-      - 255
-      - 240
-      - 198
-    brightness: 255
+    data:
+      entity_id: light.closet
+      rgb_color:
+        - 255
+        - 240
+        - 198
+      brightness: 255
