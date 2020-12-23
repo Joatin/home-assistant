@@ -1,6 +1,6 @@
 ---
 
-exclude: homeassistant/custom_components
+exclude: homeassistant/custom_components|homekit-infused|packages|www
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v2.3.0

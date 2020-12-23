@@ -4,6 +4,8 @@ homeassistant:
   latitude: !secret home_latitude
   unit_system: metric
   time_zone: Europe/Stockholm
+  packages: !include_dir_named packages/
+  customize: !include customize.yaml
 
 # Configure a default setup of Home Assistant (frontend, api, etc)
 config:
