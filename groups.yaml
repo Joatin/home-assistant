@@ -16,3 +16,8 @@ loundry_room:
   name: Loundry Room
 hallway:
   name: Hallway
+home:
+  name: Home
+  entities:
+    - person.joatin
+    - person.caroline
