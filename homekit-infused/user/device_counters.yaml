@@ -7,6 +7,7 @@
 # All Radiator Valves or Climate entities (ONLY climate entities can be used here!, if you have a single thermostat put it here as well)
 all_climate_entities:
   entities:
+    - sensor.closet_sensor_temperature
 
 # All Fans (Enter all your fans in here)
 all_fan_entities:
@@ -23,6 +24,7 @@ all_door_sensor_entities:
 # Motion Sensors
 all_motion_sensor_entities:
   entities:
+    - binary_sensor.closet_sensor_motion
 
 # All Detectors (smoke/gas/fire etc)
 all_detector_entities:
@@ -35,6 +37,14 @@ all_binary_sensor_entities:
 # All Lights
 all_light_entities:
   entities:
+    - light.kitchen
+    - light.hallway
+    - light.staircase
+    - light.living_room
+    - light.office
+    - light.guest_room
+    - light.bedroom
+    - light.closet
 
 # All Devices
 all_device_switch_entities:
@@ -43,6 +53,7 @@ all_device_switch_entities:
 # All Covers
 all_cover_entities:
   entities:
+    - cover.tradfri_blind
 
 # All Garage Doors
 all_garage_door_entities:
