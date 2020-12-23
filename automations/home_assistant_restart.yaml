@@ -6,7 +6,7 @@ action:
   - delay: '00:00:05'
   - service: script.light_sequence
     data:
-      entity_id: light.hue_color_lamp_1_3
+      entity_id: light.office_2
       color: green
   - service: notify.mobile_app_joatins_iphone
     data:
