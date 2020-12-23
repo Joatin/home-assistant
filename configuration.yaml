@@ -24,6 +24,8 @@ updater:
 zeroconf:
 person:
 
+tradfri:
+  host: 192.168.1.249
 tibber:
   access_token: !secret tibber_access_token
 browser_mod:
