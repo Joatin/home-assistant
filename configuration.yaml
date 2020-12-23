@@ -121,11 +121,6 @@ device_tracker:
       - joatins_iphone
       - joatins_apple_watch
 sensor:
-  - platform: cpuspeed
-  - platform: openweathermap
-    api_key: !secret openweathermap_key
-    monitored_conditions:
-      - weather
   - platform: command_line
     name: CPU Temperature
     command: "cat /sys/class/thermal/thermal_zone0/temp"

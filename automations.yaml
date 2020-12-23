@@ -150,7 +150,7 @@
     - service: homeassistant.turn_on
       data:
         entity_id: script.chill
-- !include automations/enable_guest_mode_when_guest_arrives.yaml
+# - !include automations/enable_guest_mode_when_guest_arrives.yaml
 - !include automations/home_assistant_restart.yaml
 - !include automations/light_closet_turn_off_motion.yaml
 - !include automations/light_closet_turn_on_motion.yaml
