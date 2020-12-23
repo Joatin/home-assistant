@@ -198,14 +198,7 @@ views:
     icon: mdi:lamp
     cards:
       - type: light
-        entity:
-          - light.hallway
-          - light.staircase
-          - light.kitchen
-          - light.bedroom
-          - light.office
-          - light.guest_room
-          - light.living_room
+        entity: light.hallway,light.staircase,light.kitchen,light.bedroom,light.office,light.guest_room,light.living_room
       - type: light
         entity: light.hallway
       - type: light
