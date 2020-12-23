@@ -31,3 +31,21 @@
 
 
     ***HKI Framework 3.x.x, by Jimz011***
+- type: horizontal-stack
+  cards:
+    - !include
+      - '../../../base/templates/picture-elements/frontpage-photo.yaml'
+      - person: person.joatin
+        image_path: /local/images/joatin.jpeg
+        navigation_path: joatin
+        alignment: left
+        text_color: white
+        phone_battery_sensor: sensor.joatins_iphone_battery_level
+        travel_time_to_home: sensor.joatins_iphone_travel_time
+    - !include
+      - '../../../base/templates/picture-elements/frontpage-photo.yaml'
+      - person: person.caroline
+        image_path: /local/images/caroline.jpeg
+        navigation_path: caroline
+        alignment: right
+        text_color: white
