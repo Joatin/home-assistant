@@ -1,6 +1,6 @@
 .idea/
 
-g.HA_VERSION
+.HA_VERSION
 tts/
 deps/
 .storage/
@@ -11,3 +11,4 @@ secrets.yaml
 .DS_Store
 !*.secret
 .gitsecret/keys/random_seed
+known_devicesyaml

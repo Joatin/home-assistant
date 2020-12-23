@@ -21,41 +21,6 @@
           </speak>
         delay: '00:00:10'
         cache: false
-- alias: Send Open I.C.E Notification
-  trigger:
-    platform: event
-    event_type: state_changed
-  condition:
-    condition: and
-    conditions:
-      - condition: template
-        value_template: >
-          {{ distance('device_tracker.i_c_e_location_tracker', 'device_tracker.iphone') < 0.050 }}
-      - condition: template
-        value_template: "{{ is_state('binary_sensor.i_c_e_parking_brake_sensor', 'on') }}"
-      - condition: template
-        value_template: |
-          {{((as_timestamp(now()) - as_timestamp(states.automation.send_open_i_c_e_notification.attributes.last_triggered)) / 60) | int > 30 }}
-  action:
-    - service: notify.mobile_app_iphone
-      data:
-        title: Unlock I.C.E
-        message: "Do you wish to unlock I.C.E?"
-        data:
-          push:
-            category: "open_ice"
-          apns_headers:
-            'apns-collapse-id': 'open_ice'
-- alias: Open I.C.E
-  trigger:
-    platform: event
-    event_type: ios.notification_action_fired
-    event_data:
-      actionName: OPEN_CAR
-  action:
-    - service: lock.unlock
-      data:
-        entity_id: lock.i_c_e_door_lock
 - alias: Charge Silver
   trigger:
     platform: numeric_state
