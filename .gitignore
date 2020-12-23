@@ -11,4 +11,5 @@ secrets.yaml
 .DS_Store
 !*.secret
 .gitsecret/keys/random_seed
-known_devicesyaml
+known_devices.yaml
+*.db.*
