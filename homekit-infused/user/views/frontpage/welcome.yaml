@@ -50,6 +50,7 @@
         navigation_path: caroline
         alignment: right
         text_color: whitega
+        ,
         phone_battery_sensor: sensor.joatins_iphone_battery_level
         travel_time_to_home: sensor.joatins_iphone_travel_time
         travel_time_to_work: sensor.joatins_iphone_travel_time

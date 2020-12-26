@@ -1,7 +1,7 @@
 alias: Turn on lights in closet when there is motion
 trigger:
   platform: state
-  entity_id: binary_sensor.hue_motion_sensor_1_motion
+  entity_id: binary_sensor.closet_sensor_motion
   to: 'on'
 action:
   - service: scene.create

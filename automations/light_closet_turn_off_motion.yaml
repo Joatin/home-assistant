@@ -1,9 +1,9 @@
 alias: Turn off lights in closet when there is no motion
 trigger:
   platform: state
-  entity_id: binary_sensor.hue_motion_sensor_1_motion
+  entity_id: binary_sensor.closet_sensor_motion
   to: 'off'
-  for: '00:00:60'
+  for: '00:00:30'
 action:
   - service: scene.turn_on
     data:
