@@ -3,9 +3,6 @@
 
 type: horizontal-stack
 cards:
-  - type: weather-forecast
-    entity: weather.home
-    show_forecast: false
   - !include
     - profile_card.yaml
     - entity: person.joatin

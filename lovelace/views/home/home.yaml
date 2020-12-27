@@ -5,6 +5,9 @@ badges: []
 title: Home
 icon: mdi:home
 cards:
+  - type: weather-forecast
+    entity: weather.home
+    show_forecast: false
   - !include ../../components/profile_cards/profile_cards.yaml
   - type: button
     name: Party
