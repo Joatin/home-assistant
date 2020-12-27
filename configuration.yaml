@@ -43,6 +43,7 @@ tts:
     sample_rate: 22050
     engine: neural
     text_type: ssml
+lovelace_gen:
 lovelace:
   mode: yaml
 speedtestdotnet:
