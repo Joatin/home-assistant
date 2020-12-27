@@ -155,8 +155,7 @@ resources:
   - url: /browser_mod.js
     type: module
 views:
-  - !include
-    - lovelace/views/home/home.yaml
+  - !include lovelace/views/home/home.yaml
   - badges: []
     title: Overview
     icon: mdi:home
