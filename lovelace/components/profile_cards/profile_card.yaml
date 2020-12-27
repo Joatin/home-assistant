@@ -1,16 +1,18 @@
+---
+
 aspect_ratio: '1:1'
 state_filter:
   "not_home": grayscale(90%)
 show_name: false
 show_state: true
 type: picture-entity
-entity: person.joatin
-image: local/images/joatin.jpeg?v=1
+entity: "{{ entity }}"
+image: "{{ image }}"
 tap_action:
   action: call-service
   service: browser_mod.popup
   service_data:
-    title: Joatin
+    title: "{{ title }}"
     card:
       type: vertical-stack
       cards:
