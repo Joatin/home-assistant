@@ -5,13 +5,12 @@ badges: []
 title: Home
 icon: mdi:home
 cards:
-  - cards:
-      - !include ../../components/profile_cards/profile_cards.yaml
-      - type: button
-        name: Party
-        show_state: false
-        show_icon: true
-        icon: mdi:emoticon-excited
-        tap_action:
-          action: call-service
-          service: script.scene_party
+  - !include ../../components/profile_cards/profile_cards.yaml
+  - type: button
+    name: Party
+    show_state: false
+    show_icon: true
+    icon: mdi:emoticon-excited
+    tap_action:
+      action: call-service
+      service: script.scene_party
