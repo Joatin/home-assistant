@@ -6,10 +6,10 @@ cards:
   - !include
     - profile_card.yaml
     - entity: person.joatin
-    - title: Joatin
-    - image: local/images/joatin.jpeg?v=1
+      title: Joatin
+      image: local/images/joatin.jpeg?v=1
   - !include
     - profile_card.yaml
     - entity: person.caroline
-    - title: Caroline
-    - image: local/images/joatin.jpeg?v=1
+      title: Caroline
+      image: local/images/joatin.jpeg?v=1
