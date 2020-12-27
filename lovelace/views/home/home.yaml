@@ -3,6 +3,7 @@ title: Home
 icon: mdi:home
 cards:
   - cards:
+      - !include ../../components/profile_cards/profile_cards.yaml
       - type: button
         name: Party
         show_state: false

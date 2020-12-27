@@ -1,0 +1,5 @@
+profile_cards:
+  type: horizontal-stack
+  cards:
+    - !include
+      - profile_card.yaml
