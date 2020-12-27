@@ -1,12 +1,12 @@
 # lovelace_gen
 ---
 
+type: picture-entity
 aspect_ratio: '1:1'
 state_filter:
   "not_home": grayscale(90%)
 show_name: false
 show_state: true
-type: picture-entity
 entity: "{{ entity }}"
 image: "{{ image }}"
 tap_action:
