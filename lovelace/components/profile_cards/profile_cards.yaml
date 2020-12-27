@@ -12,4 +12,4 @@ cards:
     - profile_card.yaml
     - entity: person.caroline
       title: Caroline
-      image: local/images/joatin.jpeg?v=1
+      image: local/images/caroline.jpeg?v=1
