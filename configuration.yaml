@@ -161,8 +161,8 @@ device_tracker:
       - joatins_iphone
       - joatins_apple_watch
 
-lovelace_gen:
-browser_mod:
-
 lovelace:
   mode: yaml
+
+lovelace_gen:
+browser_mod:
