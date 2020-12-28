@@ -63,13 +63,21 @@ cards:
               cards:
                 - !include
                   - ../../components/light_card/light_card.yaml
-                  - entity: light.bedroom
-                    title: Bedroom
+                  - entity: light.kitchen
+                    title: Kitchen
                 - !include
                   - ../../components/light_card/light_card.yaml
-                  - entity: light.office
-                    title: Office
+                  - entity: light.hallway
+                    title: Hallway
                 - !include
                   - ../../components/light_card/light_card.yaml
                   - entity: light.guest_room
                     title: Guest Room
+                - !include
+                  - ../../components/light_card/light_card.yaml
+                  - entity: light.living_room
+                    title: Living Room
+                - !include
+                  - ../../components/light_card/light_card.yaml
+                  - entity: light.staircase
+                    title: Staircase
