@@ -47,6 +47,9 @@ cards:
           cards:
             - type: vertical-stack
               cards:
+                - !include
+                  - ../../components/profile_cards/profile_cards.yaml
+                  - entity: light.bedroom
                 - type: weather-forecast
                   entity: weather.home
                   show_forecast: false
