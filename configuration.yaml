@@ -29,7 +29,6 @@ tradfri:
   host: 192.168.1.249
 tibber:
   access_token: !secret tibber_access_token
-browser_mod:
 recorder:
 #  db_url: mysql://homeassistant:password@core-mariadb/homeassistant?charset=utf8
 # Text to speech
@@ -42,9 +41,6 @@ tts:
     sample_rate: 22050
     engine: neural
     text_type: ssml
-lovelace_gen:
-lovelace:
-  mode: yaml
 speedtestdotnet:
 tesla:
   username: !secret tesla_username
@@ -112,16 +108,7 @@ hue:
 duckdns:
   domain: !secret duckdns_domain
   access_token: !secret duckdns_access_token
-device_tracker:
-  - platform: icloud3
-    username: !secret icloud_joatin_username
-    password: !secret icloud_joatin_password
-    tracking_method: famshr
-    track_devices:
-      - silver
-      - joatins_ipad
-      - joatins_iphone
-      - joatins_apple_watch
+
 sensor:
   - platform: command_line
     name: CPU Temperature
@@ -162,3 +149,20 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
 zone: !include zones.yaml
+
+device_tracker:
+  - platform: icloud3
+    username: !secret icloud_joatin_username
+    password: !secret icloud_joatin_password
+    tracking_method: famshr
+    track_devices:
+      - silver
+      - joatins_ipad
+      - joatins_iphone
+      - joatins_apple_watch
+
+lovelace_gen:
+browser_mod:
+
+lovelace:
+  mode: yaml
