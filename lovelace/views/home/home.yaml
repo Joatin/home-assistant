@@ -4,7 +4,7 @@
 badges: []
 title: Home
 icon: mdi:home
-panel: true
+panel: false
 cards:
   - type: vertical-stack
     cards:
