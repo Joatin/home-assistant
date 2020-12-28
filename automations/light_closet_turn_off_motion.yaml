@@ -7,4 +7,4 @@ trigger:
 action:
   - service: scene.turn_on
     data:
-      scene_id: light_closet_before
+      entity_id: scene.light_closet_before
