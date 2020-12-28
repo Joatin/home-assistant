@@ -4,7 +4,7 @@
 badges: []
 title: Home
 icon: mdi:home
-panel: false
+panel: true
 cards:
   - type: vertical-stack
     cards:
@@ -29,9 +29,8 @@ cards:
       - type: custom:mod-card
         style: |
           ha-card {
-            border: 1px solid green;
-            margin-top: 500px;
-            margin-bottom: 500px;
+            margin-top: 60em;
+            margin-bottom: 60em;
           }
         card:
           type: horizontal-stack
