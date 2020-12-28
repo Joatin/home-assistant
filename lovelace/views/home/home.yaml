@@ -85,8 +85,7 @@ cards:
                   margin-bottom: 2.5em;
                   margin-left: .5em;
                   margin-right: .5em;
-                  display: flex;
-                  flex-direction: row;
+                  display: block;
                   overflow-x: scroll;
                 }
                 .card-header {
