@@ -8,4 +8,7 @@ cards:
   - type: weather-forecast
     entity: weather.home
     show_forecast: false
-  - !include ../../components/profile_cards/profile_cards.yaml
+  - !include
+    - ../../components/profile_cards/profile_cards.yaml
+  - type: custom:mini-media-player
+    entity: media_player.sonos_living_room
