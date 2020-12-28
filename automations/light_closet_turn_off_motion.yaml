@@ -3,7 +3,7 @@ trigger:
   platform: state
   entity_id: binary_sensor.closet_sensor_motion
   to: 'off'
-  for: '00:00:30'
+  for: '00:00:10'
 action:
   - service: scene.turn_on
     data:
