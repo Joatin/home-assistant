@@ -3,9 +3,9 @@ trigger:
   platform: state
   entity_id: binary_sensor.closet_sensor_motion
   to: 'off'
-  for: '00:00:10'
+  for: '00:00:05'
 action:
   - service: scene.turn_on
     data:
       entity_id: scene.light_closet_before
-      transition: 5
+      transition: 4
