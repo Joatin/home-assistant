@@ -4,6 +4,7 @@ trigger:
   entity_id: binary_sensor.closet_sensor_motion
   to: 'on'
 condition:
+  condition: and
   conditions:
     - "{{ (state_attr('light.closet', 'brightness')|int) < 255 }}"
 action:
