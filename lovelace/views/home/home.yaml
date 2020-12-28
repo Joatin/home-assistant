@@ -13,6 +13,9 @@ cards:
           ha-card {
             width: 20em;
             background-color: red;
+            position: absolute;
+            top: 0;
+            bottom: 0;
           }
         card:
           type: vertical-stack
