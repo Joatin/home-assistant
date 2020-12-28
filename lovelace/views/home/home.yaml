@@ -11,7 +11,7 @@ cards:
       - type: custom:mod-card
         style: |
           ha-card {
-            margin-top: .5em;
+            margin-top: 10em;
             margin-bottom: 10em;
             margin-left: .5em;
             margin-right: .5em;
@@ -27,6 +27,8 @@ cards:
                   entity: weather.home
                   show_forecast: false
                 - !include ../../components/profile_cards/profile_cards.yaml
+            - type: vertical-stack
+              cards:
                 - type: custom:mini-media-player
                   entity: media_player.sonos_living_room
       - type: custom:mod-card
