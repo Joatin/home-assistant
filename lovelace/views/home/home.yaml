@@ -35,6 +35,10 @@ cards:
             - type: vertical-stack
               cards:
                 - type: custom:mini-media-player
+                  style: |
+                    ha-card {
+                      display: block;
+                    }
                   entity: media_player.sonos_living_room
       - type: custom:mod-card
         style: |
@@ -53,6 +57,10 @@ cards:
           cards:
             - type: horizontal-stack
               cards:
+                - !include
+                  - ../../components/light_card/light_card.yaml
+                  - entity: group.all_lights
+                    title: All Lights
                 - !include
                   - ../../components/light_card/light_card.yaml
                   - entity: light.bedroom
@@ -75,10 +83,6 @@ cards:
                   - ../../components/light_card/light_card.yaml
                   - entity: light.hallway
                     title: Hallway
-                - !include
-                  - ../../components/light_card/light_card.yaml
-                  - entity: light.guest_room
-                    title: Guest Room
                 - !include
                   - ../../components/light_card/light_card.yaml
                   - entity: light.living_room

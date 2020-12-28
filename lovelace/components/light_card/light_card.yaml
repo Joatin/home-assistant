@@ -21,7 +21,6 @@ styles:
     - justify-self: start
     - padding-left: 10px
     - font-weight: bold
-    - text-transform: lowercase
   state:
     - justify-self: start
     - padding-left: 10px
