@@ -34,12 +34,12 @@ cards:
             }
           card:
             type: vertical-stack
-            style: |
-              ha-card {
-                background-color: transparent;
-              }
             cards:
               - type: markdown
+                style: |
+                  ha-card {
+                    background-color: transparent;
+                  }
                 content: |
                   # Hello World!
         - type: vertical-stack
