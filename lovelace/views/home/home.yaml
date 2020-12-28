@@ -10,4 +10,4 @@ cards:
     show_forecast: false
   - !include ../../components/profile_cards/profile_cards.yaml
   - type: custom:mini-media-player
-    entity: media_player.bedroom
+    entity: media_player.sonos_living_room
