@@ -9,8 +9,9 @@ cards:
   - type: custom:mod-card
     style: |
       ha-card {
-        background: url("local/images/background.png");
+        background: url("/local/images/background.png");
         background-size: cover;
+        height: 100%;
       }
     card:
       type: horizontal-stack
