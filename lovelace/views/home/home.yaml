@@ -35,10 +35,8 @@ cards:
           card:
             type: vertical-stack
             cards:
-              - !include
-                - ../../components/light_card/light_card.yaml
-                - entity: group.all_lights
-                  title: All Lights
+              - type: markdown
+                content: Hello World!
         - type: vertical-stack
           cards:
             - type: custom:mod-card
