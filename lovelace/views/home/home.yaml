@@ -12,7 +12,7 @@ cards:
         style: |
           ha-card {
             margin-top: 5em;
-            margin-bottom: 5em;
+            margin-bottom: 2.5em;
             margin-left: .5em;
             margin-right: .5em;
             display: flex;
@@ -34,8 +34,8 @@ cards:
       - type: custom:mod-card
         style: |
           ha-card {
-            margin-top: 5em;
-            margin-bottom: 5em;
+            margin-top: 2.5em;
+            margin-bottom: 2.5em;
             margin-left: .5em;
             margin-right: .5em;
             display: flex;
@@ -50,20 +50,26 @@ cards:
                 - !include
                   - ../../components/light_card/light_card.yaml
                   - entity: light.bedroom
+                    title: Bedroom
                 - !include
                   - ../../components/light_card/light_card.yaml
                   - entity: light.office
+                    title: Office
                 - !include
                   - ../../components/light_card/light_card.yaml
                   - entity: light.guest_room
+                    title: Guest Room
             - type: horizontal-stack
               cards:
                 - !include
                   - ../../components/light_card/light_card.yaml
                   - entity: light.bedroom
+                    title: Bedroom
                 - !include
                   - ../../components/light_card/light_card.yaml
                   - entity: light.office
+                    title: Office
                 - !include
                   - ../../components/light_card/light_card.yaml
                   - entity: light.guest_room
+                    title: Guest Room
