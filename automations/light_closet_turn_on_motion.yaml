@@ -3,8 +3,9 @@ trigger:
   platform: state
   entity_id: binary_sensor.closet_sensor_motion
   to: 'on'
-conditions:
-  - "{{ (state_attr('light.closet', 'brightness')|int) < 255 }}"
+condition:
+  conditions:
+    - "{{ (state_attr('light.closet', 'brightness')|int) < 255 }}"
 action:
   - service: scene.create
     data:
