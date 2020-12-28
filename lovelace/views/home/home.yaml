@@ -50,6 +50,12 @@ cards:
                 - !include
                   - ../../components/light_card/light_card.yaml
                   - entity: light.bedroom
+                - !include
+                  - ../../components/light_card/light_card.yaml
+                  - entity: light.office
+                - !include
+                  - ../../components/light_card/light_card.yaml
+                  - entity: light.guest_room
                 - type: weather-forecast
                   entity: weather.home
                   show_forecast: false
