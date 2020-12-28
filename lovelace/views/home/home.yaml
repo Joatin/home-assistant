@@ -24,6 +24,10 @@ cards:
             - type: vertical-stack
               cards:
                 - type: weather-forecast
+                  style: |
+                    ha-card {
+                      display: block;
+                    }
                   entity: weather.home
                   show_forecast: false
                 - !include ../../components/profile_cards/profile_cards.yaml
