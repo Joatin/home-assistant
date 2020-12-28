@@ -162,7 +162,13 @@ device_tracker:
       - joatins_apple_watch
 
 lovelace:
-  mode: yaml
+  dashboards:
+    homekit-infused:
+      mode: yaml
+      title: Dashboard
+      icon: mdi:home-assistant
+      show_in_sidebar: true
+      filename: lovelace/base.yaml
 
 lovelace_gen:
 browser_mod:
