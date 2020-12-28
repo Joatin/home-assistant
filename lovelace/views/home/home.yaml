@@ -42,10 +42,10 @@ cards:
             flex-direction: row;
           }
         card:
-          type: horizontal-stack
+          type: vertical-stack
           title: Lights
           cards:
-            - type: vertical-stack
+            - type: horizontal-stack
               cards:
                 - !include
                   - ../../components/light_card/light_card.yaml
@@ -56,9 +56,14 @@ cards:
                 - !include
                   - ../../components/light_card/light_card.yaml
                   - entity: light.guest_room
-                - type: weather-forecast
-                  entity: weather.home
-                  show_forecast: false
-                - !include ../../components/profile_cards/profile_cards.yaml
-                - type: custom:mini-media-player
-                  entity: media_player.sonos_living_room
+            - type: horizontal-stack
+              cards:
+                - !include
+                  - ../../components/light_card/light_card.yaml
+                  - entity: light.bedroom
+                - !include
+                  - ../../components/light_card/light_card.yaml
+                  - entity: light.office
+                - !include
+                  - ../../components/light_card/light_card.yaml
+                  - entity: light.guest_room
