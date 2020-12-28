@@ -9,6 +9,10 @@ show_state: true
 type: picture-entity
 entity: "{{ entity }}"
 image: "{{ image }}"
+style: |
+  ha-card {
+    max-width: 20em;
+  }
 tap_action:
   action: call-service
   service: browser_mod.popup
