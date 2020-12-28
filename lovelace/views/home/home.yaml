@@ -43,6 +43,7 @@ cards:
           }
         card:
           type: horizontal-stack
+          title: Lights
           cards:
             - type: vertical-stack
               cards:
