@@ -10,6 +10,7 @@ styles:
   card:
     - width: 100px
     - height: 100px
+    - box-shadow: none
   grid:
     - grid-template-areas: '"i" "n" "s"'
     - grid-template-columns: 1fr
