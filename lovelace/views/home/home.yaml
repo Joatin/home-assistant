@@ -5,14 +5,16 @@ badges: []
 title: Home
 icon: mdi:home
 cards:
-  - type: vertical-stack
+  - type: horizontal-stack
     cards:
-      - type: weather-forecast
-        entity: weather.home
-        show_forecast: false
-      - !include ../../components/profile_cards/profile_cards.yaml
-      - type: custom:mini-media-player
-        entity: media_player.sonos_living_room
+      - type: vertical-stack
+        cards:
+          - type: weather-forecast
+            entity: weather.home
+            show_forecast: false
+          - !include ../../components/profile_cards/profile_cards.yaml
+          - type: custom:mini-media-player
+            entity: media_player.sonos_living_room
   - type: horizontal-stack
     style: |
       ha-card {
@@ -20,9 +22,11 @@ cards:
         margin-bottom: 100px;
       }
     cards:
-      - type: weather-forecast
-        entity: weather.home
-        show_forecast: false
-      - !include ../../components/profile_cards/profile_cards.yaml
-      - type: custom:mini-media-player
-        entity: media_player.sonos_living_room
+      - type: vertical-stack
+        cards:
+          - type: weather-forecast
+            entity: weather.home
+            show_forecast: false
+          - !include ../../components/profile_cards/profile_cards.yaml
+          - type: custom:mini-media-player
+            entity: media_player.sonos_living_room
