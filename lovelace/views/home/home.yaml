@@ -26,18 +26,21 @@ cards:
               - !include ../../components/profile_cards/profile_cards.yaml
               - type: custom:mini-media-player
                 entity: media_player.sonos_living_room
-      - type: horizontal-stack
+      - type: custom:mod-card
         style: |
-          :host {
+          ha-card {
+            border: 1px solid green;
             margin-top: 500px;
             margin-bottom: 500px;
           }
-        cards:
-          - type: vertical-stack
-            cards:
-              - type: weather-forecast
-                entity: weather.home
-                show_forecast: false
-              - !include ../../components/profile_cards/profile_cards.yaml
-              - type: custom:mini-media-player
-                entity: media_player.sonos_living_room
+        card:
+          type: horizontal-stack
+          cards:
+            - type: vertical-stack
+              cards:
+                - type: weather-forecast
+                  entity: weather.home
+                  show_forecast: false
+                - !include ../../components/profile_cards/profile_cards.yaml
+                - type: custom:mini-media-player
+                  entity: media_player.sonos_living_room
