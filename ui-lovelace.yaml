@@ -68,6 +68,8 @@ resources:
     type: module
   - url: local/lovelace/layout-card.js?v=0.0.1
     type: module
+  - url: local/lovelace/mini-media-player-bundle.js?v=0.0.1
+    type: module
   - url: /browser_mod.js
     type: module
 views:
