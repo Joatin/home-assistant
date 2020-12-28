@@ -10,6 +10,10 @@ cards:
     cards:
       - type: custom:mod-card
         style: |
+          :host {
+            width: 20em;
+            max-width: 20em;
+          }
           ha-card {
             width: 20em;
             background-color: red;
