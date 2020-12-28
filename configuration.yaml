@@ -162,6 +162,7 @@ device_tracker:
       - joatins_apple_watch
 
 lovelace:
+  mode: yaml
   resources:
     - url: local/lovelace/auto-entities.js?v=0.0.1
       type: module
