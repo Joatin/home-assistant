@@ -28,9 +28,9 @@ cards:
                 entity: media_player.sonos_living_room
       - type: horizontal-stack
         style: |
-          hui-horizontal-stack-card {
-            margin-top: 100px;
-            margin-bottom: 100px;
+          :host {
+            margin-top: 500px;
+            margin-bottom: 500px;
           }
         cards:
           - type: vertical-stack
