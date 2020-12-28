@@ -34,9 +34,14 @@ cards:
             }
           card:
             type: vertical-stack
+            style: |
+              ha-card {
+                background-color: transparent;
+              }
             cards:
               - type: markdown
-                content: Hello World!
+                content: |
+                  # Hello World!
         - type: vertical-stack
           cards:
             - type: custom:mod-card
