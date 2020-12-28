@@ -5,7 +5,6 @@ homeassistant:
   unit_system: metric
   time_zone: Europe/Stockholm
   customize: !include customize.yaml
-  packages: !include_dir packages/homekit_infused/
 
 # Configure a default setup of Home Assistant (frontend, api, etc)
 config:
