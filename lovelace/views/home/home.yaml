@@ -30,10 +30,6 @@ cards:
               bottom: 0;
               border-radius: 0;
             }
-            .card-header {
-              margin: 0;
-              padding: 0;
-            }
           card:
             type: vertical-stack
             cards:
@@ -85,6 +81,10 @@ cards:
                   display: flex;
                   flex-direction: row;
                   overflow-x: scroll;
+                }
+                .card-header {
+                  margin: 0;
+                  padding: 0;
                 }
               card:
                 type: vertical-stack
