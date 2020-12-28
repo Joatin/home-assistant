@@ -6,36 +6,38 @@ title: Home
 icon: mdi:home
 panel: true
 cards:
-  - type: horizontal-stack
+  - type: vertical-stack
     cards:
-      - type: vertical-stack
+      - type: horizontal-stack
         cards:
-          - type: weather-forecast
-            entity: weather.home
-            show_forecast: false
-          - !include ../../components/profile_cards/profile_cards.yaml
-          - type: custom:mini-media-player
-            entity: media_player.sonos_living_room
-      - type: vertical-stack
+          - type: vertical-stack
+            cards:
+              - type: weather-forecast
+                entity: weather.home
+                show_forecast: false
+              - !include ../../components/profile_cards/profile_cards.yaml
+              - type: custom:mini-media-player
+                entity: media_player.sonos_living_room
+          - type: vertical-stack
+            cards:
+              - type: weather-forecast
+                entity: weather.home
+                show_forecast: false
+              - !include ../../components/profile_cards/profile_cards.yaml
+              - type: custom:mini-media-player
+                entity: media_player.sonos_living_room
+      - type: horizontal-stack
+        style: |
+          hui-horizontal-stack-card {
+            margin-top: 100px;
+            margin-bottom: 100px;
+          }
         cards:
-          - type: weather-forecast
-            entity: weather.home
-            show_forecast: false
-          - !include ../../components/profile_cards/profile_cards.yaml
-          - type: custom:mini-media-player
-            entity: media_player.sonos_living_room
-  - type: horizontal-stack
-    style: |
-      hui-horizontal-stack-card {
-        margin-top: 100px;
-        margin-bottom: 100px;
-      }
-    cards:
-      - type: vertical-stack
-        cards:
-          - type: weather-forecast
-            entity: weather.home
-            show_forecast: false
-          - !include ../../components/profile_cards/profile_cards.yaml
-          - type: custom:mini-media-player
-            entity: media_player.sonos_living_room
+          - type: vertical-stack
+            cards:
+              - type: weather-forecast
+                entity: weather.home
+                show_forecast: false
+              - !include ../../components/profile_cards/profile_cards.yaml
+              - type: custom:mini-media-player
+                entity: media_player.sonos_living_room
