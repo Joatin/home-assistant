@@ -39,9 +39,10 @@ cards:
                 style: |
                   ha-card {
                     background-color: transparent;
+                    border: none;
                   }
                 content: |
-                  # Hello World!
+                  ### Hello World!
         - type: vertical-stack
           cards:
             - type: custom:mod-card
