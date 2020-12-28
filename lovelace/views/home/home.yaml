@@ -6,115 +6,122 @@ title: Home
 icon: mdi:home
 panel: true
 cards:
-  - type: horizontal-stack
-    cards:
-      - type: custom:mod-card
-        style: |
-          :host {
-            width: 20em;
-            max-width: 20em;
-          }
-          ha-card {
-            width: 20em;
-            background-color: red;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            border-radius: 0;
-          }
-          .card-header {
-            margin: 0;
-            padding: 0;
-          }
-        card:
-          type: vertical-stack
+  - type: custom:mod-card
+    style: |
+      ha-card {
+        background: url("local/images/background.png");
+        background-size: cover;
+      }
+    card:
+      type: horizontal-stack
+      cards:
+        - type: custom:mod-card
+          style: |
+            :host {
+              width: 20em;
+              max-width: 20em;
+            }
+            ha-card {
+              width: 20em;
+              background-color: red;
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              border-radius: 0;
+            }
+            .card-header {
+              margin: 0;
+              padding: 0;
+            }
+          card:
+            type: vertical-stack
+            cards:
+              - !include
+                - ../../components/light_card/light_card.yaml
+                - entity: group.all_lights
+                  title: All Lights
+        - type: vertical-stack
           cards:
-            - !include
-              - ../../components/light_card/light_card.yaml
-              - entity: group.all_lights
-                title: All Lights
-      - type: vertical-stack
-        cards:
-          - type: custom:mod-card
-            style: |
-              ha-card {
-                margin-top: 5em;
-                margin-bottom: 2.5em;
-                margin-left: .5em;
-                margin-right: .5em;
-                display: flex;
-                flex-direction: row;
-                overflow-x: scroll;
-              }
-            card:
-              type: horizontal-stack
-              cards:
-                - type: vertical-stack
-                  cards:
-                    - type: weather-forecast
-                      style: |
-                        ha-card {
-                          display: block;
-                        }
-                      entity: weather.home
-                      show_forecast: false
-                    - !include ../../components/profile_cards/profile_cards.yaml
-                - type: vertical-stack
-                  cards:
-                    - type: custom:mini-media-player
-                      style: |
-                        ha-card {
-                          display: block;
-                        }
-                      entity: media_player.sonos_living_room
-          - type: custom:mod-card
-            style: |
-              ha-card {
-                margin-top: 2.5em;
-                margin-bottom: 2.5em;
-                margin-left: .5em;
-                margin-right: .5em;
-                display: flex;
-                flex-direction: row;
-                overflow-x: scroll;
-              }
-            card:
-              type: vertical-stack
-              title: Lights
-              cards:
-                - type: horizontal-stack
-                  cards:
-                    - !include
-                      - ../../components/light_card/light_card.yaml
-                      - entity: group.all_lights
-                        title: All Lights
-                    - !include
-                      - ../../components/light_card/light_card.yaml
-                      - entity: light.bedroom
-                        title: Bedroom
-                    - !include
-                      - ../../components/light_card/light_card.yaml
-                      - entity: light.office
-                        title: Office
-                    - !include
-                      - ../../components/light_card/light_card.yaml
-                      - entity: light.guest_room
-                        title: Guest Room
-                - type: horizontal-stack
-                  cards:
-                    - !include
-                      - ../../components/light_card/light_card.yaml
-                      - entity: light.kitchen
-                        title: Kitchen
-                    - !include
-                      - ../../components/light_card/light_card.yaml
-                      - entity: light.hallway
-                        title: Hallway
-                    - !include
-                      - ../../components/light_card/light_card.yaml
-                      - entity: light.living_room
-                        title: Living Room
-                    - !include
-                      - ../../components/light_card/light_card.yaml
-                      - entity: light.staircase
-                        title: Staircase
+            - type: custom:mod-card
+              style: |
+                ha-card {
+                  margin-top: 5em;
+                  margin-bottom: 2.5em;
+                  margin-left: .5em;
+                  margin-right: .5em;
+                  display: flex;
+                  flex-direction: row;
+                  overflow-x: scroll;
+                }
+              card:
+                type: horizontal-stack
+                cards:
+                  - type: vertical-stack
+                    cards:
+                      - type: weather-forecast
+                        style: |
+                          ha-card {
+                            display: block;
+                          }
+                        entity: weather.home
+                        show_forecast: false
+                      - !include ../../components/profile_cards/profile_cards.yaml
+                  - type: vertical-stack
+                    cards:
+                      - type: custom:mini-media-player
+                        style: |
+                          ha-card {
+                            display: block;
+                          }
+                        entity: media_player.sonos_living_room
+            - type: custom:mod-card
+              style: |
+                ha-card {
+                  margin-top: 2.5em;
+                  margin-bottom: 2.5em;
+                  margin-left: .5em;
+                  margin-right: .5em;
+                  display: flex;
+                  flex-direction: row;
+                  overflow-x: scroll;
+                }
+              card:
+                type: vertical-stack
+                title: Lights
+                cards:
+                  - type: horizontal-stack
+                    cards:
+                      - !include
+                        - ../../components/light_card/light_card.yaml
+                        - entity: group.all_lights
+                          title: All Lights
+                      - !include
+                        - ../../components/light_card/light_card.yaml
+                        - entity: light.bedroom
+                          title: Bedroom
+                      - !include
+                        - ../../components/light_card/light_card.yaml
+                        - entity: light.office
+                          title: Office
+                      - !include
+                        - ../../components/light_card/light_card.yaml
+                        - entity: light.guest_room
+                          title: Guest Room
+                  - type: horizontal-stack
+                    cards:
+                      - !include
+                        - ../../components/light_card/light_card.yaml
+                        - entity: light.kitchen
+                          title: Kitchen
+                      - !include
+                        - ../../components/light_card/light_card.yaml
+                        - entity: light.hallway
+                          title: Hallway
+                      - !include
+                        - ../../components/light_card/light_card.yaml
+                        - entity: light.living_room
+                          title: Living Room
+                      - !include
+                        - ../../components/light_card/light_card.yaml
+                        - entity: light.staircase
+                          title: Staircase
