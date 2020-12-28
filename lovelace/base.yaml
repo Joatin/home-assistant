@@ -51,27 +51,6 @@ internet_latency: &internet_latency
     red: 15
 
 title: Casita
-resources:
-  - url: local/lovelace/auto-entities.js?v=0.0.1
-    type: module
-  - url: local/lovelace/button-card.js?v=0.0.1
-    type: module
-  - url: local/lovelace/card-mod.js?v=0.0.1
-    type: module
-  - url: local/lovelace/card-tools.js?v=0.0.1
-    type: module
-  - url: local/lovelace/mini-graph-card-bundle.js?v=0.0.1
-    type: module
-  - url: local/lovelace/state-switch.js?v=0.0.1
-    type: module
-  - url: local/lovelace/swipe-card.js?v=0.0.1
-    type: module
-  - url: local/lovelace/layout-card.js?v=0.0.1
-    type: module
-  - url: local/lovelace/mini-media-player-bundle.js?v=0.0.1
-    type: module
-  - url: /browser_mod.js
-    type: module
 views:
   - !include views/home/home.yaml
   - badges: []
