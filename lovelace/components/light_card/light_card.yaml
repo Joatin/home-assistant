@@ -11,6 +11,8 @@ styles:
     - width: 100px
     - height: 100px
     - box-shadow: none
+    - background-color: rgba(255, 255, 255, .75)
+    - backdrop-filter: blur(5px)
   grid:
     - grid-template-areas: '"i" "n" "s"'
     - grid-template-columns: 1fr
