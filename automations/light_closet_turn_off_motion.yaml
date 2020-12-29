@@ -8,4 +8,3 @@ action:
   - service: scene.turn_on
     data:
       entity_id: scene.light_closet_before
-      transition: 5
