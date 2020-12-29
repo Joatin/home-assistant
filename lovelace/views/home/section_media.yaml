@@ -31,6 +31,7 @@ card:
             ha-card {
               display: block;
               border-radius: var(--ha-card-border-radius, 4px);
-              overflow: hidden;
+              overflow: hidden !important;
+              max-width: 60em;
             }
           entity: media_player.sonos_living_room
