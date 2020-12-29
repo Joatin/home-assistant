@@ -21,7 +21,7 @@ cards:
         - !include ../../components/sidebar/sidebar.yaml
         - type: custom:mod-card
           style: |
-            ha-card {
+            :host {
               overflow-x: hidden;
               overflow-y: auto;
             }
