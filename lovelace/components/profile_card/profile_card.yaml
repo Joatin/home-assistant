@@ -12,7 +12,10 @@ styles:
     - width: 100px
     - height: 100px
     - box-shadow: none
-    - background-image: url("[[[state_attr['{{ entity }}', 'entity_picture']]]]")
+    - background-image: |
+        [[[
+          return 'url("' + state_attr['{{ entity }}', 'entity_picture'] + '")'
+        ]]]
   grid:
     - grid-template-areas: '"i" "n" "s"'
     - grid-template-columns: 1fr
