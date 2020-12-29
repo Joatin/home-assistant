@@ -119,9 +119,6 @@ input_boolean:
 binary_sensor:
   - platform: iss
 
-openweathermap:
-  api_key: !secret openweathermap_key
-
 homekit:
   - filter:
       include_entities:
@@ -152,6 +149,10 @@ device_tracker:
       - joatins_ipad
       - joatins_iphone
       - joatins_apple_watch
+
+weather:
+  - platform: openweathermap
+    api_key: !secret openweathermap_key
 
 lovelace:
   mode: yaml
