@@ -26,6 +26,9 @@ card:
           background-color: transparent;
           border: none;
           box-shadow: none;
+          font-size: 3em;
         }
       content: |
-        ### Hello World!
+        {% raw %}
+        ### {{ states(sensor) }}
+        {% endraw %}

@@ -1,3 +1,5 @@
+---
+
 homeassistant:
   name: Home
   longitude: !secret home_longitude
@@ -30,8 +32,6 @@ tradfri:
 tibber:
   access_token: !secret tibber_access_token
 recorder:
-#  db_url: mysql://homeassistant:password@core-mariadb/homeassistant?charset=utf8
-# Text to speech
 tts:
   - platform: amazon_polly
     aws_access_key_id: !secret aws_access_key_id
@@ -109,18 +109,7 @@ duckdns:
   domain: !secret duckdns_domain
   access_token: !secret duckdns_access_token
 
-sensor:
-  - platform: command_line
-    name: CPU Temperature
-    command: "cat /sys/class/thermal/thermal_zone0/temp"
-    # If errors occur, make sure configuration file is encoded as UTF-8
-    unit_of_measurement: "°C"
-    value_template: '{{ value | multiply(0.001) | round(1) }}'
-  - platform: systemmonitor
-    resources:
-      - type: disk_use_percent
-        arg: /home
-      - type: memory_free
+sensor: !include sensors.yaml
 
 input_boolean:
   guest_mode:
