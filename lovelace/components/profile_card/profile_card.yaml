@@ -8,3 +8,22 @@ aspect_ratio: 1/1
 show_state: true
 show_entity_picture: true
 tap_action: !include tap_action.yaml
+styles:
+  card:
+    - width: 100px
+    - height: 100px
+    - box-shadow: none
+  grid:
+    - grid-template-areas: '"i" "n" "s"'
+    - grid-template-columns: 1fr
+    - grid-template-rows: 1fr min-content min-content
+  img_cell:
+    - align-self: start
+    - text-align: start
+  name:
+    - justify-self: start
+    - padding-left: 10px
+    - font-weight: bold
+  state:
+    - justify-self: start
+    - padding-left: 10px
