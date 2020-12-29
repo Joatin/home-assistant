@@ -24,6 +24,7 @@ cards:
             :host {
               overflow-x: hidden;
               overflow-y: auto;
+              -webkit-overflow-scrolling: touch;
             }
           card:
             type: vertical-stack
