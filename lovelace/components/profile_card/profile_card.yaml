@@ -12,7 +12,7 @@ styles:
     - width: 100px
     - height: 100px
     - box-shadow: none
-    - background: url({% raw %}{{state_attr('{% endraw %}{{ entity }}{% raw %}', 'entity_picture')}}{% endraw %})
+    - background-image: url("{% raw %}{{state_attr('{% endraw %}{{ entity }}{% raw %}', 'entity_picture')}}{% endraw %}")
   grid:
     - grid-template-areas: '"i" "n" "s"'
     - grid-template-columns: 1fr
