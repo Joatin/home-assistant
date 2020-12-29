@@ -30,7 +30,7 @@ card:
           flex: none !important;
         }
         ha-card {
-          margin-right: 2em;
+          margin-right: 5em;
         }
       card:
         type: vertical-stack
