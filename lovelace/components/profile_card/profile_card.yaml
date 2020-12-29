@@ -11,7 +11,6 @@ tap_action: !include tap_action.yaml
 styles:
   card:
     - width: 100px
-    - min-width: 100px
     - height: 100px
     - box-shadow: none
   grid:

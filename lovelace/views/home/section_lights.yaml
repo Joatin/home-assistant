@@ -34,11 +34,6 @@ card:
         }
       card:
         type: vertical-stack
-        style: |
-          .card-header {
-            margin: 0;
-            padding: 0;
-          }
         cards:
           - type: horizontal-stack
             cards:

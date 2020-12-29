@@ -5,24 +5,40 @@ style: |
     margin-bottom: 1em;
     margin-left: .25em;
     margin-right: .25em;
-    display: flex;
-    flex-direction: row;
+    display: block;
     overflow-x: auto;
-    overflow-y: hidden;
+  }
+  .card-header {
+    margin: 0;
+    padding: 0;
   }
 card:
   type: horizontal-stack
   title: Overview
+  style: |
+    .card-header {
+      margin: 0;
+      padding: 0;
+    }
   cards:
-    - type: vertical-stack
-      cards:
-        - type: horizontal-stack
-          cards:
-            - !include
-              - ../../components/profile_card/profile_card.yaml
-              - entity: person.joatin
-                title: Joatin
-            - !include
-              - ../../components/profile_card/profile_card.yaml
-              - entity: person.caroline
-                title: Caroline
+    - type: custom:mod-card
+      style: |
+        :host {
+          flex: none !important;
+        }
+        ha-card {
+          margin-right: 5em;
+        }
+      card:
+        type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - !include
+                - ../../components/profile_card/profile_card.yaml
+                - entity: person.joatin
+                  title: Joatin
+              - !include
+                - ../../components/profile_card/profile_card.yaml
+                - entity: person.caroline
+                  title: Caroline
