@@ -16,4 +16,11 @@ card:
   cards:
     - type: vertical-stack
       cards:
-        - !include ../../components/profile_cards/profile_cards.yaml
+        - !include
+          - ../../components/profile_card/profile_card.yaml
+          - entity: person.joatin
+            title: Joatin
+        - !include
+          - ../../components/profile_card/profile_card.yaml
+          - entity: person.caroline
+            title: Caroline

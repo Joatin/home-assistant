@@ -1,0 +1,51 @@
+action: call-service
+service: browser_mod.popup
+service_data:
+  title: "{{ title }}"
+  card:
+    type: vertical-stack
+    cards:
+      - type: entities
+        entities:
+          - sensor.joatins_iphone_battery_state_2
+          - sensor.joatins_ipad_battery_level
+          - sensor.silver_battery_state
+          - sensor.joatins_apple_watch_battery_state
+      - type: horizontal-stack
+        cards:
+          - type: button
+            name: Find iPhone
+            show_state: false
+            icon: mdi:cellphone
+            icon_height: 2em
+            tap_action:
+              action: call-service
+              service: icloud.play_sound
+              service_data:
+                account: granlundjoatin@icloud.com
+                device_name: Joatin's iPhone
+          - type: button
+            name: Find iPad
+            show_state: false
+            icon: mdi:tablet-ipad
+            icon_height: 2em
+            tap_action:
+              action: call-service
+              service: icloud.play_sound
+              service_data:
+                account: granlundjoatin@icloud.com
+                device_name: Joatin's iPad
+          - type: button
+            name: Find Watch
+            show_state: false
+            icon: mdi:watch
+            icon_height: 2em
+            tap_action:
+              action: call-service
+              service: icloud.play_sound
+              service_data:
+                account: granlundjoatin@icloud.com
+                device_name: Joatin's Watch
+  deviceID:
+    - this
+    - dashboard

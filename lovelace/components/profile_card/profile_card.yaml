@@ -1,0 +1,9 @@
+# lovelace_gen
+---
+
+type: custom:button-card
+entity: "{{ entity }}"
+name: "{{ title }}"
+aspect_ratio: 1/1
+show_state: true
+tap_action: !include tap_action.yaml
