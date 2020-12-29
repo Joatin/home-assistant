@@ -75,6 +75,12 @@ card:
           border: none;
           box-shadow: none;
         }
+        .name {
+          color: white;
+        }
+        .attribute {
+          color: white;
+        }
       entity: weather.home
       show_forecast: false
 
