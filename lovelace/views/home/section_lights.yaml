@@ -26,6 +26,9 @@ card:
   cards:
     - type: custom:mod-card
       style: |
+        :host {
+          flex: 0;
+        }
         ha-card {
 
         }
