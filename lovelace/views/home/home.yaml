@@ -16,7 +16,7 @@ cards:
     card:
       type: horizontal-stack
       cards:
-        - !include ../../sidebar/sidebar.yaml
+        - !include ../../components/sidebar/sidebar.yaml
         - type: vertical-stack
           cards:
             - type: custom:mod-card
