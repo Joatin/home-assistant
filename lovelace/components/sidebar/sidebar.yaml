@@ -20,6 +20,7 @@ style: |
 card:
   type: vertical-stack
   cards:
+{ % raw % }
     - type: markdown
       style: |
         ha-card {
@@ -28,9 +29,20 @@ card:
           box-shadow: none;
           font-size: 3em;
         }
-{% raw %}
       content: |
-        ### time {{ states(sensor.time) }}
+        time {{ states(sensor.time) }}
+{% endraw %}
+{ % raw % }
+    - type: markdown
+      style: |
+        ha-card {
+          background-color: transparent;
+          border: none;
+          box-shadow: none;
+          font-size: 1.5em;
+        }
+      content: |
+        date {{ states(sensor.date) }}
 {% endraw %}
     - type: markdown
       style: |
@@ -40,7 +52,5 @@ card:
           box-shadow: none;
           font-size: 1.5em;
         }
-{% raw %}
       content: |
-        ### date {{ states(sensor.date) }}
-{% endraw %}
+        ### Hello world!
