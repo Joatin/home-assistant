@@ -27,7 +27,6 @@ card:
     - type: horizontal-stack
       cards:
         - !include
-          - ../../components/button/button.yaml
+          - ../../components/blind_card/blind_card.yaml
           - entity: cover.tradfri_blind
             title: Bedroom
-            icon: mdi:blinds
