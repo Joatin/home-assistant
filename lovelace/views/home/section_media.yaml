@@ -30,6 +30,8 @@ card:
           style: |
             ha-card {
               display: block;
+            }
+            .mmp__bg {
               box-shadow: none;
               background-color: rgba(255, 255, 255, .75);
               backdrop-filter: blur(5px);
