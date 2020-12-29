@@ -27,9 +27,11 @@ card:
           background-color: transparent;
           border: none;
           box-shadow: none;
-          font-size: 5em;
+          font-size: 7em;
           padding: 0;
           margin: 0;
+          margin-bottom: .5em;
+          font-weight: 700;
         }
       content: |
         {{ states('sensor.time') }}
@@ -46,6 +48,6 @@ card:
           margin: 0;
         }
       content: |
-        date {{ states('sensor.date') }}
+        {{ states('sensor.date') }}
 {% endraw %}
 
