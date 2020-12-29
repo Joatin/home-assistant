@@ -4,11 +4,11 @@
 type: custom:mod-card
 style: |
   :host {
-    width: 20em;
-    max-width: 20em;
+    width: 24em;
+    max-width: 24em;
   }
   ha-card {
-    width: 20em;
+    width: 24em;
     background-color: red;
     position: absolute;
     top: 0;
