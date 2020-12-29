@@ -54,24 +54,6 @@ title: Casita
 views:
   - !include views/home/home.yaml
   - badges: []
-    title: Lights
-    icon: mdi:lamp
-    cards:
-      - type: light
-        entity: light.hallway
-      - type: light
-        entity: light.staircase
-      - type: light
-        entity: light.kitchen
-      - type: light
-        entity: light.bedroom
-      - type: light
-        entity: light.office
-      - type: light
-        entity: light.guest_room
-      - type: light
-        entity: light.living_room
-  - badges: []
     title: Tesla
     icon: mdi:car
     cards:
