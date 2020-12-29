@@ -4,7 +4,6 @@
 type: custom:button-card
 entity: "{{ entity }}"
 name: "{{ title }}"
-aspect_ratio: 1/1
 show_state: true
 show_entity_picture: true
 tap_action: !include tap_action.yaml
