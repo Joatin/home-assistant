@@ -77,9 +77,10 @@ cards:
                   - type: horizontal-stack
                     cards:
                       - !include
-                        - ../../components/light_card/light_card.yaml
+                        - ../../components/button/button.yaml
                         - entity: group.all_light_entities
                           title: All Lights
+                          icon: mdi:lightbulb
                       - !include
                         - ../../components/light_card/light_card.yaml
                         - entity: light.bedroom
