@@ -30,9 +30,9 @@ card:
           font-size: 5em;
           padding: 0;
           margin: 0;
-          margin-bottom: .1em;
-          margin-top: .1em;
-          font-weight: 700;
+          margin-bottom: .05em;
+          margin-top: .25em;
+          font-weight: 500;
         }
       content: |
         {{ states('sensor.time') }}
@@ -44,7 +44,7 @@ card:
           background-color: transparent;
           border: none;
           box-shadow: none;
-          font-size: 2em;
+          font-size: 1em;
           padding: 0;
           margin: 0;
         }
