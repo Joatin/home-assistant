@@ -53,3 +53,4 @@ cards:
                         entity: media_player.sonos_living_room
             - !include section_lights.yaml
             - !include section_blinds.yaml
+            - !include section_media.yaml
