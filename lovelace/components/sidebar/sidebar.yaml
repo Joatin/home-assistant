@@ -31,7 +31,7 @@ card:
           padding: 0;
           margin: 0;
           margin-bottom: .05em;
-          margin-top: .25em;
+          margin-top: 1em;
           font-weight: 200;
         }
       content: |
