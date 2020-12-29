@@ -16,6 +16,7 @@ styles:
         [[[
           return 'url("' + entity.attributes.entity_picture + '")'
         ]]]
+    - background-fit: cover
   grid:
     - grid-template-areas: '"i" "n" "s"'
     - grid-template-columns: 1fr
