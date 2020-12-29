@@ -14,7 +14,7 @@ styles:
     - box-shadow: none
     - background-image: |
         [[[
-          return 'url("' + entity.state.entity_picture + '")'
+          return 'url("' + entity.state.attributes.entity_picture + '")'
         ]]]
   grid:
     - grid-template-areas: '"i" "n" "s"'
