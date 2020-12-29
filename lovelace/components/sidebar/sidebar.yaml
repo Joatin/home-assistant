@@ -77,8 +77,6 @@ card:
           box-shadow: none;
           padding: 0;
           margin: 0;
-          margin-top: -1.5em;
-          font-size: .75em;
         }
         .name {
           color: white !important;

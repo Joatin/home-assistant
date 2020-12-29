@@ -1,0 +1,33 @@
+# lovelace_gen
+---
+
+type: custom:mod-card
+style: |
+  ha-card {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: .25em;
+    margin-right: .25em;
+    display: block;
+    overflow-x: auto;
+  }
+  .card-header {
+    margin: 0;
+    padding: 0;
+  }
+card:
+  type: vertical-stack
+  title: Blinds
+  style: |
+    .card-header {
+      margin: 0;
+      padding: 0;
+    }
+  cards:
+    - type: horizontal-stack
+      cards:
+        - !include
+          - ../../components/button/button.yaml
+          - entity: cover.tradfri_blind
+            title: Bedroom
+            icon: mdi:cover
