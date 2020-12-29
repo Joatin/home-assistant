@@ -1,23 +1,19 @@
 ---
 
-kitchen:
-  name: Kitchen
-living_room:
-  name: Living Room
-bedroom:
-  name: Bedroom
-office:
-  name: Office
-guest_room:
-  name: Guest Room
-bath_room:
-  name: Bath Room
-loundry_room:
-  name: Loundry Room
-hallway:
-  name: Hallway
 home:
   name: Home
   entities:
     - person.joatin
     - person.caroline
+
+
+all_light_entities:
+  entities:
+    - light.kitchen
+    - light.hallway
+    - light.staircase
+    - light.living_room
+    - light.office
+    - light.guest_room
+    - light.bedroom
+    - light.closet

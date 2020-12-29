@@ -78,7 +78,7 @@ cards:
                     cards:
                       - !include
                         - ../../components/light_card/light_card.yaml
-                        - entity: group.all_lights
+                        - entity: group.all_light_entities
                           title: All Lights
                       - !include
                         - ../../components/light_card/light_card.yaml
