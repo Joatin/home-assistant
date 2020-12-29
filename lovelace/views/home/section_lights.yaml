@@ -27,7 +27,7 @@ card:
     - type: custom:mod-card
       style: |
         ha-card {
-
+          display: inline-block;
         }
       card:
         type: vertical-stack
