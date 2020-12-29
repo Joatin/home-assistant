@@ -12,6 +12,7 @@ cards:
         background: url("/local/images/background.png");
         background-size: cover;
         height: 100%;
+        overflow: hidden;
       }
     card:
       type: horizontal-stack
@@ -28,7 +29,8 @@ cards:
                   margin-right: .25em;
                   display: flex;
                   flex-direction: row;
-                  overflow-x: auto;
+                  overflow-x: hidden;
+                  overflow-y: auto;
                 }
               card:
                 type: horizontal-stack
