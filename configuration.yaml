@@ -150,10 +150,6 @@ device_tracker:
       - joatins_iphone
       - joatins_apple_watch
 
-weather:
-  - platform: openweathermap
-    api_key: !secret openweathermap_key
-
 lovelace:
   mode: yaml
   resources:

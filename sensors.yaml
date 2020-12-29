@@ -1,5 +1,9 @@
 ---
 
+
+- platform: openweathermap
+  api_key: !secret openweathermap_key
+
 - platform: time_date
   display_options:
     - time
