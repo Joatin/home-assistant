@@ -11,9 +11,8 @@ cards:
       ha-card {
         background: url("/local/images/background.png");
         background-size: cover;
-        height: 100%;
-        overflow: hidden;
-        max-height: 100%;
+        height: calc(100vh - var(--header-height));
+        max-height: calc(100vh - var(--header-height));
       }
     card:
       type: horizontal-stack
