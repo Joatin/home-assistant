@@ -20,7 +20,7 @@ style: |
 card:
   type: vertical-stack
   cards:
-{ % raw % }
+{% raw %}
     - type: markdown
       style: |
         ha-card {
@@ -32,7 +32,7 @@ card:
       content: |
         time {{ states('sensor.time') }}
 {% endraw %}
-{ % raw % }
+{% raw %}
     - type: markdown
       style: |
         ha-card {
