@@ -30,7 +30,7 @@ card:
           font-size: 3em;
         }
       content: |
-        time {{ states("sensor.time") }}
+        time {{ states('sensor.time') }}
 {% endraw %}
 { % raw % }
     - type: markdown
@@ -42,7 +42,7 @@ card:
           font-size: 1.5em;
         }
       content: |
-        date {{ states("sensor.date") }}
+        date {{ states('sensor.date') }}
 {% endraw %}
     - type: markdown
       style: |
