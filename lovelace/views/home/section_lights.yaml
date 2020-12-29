@@ -27,10 +27,10 @@ card:
     - type: custom:mod-card
       style: |
         :host {
-          flex: 0 !important;
+          flex: none !important;
         }
         ha-card {
-
+          margin-right: 2em;
         }
       card:
         type: vertical-stack
