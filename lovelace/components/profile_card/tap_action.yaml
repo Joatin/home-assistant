@@ -1,3 +1,6 @@
+# lovelace_gen
+---
+
 action: call-service
 service: browser_mod.popup
 service_data:
