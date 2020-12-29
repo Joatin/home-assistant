@@ -4,8 +4,9 @@
 type: custom:button-card
 entity: "{{ entity }}"
 name: "{{ title }}"
-show_state: true
+show_state: false
 show_entity_picture: false
+show_icon: false
 tap_action: !include tap_action.yaml
 styles:
   card:
@@ -31,3 +32,8 @@ styles:
   state:
     - justify-self: start
     - padding-left: 10px
+state:
+  - value: 'not_home'
+    styles:
+      icon:
+        - filter: grayscale(100%)
