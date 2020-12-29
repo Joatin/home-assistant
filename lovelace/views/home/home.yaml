@@ -13,6 +13,7 @@ cards:
         background-size: cover;
         height: 100%;
         overflow: hidden;
+        max-height: 100%;
       }
     card:
       type: horizontal-stack
