@@ -76,10 +76,10 @@ card:
           box-shadow: none;
         }
         .name {
-          color: white;
+          color: white !important;
         }
         .attribute {
-          color: white;
+          color: white !important;
         }
       entity: weather.home
       show_forecast: false
