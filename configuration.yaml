@@ -110,6 +110,7 @@ duckdns:
   access_token: !secret duckdns_access_token
 
 sensor: !include sensors.yaml
+media_player: !include media_players.yaml
 
 input_boolean:
   guest_mode:
