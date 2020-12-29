@@ -5,13 +5,14 @@ type: custom:button-card
 entity: "{{ entity }}"
 name: "{{ title }}"
 show_state: true
-show_entity_picture: true
+show_entity_picture: false
 tap_action: !include tap_action.yaml
 styles:
   card:
     - width: 100px
     - height: 100px
     - box-shadow: none
+    - background: url({% raw %}{{state_attr('{% endraw %}{{ entity }}{% raw %}', 'entity_picture')}}{% endraw %})
   grid:
     - grid-template-areas: '"i" "n" "s"'
     - grid-template-columns: 1fr
