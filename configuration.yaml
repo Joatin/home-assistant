@@ -119,6 +119,9 @@ input_boolean:
 binary_sensor:
   - platform: iss
 
+smhi:
+  name: SMHI
+
 homekit:
   - filter:
       include_entities:
