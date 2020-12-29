@@ -28,10 +28,10 @@ card:
           box-shadow: none;
           font-size: 3em;
         }
+{% raw %}
       content: |
-        {% raw %}
         ### time {{ states(sensor.time) }}
-        {% endraw %}
+{% endraw %}
     - type: markdown
       style: |
         ha-card {
