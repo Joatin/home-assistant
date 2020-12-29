@@ -27,11 +27,10 @@ card:
     - type: custom:mod-card
       style: |
         ha-card {
-          display: inline-block;
+
         }
       card:
         type: vertical-stack
-        title: Lights
         style: |
           .card-header {
             margin: 0;
@@ -52,7 +51,6 @@ card:
         }
       card:
         type: vertical-stack
-        title: Lights
         style: |
           .card-header {
             margin: 0;
