@@ -62,7 +62,7 @@ card:
           line-height: 1em;
           padding: 0;
           margin: 0;
-          margin-top: .15em;
+          margin-top: 0em;
         }
       content: |
         {{ states('sensor.greeting') }}
@@ -76,7 +76,7 @@ card:
           box-shadow: none;
           padding: 0;
           margin: 0;
-          margin-top: -1em;
+          margin-top: -3em;
           font-size: .75em;
         }
         .name {
