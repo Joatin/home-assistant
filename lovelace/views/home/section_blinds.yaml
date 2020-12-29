@@ -30,4 +30,4 @@ card:
           - ../../components/button/button.yaml
           - entity: cover.tradfri_blind
             title: Bedroom
-            icon: mdi:cover
+            icon: mdi:blinds

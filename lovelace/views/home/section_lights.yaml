@@ -16,7 +16,7 @@ style: |
     padding: 0;
   }
 card:
-  type: vertical-stack
+  type: horizontal-stack
   title: Lights
   style: |
     .card-header {
@@ -24,40 +24,70 @@ card:
       padding: 0;
     }
   cards:
-    - type: horizontal-stack
-      cards:
-        - !include
-          - ../../components/button/button.yaml
-          - entity: group.all_light_entities
-            title: All Lights
-            icon: mdi:lightbulb
-        - !include
-          - ../../components/light_card/light_card.yaml
-          - entity: light.bedroom
-            title: Bedroom
-        - !include
-          - ../../components/light_card/light_card.yaml
-          - entity: light.office
-            title: Office
-        - !include
-          - ../../components/light_card/light_card.yaml
-          - entity: light.guest_room
-            title: Guest Room
-    - type: horizontal-stack
-      cards:
-        - !include
-          - ../../components/light_card/light_card.yaml
-          - entity: light.kitchen
-            title: Kitchen
-        - !include
-          - ../../components/light_card/light_card.yaml
-          - entity: light.hallway
-            title: Hallway
-        - !include
-          - ../../components/light_card/light_card.yaml
-          - entity: light.living_room
-            title: Living Room
-        - !include
-          - ../../components/light_card/light_card.yaml
-          - entity: light.staircase
-            title: Staircase
+    - type: custom:mod-card
+      style: |
+        ha-card {
+
+        }
+      card:
+        type: vertical-stack
+        title: Lights
+        style: |
+          .card-header {
+            margin: 0;
+            padding: 0;
+          }
+        cards:
+          - type: horizontal-stack
+            cards:
+              - !include
+                - ../../components/button/button.yaml
+                - entity: group.all_light_entities
+                  title: All Lights
+                  icon: mdi:lightbulb
+    - type: custom:mod-card
+      style: |
+        ha-card {
+
+        }
+      card:
+        type: vertical-stack
+        title: Lights
+        style: |
+          .card-header {
+            margin: 0;
+            padding: 0;
+          }
+        cards:
+          - type: horizontal-stack
+            cards:
+              - !include
+                - ../../components/light_card/light_card.yaml
+                - entity: light.bedroom
+                  title: Bedroom
+              - !include
+                - ../../components/light_card/light_card.yaml
+                - entity: light.office
+                  title: Office
+              - !include
+                - ../../components/light_card/light_card.yaml
+                - entity: light.guest_room
+                  title: Guest Room
+          - type: horizontal-stack
+            cards:
+              - !include
+                - ../../components/light_card/light_card.yaml
+                - entity: light.kitchen
+                  title: Kitchen
+              - !include
+                - ../../components/light_card/light_card.yaml
+                - entity: light.hallway
+                  title: Hallway
+              - !include
+                - ../../components/light_card/light_card.yaml
+                - entity: light.living_room
+                  title: Living Room
+              - !include
+                - ../../components/light_card/light_card.yaml
+                - entity: light.staircase
+                  title: Staircase
