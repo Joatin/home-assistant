@@ -68,12 +68,16 @@ card:
                   title: Bedroom
               - !include
                 - ../../components/light_card/light_card.yaml
+                - entity: light.closet
+                  title: Closet
+              - !include
+                - ../../components/light_card/light_card.yaml
                 - entity: light.office
                   title: Office
               - !include
                 - ../../components/light_card/light_card.yaml
                 - entity: light.guest_room
-                  title: Guest Room
+                  title: Guest
           - type: horizontal-stack
             cards:
               - !include
@@ -87,7 +91,7 @@ card:
               - !include
                 - ../../components/light_card/light_card.yaml
                 - entity: light.living_room
-                  title: Living Room
+                  title: Living
               - !include
                 - ../../components/light_card/light_card.yaml
                 - entity: light.staircase
