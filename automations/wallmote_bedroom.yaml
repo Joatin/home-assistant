@@ -44,3 +44,16 @@
     - service: cover.toggle
       data:
         entity_id: cover.tradfri_blind
+#Button 4
+- alias: Wallmote bedroom button 4 'Single Tap'
+  trigger:
+    platform: event
+    event_type: ozw.scene_activated
+    event_data:
+      instance_id: 1
+      scene_id: 4
+      scene_value_label: "Pressed 1 Time"
+  action:
+    - service: homeassistant.toggle
+      data:
+        entity_id: group.all_light_entities
