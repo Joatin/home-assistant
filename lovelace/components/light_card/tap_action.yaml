@@ -4,7 +4,7 @@
 action: call-service
 service: browser_mod.popup
 service_data:
-  title: "{{ title }}
+  title: "{{ title }}"
   style:
     $: |
       .mdc-dialog .mdc-dialog__container {
@@ -29,7 +29,7 @@ service_data:
       }
   card:
     type: custom:light-popup-card
-    entity: {{ entity }}
+    entity: "{{ entity }}"
   deviceID:
     - this
     - dashboard
