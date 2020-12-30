@@ -112,6 +112,14 @@ duckdns:
 binary_sensor:
   - platform: iss
 
+emulated_hue:
+  listen_port: 80
+  host_ip: 192.168.1.2
+  expose_by_default: false
+  entities:
+    light.bedroom:
+      hidden: false
+
 homekit:
   - filter:
       include_entities:
