@@ -142,6 +142,10 @@ script: !include scripts.yaml
 scene: !include scenes.yaml
 zone: !include zones.yaml
 
+home_connect:
+  client_id: !secret bosch_client_id
+  client_secret: !secret bosch_client_secret
+
 device_tracker:
   - platform: icloud3
     username: !secret icloud_joatin_username
