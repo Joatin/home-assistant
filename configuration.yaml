@@ -27,6 +27,9 @@ updater:
 zeroconf:
 person:
 
+mqtt:
+  broker: 192.168.1.2
+
 tradfri:
   host: 192.168.1.249
 tibber:
