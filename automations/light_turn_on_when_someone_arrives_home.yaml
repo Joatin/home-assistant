@@ -1,10 +1,10 @@
-alias: Turn on the lights when someone arrives at home
-trigger:
-  platform: state
-  entity_id: group.home
-  to: "home"
-action:
-  - service: light.turn_on
-    data:
-      entity_id: light.kitchen,light.hallway,light.staircase,light.office,light.bedroom,light.guest_room,light.living_room
-      brightness: 255
+- alias: Turn on the lights when someone arrives at home
+  trigger:
+    platform: state
+    entity_id: group.home
+    to: "home"
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: light.kitchen,light.hallway,light.staircase,light.office,light.bedroom,light.guest_room,light.living_room
+        brightness: 255

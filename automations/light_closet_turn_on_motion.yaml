@@ -1,22 +1,22 @@
-alias: Turn on lights in closet when there is motion
-trigger:
-  platform: state
-  entity_id: binary_sensor.closet_sensor_motion
-  to: 'on'
-condition:
-  condition: and
-  conditions:
-    - "{{ (state_attr('light.closet', 'brightness')|int) < 255 }}"
-action:
-  - service: scene.create
-    data:
-      scene_id: light_closet_before
-      snapshot_entities: light.closet
-  - service: light.turn_on
-    data:
-      entity_id: light.closet
-      rgb_color:
-        - 255
-        - 240
-        - 198
-      brightness: 255
+- alias: Turn on lights in closet when there is motion
+  trigger:
+    platform: state
+    entity_id: binary_sensor.closet_sensor_motion
+    to: 'on'
+  condition:
+    condition: and
+    conditions:
+      - "{{ (state_attr('light.closet', 'brightness')|int) < 255 }}"
+  action:
+    - service: scene.create
+      data:
+        scene_id: light_closet_before
+        snapshot_entities: light.closet
+    - service: light.turn_on
+      data:
+        entity_id: light.closet
+        rgb_color:
+          - 255
+          - 240
+          - 198
+        brightness: 255

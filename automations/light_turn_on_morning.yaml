@@ -1,9 +1,9 @@
-alias: Turn on lights in the morning
-trigger:
-  platform: time
-  at: "07:00:00"
-action:
-  service: light.turn_on
-  data:
-    entity_id: light.hallway,light.staircase,light.kitchen,light.bedroom,light.office,light.guest_room,light.living_room
-    brightness: 255
+- alias: Turn on lights in the morning
+  trigger:
+    platform: time
+    at: "07:00:00"
+  action:
+    service: light.turn_on
+    data:
+      entity_id: light.hallway,light.staircase,light.kitchen,light.bedroom,light.office,light.guest_room,light.living_room
+      brightness: 255

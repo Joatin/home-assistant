@@ -1,19 +1,19 @@
-alias: Home Assistant Restart Notification
-trigger:
-  platform: homeassistant
-  event: start
-action:
-  - delay: '00:00:05'
-  - service: script.light_sequence
-    data:
-      entity_id: light.office_2
-      color: green
-  - service: notify.mobile_app_joatins_iphone
-    data:
-      title: Home Assistant Restart
-      message: Home Assistant was just restarted 🚀
+- alias: Home Assistant Restart Notification
+  trigger:
+    platform: homeassistant
+    event: start
+  action:
+    - delay: '00:00:05'
+    - service: script.light_sequence
       data:
-        push:
-          category: "home_assistant"
-        apns_headers:
-          'apns-collapse-id': 'restart'
+        entity_id: light.office_2
+        color: green
+    - service: notify.mobile_app_joatins_iphone
+      data:
+        title: Home Assistant Restart
+        message: Home Assistant was just restarted 🚀
+        data:
+          push:
+            category: "home_assistant"
+          apns_headers:
+            'apns-collapse-id': 'restart'

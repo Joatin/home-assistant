@@ -1,7 +1,7 @@
-alias: Turn off the lights when nobody is home
-trigger:
-  platform: state
-  entity_id: group.home
-  from: "home"
-action:
-  - service: script.turn_off_lights
+- alias: Turn off the lights when nobody is home
+  trigger:
+    platform: state
+    entity_id: group.home
+    from: "home"
+  action:
+    - service: script.turn_off_lights
