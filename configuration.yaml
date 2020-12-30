@@ -122,6 +122,20 @@ emulated_hue:
   entities:
     light.bedroom:
       hidden: false
+    light.closet:
+      hidden: false
+    light.office:
+      hidden: false
+    light.guest_room:
+      hidden: false
+    light.staircase:
+      hidden: false
+    light.kitchen:
+      hidden: false
+    light.hallway:
+      hidden: false
+    light.living_room:
+      hidden: false
 
 homekit:
   - filter:
