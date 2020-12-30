@@ -8,9 +8,9 @@ icon: mdi:lightbulb
 show_state: true
 tap_action:
   !include
-    - tap_action.yaml
-    - title: {{ title }}
-      entity: {{ entity }}
+  - tap_action.yaml
+  - title: {{ title }}
+    entity: {{ entity }}
 styles:
   card:
     - width: 100px
