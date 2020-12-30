@@ -16,7 +16,7 @@ style: |
     padding: 0;
   }
 card:
-  type: vertical-stack
+  type: horizontal-stack
   title: Media
   style: |
     .card-header {
@@ -24,14 +24,27 @@ card:
       padding: 0;
     }
   cards:
-    - type: horizontal-stack
+    - type: vertical-stack
       cards:
-        - type: custom:mini-media-player
-          style: |
-            ha-card {
-              display: block;
-              border-radius: var(--ha-card-border-radius, 4px);
-              overflow: hidden !important;
-              max-width: 30em;
-            }
-          entity: media_player.sonos_living_room
+        - type: horizontal-stack
+          cards:
+            - type: custom:mini-media-player
+              style: |
+                ha-card {
+                  display: block;
+                  border-radius: var(--ha-card-border-radius, 4px);
+                  overflow: hidden !important;
+                  max-width: 30em;
+                }
+              entity: media_player.sonos_living_room
+        - type: horizontal-stack
+          cards:
+            - type: custom:mini-media-player
+              style: |
+                ha-card {
+                  display: block;
+                  border-radius: var(--ha-card-border-radius, 4px);
+                  overflow: hidden !important;
+                  max-width: 30em;
+                }
+              entity: media_player.pioneer_avr
