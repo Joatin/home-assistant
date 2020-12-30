@@ -86,4 +86,13 @@ card:
         }
       entity: weather.home
       show_forecast: false
+{ % raw % }
+    - type: markdown
+      content: |
+        {% if states('sensor.dishwasher_remaining_program_time') == 'Unavailable' %}
+        <ha-icon icon="mdi:home-assistant"></ha-icon> Dischwasher program has finished
+        {% else %}
+        <ha-icon icon="mdi:home-assistant"></ha-icon> Time left {{states('sensor.dishwasher_remaining_program_time')}}
+        {% endif %}
+{% endraw %}
 
