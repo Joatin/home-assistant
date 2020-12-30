@@ -35,8 +35,38 @@ service_data:
         service_data:
           group_name: "{{ hue_room }}"
           scene_name: Bright
-        color: "#FDCA64"
+        color: "#FFE7C0"
         name: Bright
+      - service: hue.hue_activate_scene
+        service_data:
+          group_name: "{{ hue_room }}"
+          scene_name: Concentrate
+        color: "#BBEEF3"
+        name: Concentrate
+      - service: hue.hue_activate_scene
+        service_data:
+          group_name: "{{ hue_room }}"
+          scene_name: Dimmed
+        color: "#FDCA64"
+        name: Dimmed
+      - service: hue.hue_activate_scene
+        service_data:
+          group_name: "{{ hue_room }}"
+          scene_name: Tropical twilight
+        color: "#4F0A3F"
+        name: Tropical twilight
+      - service: hue.hue_activate_scene
+        service_data:
+          group_name: "{{ hue_room }}"
+          scene_name: Savanna sunset
+        color: "#ED422C"
+        name: Savanna sunset
+      - service: hue.hue_activate_scene
+        service_data:
+          group_name: "{{ hue_room }}"
+          scene_name: Spring blossom
+        color: "#EF9CBB"
+        name: Spring blossom
   deviceID:
     - this
     - dashboard
