@@ -1,0 +1,20 @@
+- alias: Wallmote bedroom button 1 'Single Tap'
+  trigger:
+    platform: event
+    event_type: ozw.scene_activated
+    event_data:
+      instance_id: 1
+      scene_id: 1
+      scene_value_label: "Pressed 1 Time"
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: light.bedroom
+- alias: Wallmote bedroom 'Single Tap'
+  trigger:
+    platform: mqtt
+    topic: "OpenZWave/1/node/+/instance/1/commandclass/112/value/+/"
+  action:
+    - service: light.turn_off
+      data:
+        entity_id: light.bedroom
