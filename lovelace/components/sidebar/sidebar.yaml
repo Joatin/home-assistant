@@ -86,7 +86,7 @@ card:
         }
       entity: weather.home
       show_forecast: false
-{ % raw % }
+{% raw %}
     - type: markdown
       style: |
         ha-card {
