@@ -129,7 +129,7 @@ homekit:
 sensor: !include sensors.yaml
 media_player: !include media_players.yaml
 group: !include groups.yaml
-automation: !include_dir_merge_named  automations/
+automation: !include_dir_merge_list  automations/
 script: !include scripts.yaml
 scene: !include scenes.yaml
 zone: !include zones.yaml
