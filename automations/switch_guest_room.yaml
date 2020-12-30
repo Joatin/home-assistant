@@ -10,3 +10,14 @@
       data:
         entity_id: light.hallway
         brightness: 255
+- alias: Switch guest room 'Off' press
+  trigger:
+    platform: event
+    event_type: hue_event
+    event_data:
+      id: guest_room_switch
+      event: 1002
+  action:
+    - service: light.turn_off
+      data:
+        entity_id: light.hallway
