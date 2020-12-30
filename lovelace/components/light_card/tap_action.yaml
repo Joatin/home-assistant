@@ -8,3 +8,4 @@ service_data:
   card:
     type: custom:light-popup-card
     entity: {{ entity }}
+    fullscreen: false
