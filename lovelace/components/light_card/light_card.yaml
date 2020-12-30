@@ -11,6 +11,7 @@ tap_action:
   - tap_action.yaml
   - title: {{ title }}
     entity: {{ entity }}
+    hue_room: {{ hue_room }}
 styles:
   card:
     - width: 100px

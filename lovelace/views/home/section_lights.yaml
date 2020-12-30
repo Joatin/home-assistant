@@ -61,33 +61,41 @@ card:
                 - ../../components/light_card/light_card.yaml
                 - entity: light.bedroom
                   title: Bedroom
+                  hue_room: Bedroom
               - !include
                 - ../../components/light_card/light_card.yaml
                 - entity: light.closet
                   title: Closet
+                  hue_room: Closet
               - !include
                 - ../../components/light_card/light_card.yaml
                 - entity: light.office
                   title: Office
+                  hue_room: Office
               - !include
                 - ../../components/light_card/light_card.yaml
                 - entity: light.guest_room
                   title: Guest
+                  hue_room: Guest Room
           - type: horizontal-stack
             cards:
               - !include
                 - ../../components/light_card/light_card.yaml
                 - entity: light.kitchen
                   title: Kitchen
+                  hue_room: Kitchen
               - !include
                 - ../../components/light_card/light_card.yaml
                 - entity: light.hallway
                   title: Hallway
+                  hue_room: Hallway
               - !include
                 - ../../components/light_card/light_card.yaml
                 - entity: light.living_room
                   title: Living
+                  hue_room: Living Room
               - !include
                 - ../../components/light_card/light_card.yaml
                 - entity: light.staircase
                   title: Staircase
+                  hue_room: Staircase

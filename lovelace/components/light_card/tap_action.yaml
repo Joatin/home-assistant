@@ -30,6 +30,13 @@ service_data:
   card:
     type: custom:light-popup-card
     entity: "{{ entity }}"
+    actions:
+      - service: hue.hue_activate_scene
+        service_data:
+          group_name: "{{ hue_room }}"
+          scene_name: Bright
+        color: "#FDCA64"
+        name: Bright
   deviceID:
     - this
     - dashboard
