@@ -109,14 +109,6 @@ duckdns:
   domain: !secret duckdns_domain
   access_token: !secret duckdns_access_token
 
-sensor: !include sensors.yaml
-media_player: !include media_players.yaml
-
-input_boolean:
-  guest_mode:
-    name: Guest Mode
-    icon: mdi:user
-
 binary_sensor:
   - platform: iss
 
@@ -134,6 +126,8 @@ homekit:
         - sensor.i_c_e_temperature_sensor_inside
         - sensor.i_c_e_mileage_sensor
 
+sensor: !include sensors.yaml
+media_player: !include media_players.yaml
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
@@ -171,6 +165,8 @@ lovelace:
     - url: local/lovelace/layout-card.js?v=0.0.1
       type: module
     - url: local/lovelace/mini-media-player-bundle.js?v=0.0.1
+      type: module
+    - url: local/lovelace/light-popup-card.js?v=0.0.1
       type: module
     - url: /browser_mod.js
       type: module
