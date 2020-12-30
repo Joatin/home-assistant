@@ -1,0 +1,12 @@
+- alias: Switch guest room 'On' press
+  trigger:
+    platform: event
+    event_type: hue_event
+    event_data:
+      id: guest_room_switch
+      event: 4002
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: light.hallway
+        brightness: 255
