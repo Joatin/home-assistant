@@ -88,6 +88,17 @@ card:
       show_forecast: false
 { % raw % }
     - type: markdown
+      style: |
+        ha-card {
+          background-color: transparent;
+          border: none;
+          box-shadow: none;
+          font-size: 1em;
+          line-height: 1em;
+          padding: 0;
+          margin: 0;
+          margin-top: 0em;
+        }
       content: |
         {% if is_state('sensor.dishwasher_remaining_program_time', 'Unavailable') %}
           <ha-icon icon="mdi:home-assistant"></ha-icon> Dischwasher program has finished
