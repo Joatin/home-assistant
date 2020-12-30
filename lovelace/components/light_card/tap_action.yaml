@@ -1,4 +1,9 @@
 # lovelace_gen
 ---
 
-action: toggle
+service: browser_mod.popup
+service_data:
+  title: "{{ title }}"
+  card:
+    type: custom:light-popup-card
+    entity: {{ entity }}
