@@ -101,9 +101,9 @@ card:
         }
       content: |
         {% if is_state('sensor.dishwasher_remaining_program_time', 'unavailable') %}
-          <ha-icon icon="mdi:lightbulb"></ha-icon> Dishwasher program has finished
+          <ha-icon icon="mdi:dishwasher"></ha-icon> Dishwasher program has finished
         {% else %}
-          <ha-icon icon="mdi:lightbulb"></ha-icon> Time left {{states('sensor.dishwasher_remaining_program_time')}}
+          <ha-icon icon="mdi:dishwasher"></ha-icon> Time left {{states('sensor.dishwasher_remaining_program_time')}}
         {% endif %}
 {% endraw %}
 
