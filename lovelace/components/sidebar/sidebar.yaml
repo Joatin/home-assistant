@@ -103,7 +103,7 @@ card:
         {% if is_state('sensor.dishwasher_remaining_program_time', 'unavailable') %}
           <ha-icon icon="mdi:dishwasher"></ha-icon> Dishwasher program has finished
         {% else %}
-          <ha-icon icon="mdi:dishwasher"></ha-icon> Time left {{(as_timestamp(states('sensor.dishwasher_remaining_program_time')) - as_timestamp(states('sensor.date_time_iso'))) / (1000 * 60) | round(0)}}
+          <ha-icon icon="mdi:dishwasher"></ha-icon> Time left {{(as_timestamp(states('sensor.dishwasher_remaining_program_time')) - as_timestamp(states('sensor.date_time_iso'))) / 60 | round(1)}}
         {% endif %}
 {% endraw %}
 
