@@ -1,4 +1,5 @@
 - id: wallmote_swipe_handling
+  alias: Wallmote Swipe Handling
   trigger:
     platform: mqtt
     topic: "OpenZWave/1/node/+/instance/1/commandclass/112/value/+/"
