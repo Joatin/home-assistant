@@ -5,7 +5,7 @@ type: custom:button-card
 entity: "{{ entity }}"
 name: "{{ title }}"
 icon: mdi:album
-show_state: false
+show_state: true
 styles:
   card:
     - width: 100px
