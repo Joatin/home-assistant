@@ -28,15 +28,10 @@ card:
       cards:
         - type: horizontal-stack
           cards:
-            - type: custom:mini-media-player
-              style: |
-                ha-card {
-                  display: block;
-                  border-radius: var(--ha-card-border-radius, 4px);
-                  overflow: hidden !important;
-                  max-width: 30em;
-                }
-              entity: media_player.sonos_living_room
+            - !include
+              - ../../components/milage_card/milage_card.yaml
+              - entity: sensor.i_c_e_mileage_sensor
+                title: Total Km
         - type: horizontal-stack
           cards:
             - type: custom:mini-media-player
