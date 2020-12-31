@@ -45,7 +45,7 @@ card:
     - type: custom:mod-card
       style: |
         ha-card {
-
+          margin-right: 5em;
         }
       card:
         type: vertical-stack
@@ -99,3 +99,30 @@ card:
                 - entity: light.staircase
                   title: Staircase
                   hue_room: Staircase
+    - type: custom:mod-card
+      style: |
+        ha-card {
+
+        }
+      card:
+        type: vertical-stack
+        style: |
+          .card-header {
+            margin: 0;
+            padding: 0;
+          }
+        cards:
+          - type: horizontal-stack
+            cards:
+              - !include
+                - ../../components/button/button.yaml
+                - entity: input_boolean.unify_ap_bedroom_led
+                  title: AP Bedroom
+                  icon: mdi:album
+          - type: horizontal-stack
+            cards:
+              - !include
+                - ../../components/button/button.yaml
+                - entity: input_boolean.unify_ap_living_room_led
+                  title: AP Bedroom
+                  icon: mdi:album
