@@ -118,14 +118,12 @@ card:
           - type: horizontal-stack
             cards:
               - !include
-                - ../../components/button/button.yaml
+                - ../../components/ap_card/ap_card.yaml
                 - entity: input_boolean.unify_ap_bedroom_led
                   title: Bedroom
-                  icon: mdi:album
           - type: horizontal-stack
             cards:
               - !include
-                - ../../components/button/button.yaml
+                - ../../components/ap_card/ap_card.yaml
                 - entity: input_boolean.unify_ap_living_room_led
                   title: Living
-                  icon: mdi:album
