@@ -26,6 +26,7 @@ tag:
 updater:
 zeroconf:
 person:
+python_script:
 
 mqtt:
   broker: 192.168.1.2
