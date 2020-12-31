@@ -47,5 +47,4 @@ card:
                   overflow: hidden !important;
                   max-width: 30em;
                 }
-              entity: media_player.pioneer_avr
-              toggle_power: false
+              entity: media_player.reciever
