@@ -13,3 +13,5 @@ secrets.yaml
 .gitsecret/keys/random_seed
 known_devices.yaml
 *.db.*
+id_rsa
+id_rsa.pub

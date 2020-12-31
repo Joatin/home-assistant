@@ -1,0 +1,4 @@
+unify_ap_bedroom_led:
+  name: Bedroom UniFy AP Led status
+  icon: mdi:album
+unify_ap_living_room_led:

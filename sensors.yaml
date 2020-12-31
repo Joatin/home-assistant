@@ -53,3 +53,8 @@
         {% else %}
           Good evening
         {% endif %}
+
+- platform: template
+  sensors:
+    unify_ap_user_and_ip_bedroom:
+      value_template: !secret unify_ap_user_and_ip_bedroom

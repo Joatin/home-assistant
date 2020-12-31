@@ -151,6 +151,7 @@ homekit:
         - sensor.i_c_e_temperature_sensor_inside
         - sensor.i_c_e_mileage_sensor
 
+shell_command: !include shell_commands.yaml
 sensor: !include sensors.yaml
 media_player: !include media_players.yaml
 group: !include groups.yaml
@@ -158,6 +159,7 @@ automation: !include_dir_merge_list  automations/
 script: !include scripts.yaml
 scene: !include scenes.yaml
 zone: !include zones.yaml
+input_boolean: !include input_booleans.yaml
 
 home_connect:
   client_id: !secret bosch_client_id
