@@ -37,6 +37,7 @@ card:
                   max-width: 30em;
                 }
               entity: media_player.sonos_living_room
+              icon: mdi:speaker
         - type: horizontal-stack
           cards:
             - type: custom:mini-media-player
@@ -48,3 +49,4 @@ card:
                   max-width: 30em;
                 }
               entity: media_player.receiver
+              icon: mdi:audio-video
