@@ -1,4 +1,4 @@
 unifi_ap_bedroom_led_blue: >-
-  ssh IGx3qAaNy@192.168.1.10 -i config/id_rsa -o 'StrictHostKeyChecking=no' "echo '1' >/proc/gpio/led_pattern && sed -i '/mgmt.led_pattern_override/d' /var/etc/persistent/cfg/mgmt && echo 'mgmt.led_pattern_override=1' >> /var/etc/persistent/cfg/mgmt"
+  ssh IGx3qAaNy@192.168.1.10 -i /config/id_rsa -o 'StrictHostKeyChecking=no' "echo '1' >/proc/gpio/led_pattern && sed -i '/mgmt.led_pattern_override/d' /var/etc/persistent/cfg/mgmt && echo 'mgmt.led_pattern_override=1' >> /var/etc/persistent/cfg/mgmt"
 unifi_ap_bedroom_led_off: >-
-  ssh IGx3qAaNy@192.168.1.10 -i config/id_rsa -o 'StrictHostKeyChecking=no' "echo '0' >/proc/gpio/led_pattern && sed -i '/mgmt.led_pattern_override/d' /var/etc/persistent/cfg/mgmt && echo 'mgmt.led_pattern_override=0' >> /var/etc/persistent/cfg/mgmt"
+  ssh IGx3qAaNy@192.168.1.10 -i /config/id_rsa -o 'StrictHostKeyChecking=no' "echo '0' >/proc/gpio/led_pattern && sed -i '/mgmt.led_pattern_override/d' /var/etc/persistent/cfg/mgmt && echo 'mgmt.led_pattern_override=0' >> /var/etc/persistent/cfg/mgmt"
