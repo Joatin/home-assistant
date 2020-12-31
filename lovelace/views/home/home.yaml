@@ -33,3 +33,4 @@ cards:
               - !include section_lights.yaml
               - !include section_blinds.yaml
               - !include section_media.yaml
+              - !include section_car.yaml

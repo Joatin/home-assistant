@@ -120,12 +120,12 @@ card:
               - !include
                 - ../../components/button/button.yaml
                 - entity: input_boolean.unify_ap_bedroom_led
-                  title: AP Bedroom
+                  title: Bedroom
                   icon: mdi:album
           - type: horizontal-stack
             cards:
               - !include
                 - ../../components/button/button.yaml
                 - entity: input_boolean.unify_ap_living_room_led
-                  title: AP Bedroom
+                  title: Living
                   icon: mdi:album
