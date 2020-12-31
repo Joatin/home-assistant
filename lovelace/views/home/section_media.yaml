@@ -47,4 +47,4 @@ card:
                   overflow: hidden !important;
                   max-width: 30em;
                 }
-              entity: media_player.reciever
+              entity: media_player.receiver
