@@ -7,7 +7,7 @@
         - conditions:
             - condition: state
               entity_id: binary_sensor.fgdw002_door_opening_sensor_2_access_control_door_window_open
-              state: 'open'
+              state: 'Open'
           sequence:
             - service: light.turn_on
               data:
@@ -16,7 +16,7 @@
         - conditions:
             - condition: state
               entity_id: binary_sensor.fgdw002_door_opening_sensor_2_access_control_door_window_open
-              state: 'closed'
+              state: 'Closed'
           sequence:
             - service: light.turn_off
               data:
