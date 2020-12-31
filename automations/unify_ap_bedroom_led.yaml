@@ -7,13 +7,13 @@
         - conditions:
             - condition: state
               entity_id: input_boolean.unify_ap_bedroom_led
-              state: 'true'
+              state: 'on'
           sequence:
             - service: shell_command.unifi_ap_bedroom_led_blue
         - conditions:
             - condition: state
               entity_id: input_boolean.unify_ap_bedroom_led
-              state: 'false'
+              state: 'off'
           sequence:
             - service: shell_command.unifi_ap_bedroom_led_off
 - alias: Update unify ap bedroom led when state changes
@@ -25,13 +25,13 @@
         - conditions:
             - condition: state
               entity_id: input_boolean.unify_ap_bedroom_led
-              state: 'true'
+              state: 'on'
           sequence:
             - service: shell_command.unifi_ap_bedroom_led_blue
         - conditions:
             - condition: state
               entity_id: input_boolean.unify_ap_bedroom_led
-              state: 'false'
+              state: 'off'
           sequence:
             - service: shell_command.unifi_ap_bedroom_led_off
 - alias: Turn off unify ap bedroom led at night
