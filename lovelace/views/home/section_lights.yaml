@@ -44,6 +44,9 @@ card:
                   icon: mdi:lightbulb
     - type: custom:mod-card
       style: |
+        :host {
+          flex: none !important;
+        }
         ha-card {
           margin-right: 5em;
         }
