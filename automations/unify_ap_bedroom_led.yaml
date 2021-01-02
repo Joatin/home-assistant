@@ -39,7 +39,7 @@
     platform: time
     at: "23:00:00"
   action:
-    - service: input_boolean.turn_on
+    - service: input_boolean.turn_off
       data:
         entity_id: input_boolean.unify_ap_bedroom_led
 - alias: Turn on unify ap bedroom led at morning
@@ -47,6 +47,6 @@
     platform: time
     at: "06:00:00"
   action:
-    - service: input_boolean.turn_off
+    - service: input_boolean.turn_on
       data:
         entity_id: input_boolean.unify_ap_bedroom_led
