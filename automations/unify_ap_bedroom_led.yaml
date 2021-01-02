@@ -37,7 +37,7 @@
 - alias: Turn off unify ap bedroom led at night
   trigger:
     platform: time
-    at: "23:00"
+    at: "23:00:00"
   action:
     - service: input_boolean.turn_on
       data:
@@ -45,7 +45,7 @@
 - alias: Turn on unify ap bedroom led at morning
   trigger:
     platform: time
-    at: "06:00"
+    at: "06:00:00"
   action:
     - service: input_boolean.turn_off
       data:
