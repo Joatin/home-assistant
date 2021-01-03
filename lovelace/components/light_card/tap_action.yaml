@@ -35,8 +35,9 @@ service_data:
     settings: true
     settingsCard:
       type: custom:light-entity-card
-      entity: "{{ entity }}"
-      effects_list: false
+      cardOptions:
+        entity: "{{ entity }}"
+        effects_list: false
     sliderColoredByLight: true
     actions:
       - service: hue.hue_activate_scene
