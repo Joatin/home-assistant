@@ -32,6 +32,7 @@ service_data:
     entity: "{{ entity }}"
     actionSize: 75px
     actionsInARow: 6
+    settings: true
     sliderColoredByLight: true
     actions:
       - service: hue.hue_activate_scene

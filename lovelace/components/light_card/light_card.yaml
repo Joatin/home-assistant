@@ -4,7 +4,7 @@
 type: custom:button-card
 entity: "{{ entity }}"
 name: "{{ title }}"
-icon: mdi:lightbulb
+icon: "{{ icon or 'mdi:lightbulb' }}"
 show_state: true
 tap_action:
   !include
