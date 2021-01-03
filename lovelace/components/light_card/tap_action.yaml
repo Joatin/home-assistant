@@ -42,6 +42,8 @@ service_data:
         color_temp: true
         color_picker: true
         show_slider_percent: true
+        shorten_cards: true
+        hide_header: true
     sliderColoredByLight: true
     actions:
       - service: hue.hue_activate_scene
