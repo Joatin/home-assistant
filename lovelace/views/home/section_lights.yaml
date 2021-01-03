@@ -66,6 +66,7 @@ card:
                 - entity: light.bedroom
                   title: Bedroom
                   hue_room: Bedroom
+                  icon: mdi:bed-king
               - !include
                 - ../../components/light_card/light_card.yaml
                 - entity: light.closet
