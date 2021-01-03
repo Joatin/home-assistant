@@ -38,6 +38,10 @@ service_data:
       cardOptions:
         entity: "{{ entity }}"
         effects_list: false
+        brightness: true
+        color_temp: true
+        color_picker: true
+        show_slider_percent: true
     sliderColoredByLight: true
     actions:
       - service: hue.hue_activate_scene
