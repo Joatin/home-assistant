@@ -11,6 +11,7 @@ style: |
     display: block;
     overflow-x: auto;
     will-change: transform;
+    padding-bottom: .25em;
   }
   .card-header {
     margin: 0;
@@ -106,8 +107,11 @@ card:
                   hue_room: Staircase
     - type: custom:mod-card
       style: |
+        :host {
+          flex: none !important;
+        }
         ha-card {
-
+          margin-right: 5em;
         }
       card:
         type: vertical-stack
