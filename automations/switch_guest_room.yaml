@@ -8,7 +8,7 @@
   action:
     - service: light.turn_on
       data:
-        entity_id: light.hallway
+        entity_id: light.guest_room
 - alias: Switch guest room 'Off' press
   trigger:
     platform: event
@@ -19,7 +19,7 @@
   action:
     - service: light.turn_off
       data:
-        entity_id: light.hallway
+        entity_id: light.guest_room
 - alias: Switch guest room 'Off Hold' press
   trigger:
     platform: event
@@ -30,8 +30,8 @@
   action:
     - service: light.turn_on
       data:
-        entity_id: light.hallway
-        brightness: "{{ state_attr('light.hallway', 'brightness')|int - 25 }}"
+        entity_id: light.guest_room
+        brightness: "{{ state_attr('light.guest_room', 'brightness')|int - 25 }}"
 - alias: Switch guest room 'Off Hold End' press
   trigger:
     platform: event
@@ -42,8 +42,8 @@
   action:
     - service: light.turn_off
       data:
-        entity_id: light.hallway
-        brightness: "{{ state_attr('light.hallway', 'brightness')|int - 25 }}"
+        entity_id: light.guest_room
+        brightness: "{{ state_attr('light.guest_room', 'brightness')|int - 25 }}"
 - alias: Switch guest room 'On Hold' press
   trigger:
     platform: event
@@ -54,8 +54,8 @@
   action:
     - service: light.turn_on
       data:
-        entity_id: light.hallway
-        brightness: "{{ state_attr('light.hallway', 'brightness')|int + 25 }}"
+        entity_id: light.guest_room
+        brightness: "{{ state_attr('light.guest_room', 'brightness')|int + 25 }}"
 - alias: Switch guest room 'On Hold End' press
   trigger:
     platform: event
@@ -66,5 +66,5 @@
   action:
     - service: light.turn_off
       data:
-        entity_id: light.hallway
-        brightness: "{{ state_attr('light.hallway', 'brightness')|int + 25 }}"
+        entity_id: light.guest_room
+        brightness: "{{ state_attr('light.guest_room', 'brightness')|int + 25 }}"
