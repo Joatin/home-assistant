@@ -1,5 +1,6 @@
 # Button 1
 - alias: Wallmote bedroom button 1 'Single Tap'
+  mode: restart
   trigger:
     platform: event
     event_type: ozw.scene_activated
@@ -12,6 +13,7 @@
       data:
         entity_id: light.bedroom
 - alias: Wallmote bedroom button 1 'Hold'
+  mode: restart
   trigger:
     platform: event
     event_type: ozw.scene_activated
@@ -25,6 +27,7 @@
         entity_id: light.bedroom
 #Button 2
 - alias: Wallmote bedroom button 2 'Single Tap'
+  mode: restart
   trigger:
     platform: event
     event_type: ozw.scene_activated
@@ -38,6 +41,7 @@
         entity_id: cover.tradfri_blind
 #Button 4
 - alias: Wallmote bedroom button 4 'Single Tap'
+  mode: restart
   trigger:
     platform: event
     event_type: ozw.scene_activated
