@@ -1,0 +1,33 @@
+# lovelace_gen
+---
+
+type: custom:button-card
+name: "{{ title }}"
+icon: "{{ icon }}"
+show_state: true
+tap_action:
+  action: call-service
+  service: "{{ service }}"
+  service_data: "{{ service_data }}"
+styles:
+  card:
+    - width: 100px
+    - height: 100px
+    - box-shadow: none
+    - background-color: rgba(255, 255, 255, 1)
+    - backdrop-filter: blur(5px)
+    - color: black
+  grid:
+    - grid-template-areas: '"i" "n" "s"'
+    - grid-template-columns: 1fr
+    - grid-template-rows: 1fr min-content min-content
+  img_cell:
+    - align-self: start
+    - text-align: start
+  name:
+    - justify-self: start
+    - padding-left: 10px
+    - font-weight: bold
+  state:
+    - justify-self: start
+    - padding-left: 10px

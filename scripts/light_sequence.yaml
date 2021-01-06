@@ -1,54 +1,54 @@
 ---
-
-alias: Light Sequence
-icon: mdi:bulb
-description: |
-  Flashes the lights in the provided sequence. Afterwards it
-  restores the lights to their previous state.
-mode: queued
-max: 5
-fields:
-  color:
-    description: The color to cycle through
-    example: blue
-  entity_id:
-    description: The lights that should be affected
-sequence:
-  - service: scene.create
-    data:
-      scene_id: light_sequence_before
-      snapshot_entities: "{{ entity_id }}"
-  - service: light.turn_on
-    data:
-      entity_id: "{{ entity_id }}"
-      color_name: "{{ color }}"
-      brightness: 255
-  - delay:
-      milliseconds: 200
-  - service: scene.turn_on
-    data:
-      entity_id: scene.light_sequence_before
-  - delay:
-      milliseconds: 300
-  - service: light.turn_on
-    data:
-      entity_id: "{{ entity_id }}"
-      color_name: "{{ color }}"
-      brightness: 255
-  - delay:
-      milliseconds: 200
-  - service: scene.turn_on
-    data:
-      entity_id: scene.light_sequence_before
-  - delay:
-      milliseconds: 300
-  - service: light.turn_on
-    data:
-      entity_id: "{{ entity_id }}"
-      color_name: "{{ color }}"
-      brightness: 255
-  - delay:
-      milliseconds: 200
-  - service: scene.turn_on
-    data:
-      entity_id: scene.light_sequence_before
+light_sequence:
+  alias: Light Sequence
+  icon: mdi:bulb
+  description: |
+    Flashes the lights in the provided sequence. Afterwards it
+    restores the lights to their previous state.
+  mode: queued
+  max: 5
+  fields:
+    color:
+      description: The color to cycle through
+      example: blue
+    entity_id:
+      description: The lights that should be affected
+  sequence:
+    - service: scene.create
+      data:
+        scene_id: light_sequence_before
+        snapshot_entities: "{{ entity_id }}"
+    - service: light.turn_on
+      data:
+        entity_id: "{{ entity_id }}"
+        color_name: "{{ color }}"
+        brightness: 255
+    - delay:
+        milliseconds: 200
+    - service: scene.turn_on
+      data:
+        entity_id: scene.light_sequence_before
+    - delay:
+        milliseconds: 300
+    - service: light.turn_on
+      data:
+        entity_id: "{{ entity_id }}"
+        color_name: "{{ color }}"
+        brightness: 255
+    - delay:
+        milliseconds: 200
+    - service: scene.turn_on
+      data:
+        entity_id: scene.light_sequence_before
+    - delay:
+        milliseconds: 300
+    - service: light.turn_on
+      data:
+        entity_id: "{{ entity_id }}"
+        color_name: "{{ color }}"
+        brightness: 255
+    - delay:
+        milliseconds: 200
+    - service: scene.turn_on
+      data:
+        entity_id: scene.light_sequence_before

@@ -1,0 +1,10 @@
+---
+
+turn_on_lights:
+  alias: Turn on lights
+  icon: mdi:bulb
+  description: |
+    Turns on all lights at home (with some exceptions)
+  sequence:
+    - service: light.turn_on
+      entity_id: light.kitchen,light.hallway,light.staircase,light.office,light.bedroom,light.closet,light.guest_room

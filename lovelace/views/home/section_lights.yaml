@@ -44,6 +44,36 @@ card:
                 - entity: group.all_light_entities
                   title: All Lights
                   icon: mdi:lightbulb
+              - !include
+                - ../../components/button/button.yaml
+                - service: script.turn_on_light_scene
+                  title: All Bright
+                  icon: mdi:lightbulb
+                  service_data:
+                    scene_name: Bright
+              - !include
+                - ../../components/button/button.yaml
+                - service: script.turn_on_light_scene
+                  title: All Tropical
+                  icon: mdi:lightbulb
+                  service_data:
+                    scene_name: Tropical twilight
+          - type: horizontal-stack
+            cards:
+              - !include
+                - ../../components/button/button.yaml
+                - service: script.turn_on_light_scene
+                  title: All Concentrate
+                  icon: mdi:lightbulb
+                  service_data:
+                    scene_name: Concentrate
+              - !include
+                - ../../components/button/button.yaml
+                - service: script.turn_on_light_scene
+                  title: All Dimmed
+                  icon: mdi:lightbulb
+                  service_data:
+                    scene_name: Dimmed
     - type: custom:mod-card
       style: |
         :host {
@@ -111,7 +141,7 @@ card:
                 - entity: light.staircase
                   title: Staircase
                   hue_room: Staircase
-                  icon: mdi:stairs
+                  icon: mdi:stairs-up
     - type: custom:mod-card
       style: |
         :host {

@@ -1,0 +1,44 @@
+---
+
+turn_on_light_scene:
+  alias: Turn on lights
+  icon: mdi:bulb
+  description: |
+    Turns on scene for all lights at home (with some exceptions)
+  fields:
+    scene_name:
+      description: The scene to turn on
+      example: Bright
+  sequence:
+    - service: hue.hue_activate_scene
+      data_template:
+        group_name: "Kitchen"
+        scene_name: "{{ scene_name }}"
+    - service: hue.hue_activate_scene
+      data_template:
+        group_name: "Hallway"
+        scene_name: "{{ scene_name }}"
+    - service: hue.hue_activate_scene
+      data_template:
+        group_name: "Staircase"
+        scene_name: "{{ scene_name }}"
+    - service: hue.hue_activate_scene
+      data_template:
+        group_name: "Living Room"
+        scene_name: "{{ scene_name }}"
+    - service: hue.hue_activate_scene
+      data_template:
+        group_name: "Office"
+        scene_name: "{{ scene_name }}"
+    - service: hue.hue_activate_scene
+      data_template:
+        group_name: "Guest Room"
+        scene_name: "{{ scene_name }}"
+    - service: hue.hue_activate_scene
+      data_template:
+        group_name: "Bedroom"
+        scene_name: "{{ scene_name }}"
+    - service: hue.hue_activate_scene
+      data_template:
+        group_name: "Closet"
+        scene_name: "{{ scene_name }}"

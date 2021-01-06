@@ -1,9 +1,10 @@
 ---
 
-alias: Turn off lights
-icon: mdi:bulb
-description: |
-  Turns off all lights at home (with some exceptions)
-sequence:
-  - service: light.turn_off
-    entity_id: light.kitchen_2a,light.kitchen_2b,light.kitchen_2c,light.kitchen_3a,light.kitchen_3b,light.kitchen_3c,light.hallway,light.staircase,light.office,light.bedroom,light.closet,light.guest_room
+turn_off_lights:
+  alias: Turn off lights
+  icon: mdi:bulb
+  description: |
+    Turns off all lights at home (with some exceptions)
+  sequence:
+    - service: light.turn_off
+      entity_id: light.kitchen_1,light.kitchen_2a,light.kitchen_2b,light.kitchen_2c,light.kitchen_3a,light.kitchen_3b,light.kitchen_3c,light.hallway,light.staircase,light.office,light.bedroom,light.closet,light.guest_room
