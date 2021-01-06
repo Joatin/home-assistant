@@ -45,14 +45,14 @@ card:
                   title: All Lights
                   icon: mdi:lightbulb
               - !include
-                - ../../components/button/button.yaml
+                - ../../components/light_scene_button/light_scene_button.yaml
                 - service: script.turn_on_light_scene
                   title: All Bright
                   icon: mdi:lightbulb
                   service_data:
                     scene_name: Bright
               - !include
-                - ../../components/button/button.yaml
+                - ../../components/light_scene_button/light_scene_button.yaml
                 - service: script.turn_on_light_scene
                   title: All Tropical
                   icon: mdi:lightbulb
@@ -61,14 +61,14 @@ card:
           - type: horizontal-stack
             cards:
               - !include
-                - ../../components/button/button.yaml
+                - ../../components/light_scene_button/light_scene_button.yaml
                 - service: script.turn_on_light_scene
                   title: All Concentrate
                   icon: mdi:lightbulb
                   service_data:
                     scene_name: Concentrate
               - !include
-                - ../../components/button/button.yaml
+                - ../../components/light_scene_button/light_scene_button.yaml
                 - service: script.turn_on_light_scene
                   title: All Dimmed
                   icon: mdi:lightbulb
