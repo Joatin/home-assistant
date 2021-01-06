@@ -39,6 +39,20 @@
     - service: cover.toggle
       data:
         entity_id: cover.tradfri_blind
+#Button 3
+- alias: Wallmote bedroom button 3 'Single Tap'
+  mode: restart
+  trigger:
+    platform: event
+    event_type: ozw.scene_activated
+    event_data:
+      instance_id: 1
+      scene_id: 3
+      scene_value_label: "Pressed 1 Time"
+  action:
+    - service: media_player.media_play_pause
+      data:
+        entity_id: media_player.sonos_living_room
 #Button 4
 - alias: Wallmote bedroom button 4 'Single Tap'
   mode: restart
