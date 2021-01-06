@@ -7,8 +7,9 @@ icon: "{{ icon }}"
 show_state: true
 tap_action:
   action: call-service
-  service: "{{ service }}"
-  service_data: "{{ service_data }}"
+  service: script.turn_on_light_scene
+  service_data:
+    scene_name: "{{ scene_name }}"
 styles:
   card:
     - width: 100px

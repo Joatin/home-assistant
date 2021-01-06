@@ -46,34 +46,26 @@ card:
                   icon: mdi:lightbulb
               - !include
                 - ../../components/light_scene_button/light_scene_button.yaml
-                - service: script.turn_on_light_scene
-                  title: All Bright
-                  icon: mdi:lightbulb
-                  service_data:
-                    scene_name: Bright
+                - title: All Bright
+                  icon: mdi:brightness-7
+                  scene_name: Bright
               - !include
                 - ../../components/light_scene_button/light_scene_button.yaml
-                - service: script.turn_on_light_scene
-                  title: All Tropical
-                  icon: mdi:lightbulb
-                  service_data:
-                    scene_name: Tropical twilight
+                - title: All Tropical
+                  icon: mdi:palm-tree
+                  scene_name: Tropical twilight
           - type: horizontal-stack
             cards:
               - !include
                 - ../../components/light_scene_button/light_scene_button.yaml
-                - service: script.turn_on_light_scene
-                  title: All Concentrate
-                  icon: mdi:lightbulb
-                  service_data:
-                    scene_name: Concentrate
+                - title: All Concentrate
+                  icon: mdi:brightness-5
+                  scene_name: Concentrate
               - !include
                 - ../../components/light_scene_button/light_scene_button.yaml
-                - service: script.turn_on_light_scene
-                  title: All Dimmed
-                  icon: mdi:lightbulb
-                  service_data:
-                    scene_name: Dimmed
+                - title: All Dimmed
+                  icon: mdi:brightness-6
+                  scene_name: Dimmed
     - type: custom:mod-card
       style: |
         :host {
