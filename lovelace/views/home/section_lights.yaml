@@ -46,24 +46,24 @@ card:
                   icon: mdi:lightbulb
               - !include
                 - ../../components/light_scene_button/light_scene_button.yaml
-                - title: All Bright
+                - title: Bright
                   icon: mdi:brightness-7
                   scene_name: Bright
               - !include
                 - ../../components/light_scene_button/light_scene_button.yaml
-                - title: All Tropical
+                - title: Tropical
                   icon: mdi:palm-tree
                   scene_name: Tropical twilight
           - type: horizontal-stack
             cards:
               - !include
                 - ../../components/light_scene_button/light_scene_button.yaml
-                - title: All Concentrate
+                - title: Concentrate
                   icon: mdi:brightness-5
                   scene_name: Concentrate
               - !include
                 - ../../components/light_scene_button/light_scene_button.yaml
-                - title: All Dimmed
+                - title: Dimmed
                   icon: mdi:brightness-6
                   scene_name: Dimmed
     - type: custom:mod-card
