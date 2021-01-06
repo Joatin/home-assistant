@@ -73,16 +73,19 @@ card:
                 - entity: light.closet
                   title: Closet
                   hue_room: Closet
+                  icon: mdi:wardrobe
               - !include
                 - ../../components/light_card/light_card.yaml
                 - entity: light.office
                   title: Office
                   hue_room: Office
+                  icon: mdi:chair-rolling
               - !include
                 - ../../components/light_card/light_card.yaml
                 - entity: light.guest_room
                   title: Guest
                   hue_room: Guest Room
+                  icon: mdi:bed
           - type: horizontal-stack
             cards:
               - !include
@@ -90,21 +93,25 @@ card:
                 - entity: light.kitchen
                   title: Kitchen
                   hue_room: Kitchen
+                  icon: mdi:silverware-fork-knife
               - !include
                 - ../../components/light_card/light_card.yaml
                 - entity: light.hallway
                   title: Hallway
                   hue_room: Hallway
+                  icon: mdi:hanger
               - !include
                 - ../../components/light_card/light_card.yaml
                 - entity: light.living_room
                   title: Living
                   hue_room: Living Room
+                  icon: mdi:theater
               - !include
                 - ../../components/light_card/light_card.yaml
                 - entity: light.staircase
                   title: Staircase
                   hue_room: Staircase
+                  icon: mdi:stairs
     - type: custom:mod-card
       style: |
         :host {
