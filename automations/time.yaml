@@ -1,0 +1,50 @@
+# TIME: These automations fires events at important time intervals
+
+- alias: Fire WAKEUP event
+  trigger:
+    platform: time
+    at: "07:00:00"
+  action:
+    event: TIME_EVENT
+    event_data:
+      time: WAKEUP
+- alias: Fire MORNING event
+  trigger:
+    platform: time
+    at: "07:00:00"
+  action:
+    event: TIME_EVENT
+    event_data:
+      time: MORNING
+- alias: Fire LUNCH event
+  trigger:
+    platform: time
+    at: "11:00:00"
+  action:
+    event: TIME_EVENT
+    event_data:
+      time: LUNCH
+- alias: Fire EVENING event
+  trigger:
+    platform: time
+    at: "18:00:00"
+  action:
+    event: TIME_EVENT
+    event_data:
+      time: EVENING
+- alias: Fire NIGHT event
+  trigger:
+    platform: time
+    at: "20:00:00"
+  action:
+    event: TIME_EVENT
+    event_data:
+      time: NIGHT
+- alias: Fire MIDNIGHT event
+  trigger:
+    platform: time
+    at: "23:00:00"
+  action:
+    event: TIME_EVENT
+    event_data:
+      time: MIDNIGHT
