@@ -1,0 +1,26 @@
+- id: guest_room_time_wakeup_light
+  alias: 'GUEST_ROOM: Turn on the lights when it is WAKEUP'
+  use_blueprint:
+    path: activate_hue_scene_at_time.yaml
+    input:
+      time: WAKEUP
+      room: Guest Room
+      scene: Bright
+- id: guest_room_time_evening_light
+  alias: 'GUEST_ROOM: Set the lights to tropical twilight when it is EVENING'
+  use_blueprint:
+    path: activate_hue_scene_at_time_if_already_on.yaml
+    input:
+      time: EVENING
+      room: Guest Room
+      scene: Tropical twilight
+      light: light.office
+- id: guest_room_time_night_light
+  alias: 'GUEST_ROOM: Set the lights to tropical twilight when it is NIGHT'
+  use_blueprint:
+    path: activate_hue_scene_at_time_if_already_on.yaml
+    input:
+      time: NIGHT
+      room: Guest Room
+      scene: Dimmed
+      light: light.office
