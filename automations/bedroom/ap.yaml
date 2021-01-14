@@ -1,0 +1,22 @@
+- id: bedroom_sync_ap_light_on_state_change
+  alias: "BEDROOM: Update unify ap bedroom led when state changes"
+  trigger:
+    platform: state
+    entity_id: input_boolean.unify_ap_bedroom_led
+  action:
+    service: script.sync_ap_led_light
+    data:
+      input_boolean: input_boolean.unify_ap_bedroom_led
+      turn_on_command: shell_command.unifi_ap_bedroom_led_blue
+      turn_off_command: shell_command.unifi_ap_bedroom_led_off
+- id: bedroom_sync_ap_light_on_restart
+  alias: "BEDROOM: Update unify ap bedroom led when home assistant restarts"
+  trigger:
+    platform: homeassistant
+    event: start
+  action:
+    service: script.sync_ap_led_light
+    data:
+      input_boolean: input_boolean.unify_ap_bedroom_led
+      turn_on_command: shell_command.unifi_ap_bedroom_led_blue
+      turn_off_command: shell_command.unifi_ap_bedroom_led_off

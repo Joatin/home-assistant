@@ -17,6 +17,12 @@ trigger:
   event_type: time_event
   event_data:
     time: !input time
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: !input light
+      state: 'on'
 action:
   service: hue.hue_activate_scene
   data_template:

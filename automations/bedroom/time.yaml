@@ -6,6 +6,17 @@
       time: MORNING
       room: Bedroom
       scene: Bright
+- id: bedroom_time_morning_ap_led
+  alias: 'BEDROOM: Turn on AP led when it is MORNING'
+  trigger:
+    platform: event
+    event_type: time_event
+    event_data:
+      time: MORNING
+  action:
+    - service: input_boolean.turn_on
+      data:
+        entity_id: input_boolean.unify_ap_bedroom_led
 - id: bedroom_closet_time_morning_light
   alias: 'BEDROOM: Turn on the lights in closet when it is MORNING'
   use_blueprint:
@@ -32,3 +43,25 @@
       room: Closet
       scene: Tropical twilight
       light: light.closet
+- id: bedroom_time_midnight_ap_led
+  alias: 'BEDROOM: Turn off AP led when it is MIDNIGHT'
+  trigger:
+    platform: event
+    event_type: time_event
+    event_data:
+      time: MIDNIGHT
+    action:
+      - service: input_boolean.turn_off
+        data:
+          entity_id: input_boolean.unify_ap_bedroom_led
+- id: bedroom_time_goodnight_ap_led
+  alias: 'BEDROOM: Turn off AP led when it is GOODNIGHT'
+  trigger:
+    platform: event
+    event_type: time_event
+    event_data:
+      time: GOODNIGHT
+    action:
+      - service: input_boolean.turn_off
+        data:
+          entity_id: input_boolean.unify_ap_bedroom_led
