@@ -1,0 +1,34 @@
+- id: hallway_time_wakeup_light
+  alias: 'HALLWAY: Turn on the lights when it is WAKEUP'
+  use_blueprint:
+    path: activate_hue_scene_at_time.yaml
+    input:
+      time: WAKEUP
+      room: Hallway
+      scene: Bright
+- id: hallway_time_morning_light
+  alias: 'HALLWAY: Turn on the lights when it is MORNING'
+  use_blueprint:
+    path: activate_hue_scene_at_time.yaml
+    input:
+      time: MORNING
+      room: Hallway
+      scene: Bright
+- id: hallway_time_evening_light
+  alias: 'HALLWAY: Set the lights to tropical twilight when it is EVENING'
+  use_blueprint:
+    path: activate_hue_scene_at_time_if_already_on.yaml
+    input:
+      time: EVENING
+      room: Hallway
+      scene: Tropical twilight
+      light: light.hallway
+- id: hallway_time_night_light
+  alias: 'HALLWAY: Set the lights to dimmed when it is NIGHT'
+  use_blueprint:
+    path: activate_hue_scene_at_time_if_already_on.yaml
+    input:
+      time: NIGHT
+      room: Hallway
+      scene: Dimmed
+      light: light.hallway

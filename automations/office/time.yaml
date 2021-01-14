@@ -16,7 +16,7 @@
       scene: Tropical twilight
       light: light.office
 - id: office_time_night_light
-  alias: 'OFFICE: Set the lights to tropical twilight when it is NIGHT'
+  alias: 'OFFICE: Set the lights to dimmed when it is NIGHT'
   use_blueprint:
     path: activate_hue_scene_at_time_if_already_on.yaml
     input:
