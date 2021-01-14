@@ -10,13 +10,13 @@ blueprint:
     scene:
       name: Hue Scene
       description: The hue scene to set
-  trigger:
-    platform: event
-    event_type: time_event
-    event_data:
-      time: !input time
-  action:
-    service: hue.hue_activate_scene
-    data_template:
-      group_name: !input room
-      scene_name: !input scene
+trigger:
+  platform: event
+  event_type: time_event
+  event_data:
+    time: !input time
+action:
+  service: hue.hue_activate_scene
+  data_template:
+    group_name: !input room
+    scene_name: !input scene
