@@ -1,0 +1,22 @@
+blueprint:
+  name: Turns on a hue scene when a time event occurs
+  description: Turns on a hue scene when a time event occurs
+  domain: automation
+  input:
+    time:
+    room:
+      name: Hue Room
+      description: The hue group name to change the scene within
+    scene:
+      name: Hue Scene
+      description: The hue scene to set
+  trigger:
+    platform: event
+    event_type: time_event
+    event_data:
+      time: !input time
+  action:
+    service: hue.hue_activate_scene
+    data_template:
+      group_name: !input room
+      scene_name: !input scene
