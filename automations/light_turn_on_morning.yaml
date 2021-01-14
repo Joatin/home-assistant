@@ -1,8 +1,0 @@
-- alias: Turn on lights in the morning
-  trigger:
-    platform: time
-    at: "07:00:00"
-  action:
-    service: script.turn_on_light_scene
-    data:
-      scene_name: Concentrate

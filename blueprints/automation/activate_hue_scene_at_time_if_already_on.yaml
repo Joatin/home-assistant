@@ -1,5 +1,5 @@
 blueprint:
-  name: Turn on a hue scene when a time event occurs
+  name: Turn on a hue scene when a time event occurs if the lights are already on
   domain: automation
   input:
     time:
@@ -9,6 +9,9 @@ blueprint:
     scene:
       name: Hue Scene
       description: The hue scene to set
+    light:
+      name: Light
+      description: The light to check whether this room is already lit
 trigger:
   platform: event
   event_type: time_event

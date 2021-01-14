@@ -1,4 +1,4 @@
-- alias: Change storage light when door open/closes
+- alias: "STORAGE: Change storage light when door open/closes"
   trigger:
     platform: state
     entity_id: binary_sensor.fgdw002_door_opening_sensor_2_access_control_door_window_open

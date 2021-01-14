@@ -1,4 +1,4 @@
-- alias: Turn on lights in closet when there is motion
+- alias: "BEDROOM: Turn on lights in closet when there is motion"
   trigger:
     platform: state
     entity_id: binary_sensor.closet_sensor_motion
@@ -20,7 +20,7 @@
           - 240
           - 198
         brightness: 255
-- alias: Turn off lights in closet when there is no motion
+- alias: "BEDROOM: Turn off lights in closet when there is no motion"
   trigger:
     platform: state
     entity_id: binary_sensor.closet_sensor_motion

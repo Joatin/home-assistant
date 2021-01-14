@@ -1,9 +1,26 @@
 - id: office_time_wakeup_light
-  alias: 'Office - Turn on the lights when it is time to WAKEUP'
-  description: 'Set the lights to bright when it is time to wake up'
+  alias: 'OFFICE: Turn on the lights when it is WAKEUP'
   use_blueprint:
     path: activate_hue_scene_at_time.yaml
     input:
       time: WAKEUP
       room: Office
       scene: Bright
+- id: office_time_evening_light
+  alias: 'OFFICE: Set the lights to tropical twilight when it is EVENING'
+  use_blueprint:
+    path: activate_hue_scene_at_time_if_already_on.yaml
+    input:
+      time: EVENING
+      room: Office
+      scene: Tropical twilight
+      light: light.office
+- id: office_time_night_light
+  alias: 'OFFICE: Set the lights to tropical twilight when it is NIGHT'
+  use_blueprint:
+    path: activate_hue_scene_at_time_if_already_on.yaml
+    input:
+      time: NIGHT
+      room: Office
+      scene: Dimmed
+      light: light.office

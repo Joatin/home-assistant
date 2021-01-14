@@ -1,0 +1,34 @@
+- id: bedroom_time_morning_light
+  alias: 'BEDROOM: Turn on the lights when it is MORNING'
+  use_blueprint:
+    path: activate_hue_scene_at_time.yaml
+    input:
+      time: MORNING
+      room: Bedroom
+      scene: Bright
+- id: bedroom_closet_time_morning_light
+  alias: 'BEDROOM: Turn on the lights in closet when it is MORNING'
+  use_blueprint:
+    path: activate_hue_scene_at_time.yaml
+    input:
+      time: MORNING
+      room: Closet
+      scene: Bright
+- id: bedroom_time_evening_light
+  alias: 'BEDROOM: Set the lights to tropical twilight when it is LUNCH'
+  use_blueprint:
+    path: activate_hue_scene_at_time_if_already_on.yaml
+    input:
+      time: LUNCH
+      room: Bedroom
+      scene: Tropical twilight
+      light: light.bedroom
+- id: bedroom_closet_time_evening_light
+  alias: 'BEDROOM: Set the lights in closet to tropical twilight when it is LUNCH'
+  use_blueprint:
+    path: activate_hue_scene_at_time_if_already_on.yaml
+    input:
+      time: LUNCH
+      room: Closet
+      scene: Tropical twilight
+      light: light.closet
