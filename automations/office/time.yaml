@@ -1,0 +1,13 @@
+- id: office_time_wakeup_light
+  alias: 'Office - Turn on the lights when it is time to WAKEUP'
+  description: 'Set the lights to bright when it is time to wake up'
+  trigger:
+    platform: event
+    event_type: time_event
+    event_data:
+      time: WAKEUP
+  action:
+    service: hue.hue_activate_scene
+    data_template:
+      group_name: "Office"
+      scene_name: "Bright"
