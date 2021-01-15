@@ -5,7 +5,7 @@
     platform: time
     at: "07:00:00"
   action:
-    event: TIME_EVENT
+    event: time_event
     event_data:
       time: WAKEUP
 - alias: Fire MORNING event
@@ -13,7 +13,7 @@
     platform: time
     at: "07:00:00"
   action:
-    event: TIME_EVENT
+    event: time_event
     event_data:
       time: MORNING
 - alias: Fire LUNCH event
@@ -21,7 +21,7 @@
     platform: time
     at: "11:00:00"
   action:
-    event: TIME_EVENT
+    event: time_event
     event_data:
       time: LUNCH
 - alias: Fire EVENING event
@@ -29,7 +29,7 @@
     platform: time
     at: "18:00:00"
   action:
-    event: TIME_EVENT
+    event: time_event
     event_data:
       time: EVENING
 - alias: Fire NIGHT event
@@ -37,7 +37,7 @@
     platform: time
     at: "20:00:00"
   action:
-    event: TIME_EVENT
+    event: time_event
     event_data:
       time: NIGHT
 - alias: Fire MIDNIGHT event
@@ -45,6 +45,6 @@
     platform: time
     at: "23:00:00"
   action:
-    event: TIME_EVENT
+    event: time_event
     event_data:
       time: MIDNIGHT
