@@ -1,7 +1,7 @@
 - alias: "BEDROOM: Turn on lights in closet when there is motion"
   trigger:
     platform: state
-    entity_id: binary_sensor.closet_sensor_motion
+    entity_id: binary_sensor.closet_motion_sensor
     to: 'on'
   condition:
     condition: and
@@ -23,9 +23,9 @@
 - alias: "BEDROOM: Turn off lights in closet when there is no motion"
   trigger:
     platform: state
-    entity_id: binary_sensor.closet_sensor_motion
+    entity_id: binary_sensor.closet_motion_sensor
     to: 'off'
-    for: '00:00:15'
+    for: '00:00:03'
   action:
     - service: scene.turn_on
       data:
