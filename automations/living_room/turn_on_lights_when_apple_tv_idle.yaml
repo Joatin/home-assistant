@@ -1,0 +1,10 @@
+- alias: "LIVING_ROOM: Turn on lights when apple tv is idle"
+  trigger:
+    platform: state
+    entity_id: media_player.living_room_2
+    to: 'idle'
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: light.living_room
+        brightness: 1
