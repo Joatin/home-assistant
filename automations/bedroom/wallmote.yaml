@@ -1,6 +1,5 @@
 # Button 1
 - alias: "BEDROOM: Wallmote bedroom button 1 'Single Tap'"
-  mode: restart
   trigger:
     platform: event
     event_type: ozw.scene_activated
@@ -9,9 +8,129 @@
       scene_id: 1
       scene_value_label: "Pressed 1 Time"
   action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Bedroom
+        scene_name: Bright
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Closet
+        scene_name: Bright
     - service: light.turn_on
       data:
+        entity_id: light.closet
+        brightness: 150
+    - wait_for_trigger:
+        - platform: event
+          event_type: ozw.scene_activated
+          event_data:
+            instance_id: 1
+            scene_id: 1
+            scene_value_label: "Pressed 1 Time"
+      timeout: 00:00:03
+      continue_on_timeout: false
+    - service: light.turn_off
+      data:
         entity_id: light.bedroom
+    - service: light.turn_off
+      data:
+        entity_id: light.closet
+- alias: "BEDROOM: Wallmote bedroom button 2 'Single Tap'"
+  trigger:
+    platform: event
+    event_type: ozw.scene_activated
+    event_data:
+      instance_id: 1
+      scene_id: 2
+      scene_value_label: "Pressed 1 Time"
+  action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Bedroom
+        scene_name: Tropical twilight
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Closet
+        scene_name: Tropical twilight
+    - wait_for_trigger:
+        - platform: event
+          event_type: ozw.scene_activated
+          event_data:
+            instance_id: 1
+            scene_id: 2
+            scene_value_label: "Pressed 1 Time"
+      timeout: 00:00:03
+      continue_on_timeout: false
+    - service: light.turn_off
+      data:
+        entity_id: light.bedroom
+    - service: light.turn_off
+      data:
+        entity_id: light.closet
+- alias: "BEDROOM: Wallmote bedroom button 3 'Single Tap'"
+  trigger:
+    platform: event
+    event_type: ozw.scene_activated
+    event_data:
+      instance_id: 1
+      scene_id: 3
+      scene_value_label: "Pressed 1 Time"
+  action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Bedroom
+        scene_name: Savanna sunset
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Closet
+        scene_name: Savanna sunset
+    - wait_for_trigger:
+        - platform: event
+          event_type: ozw.scene_activated
+          event_data:
+            instance_id: 1
+            scene_id: 3
+            scene_value_label: "Pressed 1 Time"
+      timeout: 00:00:03
+      continue_on_timeout: false
+    - service: light.turn_off
+      data:
+        entity_id: light.bedroom
+    - service: light.turn_off
+      data:
+        entity_id: light.closet
+- alias: "BEDROOM: Wallmote bedroom button 4 'Single Tap'"
+  trigger:
+    platform: event
+    event_type: ozw.scene_activated
+    event_data:
+      instance_id: 1
+      scene_id: 4
+      scene_value_label: "Pressed 1 Time"
+  action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Bedroom
+        scene_name: Spring blossom
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Closet
+        scene_name: Spring blossom
+    - wait_for_trigger:
+        - platform: event
+          event_type: ozw.scene_activated
+          event_data:
+            instance_id: 1
+            scene_id: 4
+            scene_value_label: "Pressed 1 Time"
+      timeout: 00:00:03
+      continue_on_timeout: false
+    - service: light.turn_off
+      data:
+        entity_id: light.bedroom
+    - service: light.turn_off
+      data:
+        entity_id: light.closet
 - alias: "BEDROOM: Wallmote bedroom button 1 'Hold'"
   mode: restart
   trigger:
@@ -22,48 +141,9 @@
       scene_id: 1
       scene_value_label: "Key Held down"
   action:
-    - service: light.turn_off
-      data:
-        entity_id: light.bedroom
-#Button 2
-- alias: "BEDROOM: Wallmote bedroom button 2 'Single Tap'"
-  mode: restart
-  trigger:
-    platform: event
-    event_type: ozw.scene_activated
-    event_data:
-      instance_id: 1
-      scene_id: 2
-      scene_value_label: "Pressed 1 Time"
-  action:
     - service: cover.toggle
       data:
         entity_id: cover.tradfri_blind
 #Button 3
-- alias: "BEDROOM: Wallmote bedroom button 3 'Single Tap'"
-  mode: restart
-  trigger:
-    platform: event
-    event_type: ozw.scene_activated
-    event_data:
-      instance_id: 1
-      scene_id: 3
-      scene_value_label: "Pressed 1 Time"
-  action:
-    - service: media_player.media_play_pause
-      data:
-        entity_id: media_player.sonos_living_room
+
 #Button 4
-- alias: "BEDROOM: Wallmote bedroom button 4 'Single Tap'"
-  mode: restart
-  trigger:
-    platform: event
-    event_type: ozw.scene_activated
-    event_data:
-      instance_id: 1
-      scene_id: 4
-      scene_value_label: "Pressed 1 Time"
-  action:
-    - service: homeassistant.toggle
-      data:
-        entity_id: group.all_light_entities
