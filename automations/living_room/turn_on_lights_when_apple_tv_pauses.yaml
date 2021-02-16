@@ -4,7 +4,6 @@
     entity_id: media_player.living_room_2
     to: 'playing'
   action:
-    - service: scene.create
     - service: light.turn_off
       data:
         entity_id: light.living_room
