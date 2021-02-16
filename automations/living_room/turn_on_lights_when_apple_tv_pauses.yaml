@@ -1,0 +1,26 @@
+- alias: "LIVING_ROOM: Turn on lights when apple tv is paused"
+  trigger:
+    platform: state
+    entity_id: media_player.living_room_2
+    to: 'playing'
+  action:
+    - service: scene.create
+    - service: light.turn_off
+      data:
+        entity_id: light.living_room
+    - service: light.turn_on
+      data:
+        entity_id: light.color_temperature_light_1
+        brightness: 1
+    - service: light.turn_on
+      data:
+        entity_id: light.color_temperature_light_1_2
+        brightness: 1
+    - service: light.turn_on
+      data:
+        entity_id: light.color_temperature_light_1_16
+        brightness: 1
+    - service: light.turn_on
+      data:
+        entity_id: light.color_temperature_light_1_17
+        brightness: 1
