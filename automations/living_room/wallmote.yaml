@@ -1,0 +1,104 @@
+# Button 1
+- alias: "LIVING_ROOM: Wallmote bedroom button 1 'Single Tap'"
+  trigger:
+    platform: event
+    event_type: ozw.scene_activated
+    event_data:
+      node_id: 9
+      scene_id: 1
+      scene_value_label: "Pressed 1 Time"
+  action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Living Room
+        scene_name: Concentrate
+    - wait_for_trigger:
+        - platform: event
+          event_type: ozw.scene_activated
+          event_data:
+            node_id: 9
+            scene_id: 1
+            scene_value_label: "Pressed 1 Time"
+      timeout: 00:00:03
+      continue_on_timeout: false
+    - service: light.turn_off
+      data:
+        entity_id: light.living_room
+# Button 2
+- alias: "LIVING_ROOM: Wallmote bedroom button 2 'Single Tap'"
+  trigger:
+    platform: event
+    event_type: ozw.scene_activated
+    event_data:
+      node_id: 9
+      scene_id: 2
+      scene_value_label: "Pressed 1 Time"
+  action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Living Room
+        scene_name: Bright
+    - wait_for_trigger:
+        - platform: event
+          event_type: ozw.scene_activated
+          event_data:
+            node_id: 9
+            scene_id: 2
+            scene_value_label: "Pressed 1 Time"
+      timeout: 00:00:03
+      continue_on_timeout: false
+    - service: light.turn_off
+      data:
+        entity_id: light.living_room
+# Button 3
+- alias: "LIVING_ROOM: Wallmote bedroom button 3 'Single Tap'"
+  trigger:
+    platform: event
+    event_type: ozw.scene_activated
+    event_data:
+      node_id: 9
+      scene_id: 3
+      scene_value_label: "Pressed 1 Time"
+  action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Living Room
+        scene_name: Tropical twilight
+    - wait_for_trigger:
+        - platform: event
+          event_type: ozw.scene_activated
+          event_data:
+            node_id: 9
+            scene_id: 3
+            scene_value_label: "Pressed 1 Time"
+      timeout: 00:00:03
+      continue_on_timeout: false
+    - service: light.turn_off
+      data:
+        entity_id: light.living_room
+# Button 4
+- alias: "LIVING_ROOM: Wallmote bedroom button 4 'Single Tap'"
+  trigger:
+    platform: event
+    event_type: ozw.scene_activated
+    event_data:
+      node_id: 9
+      scene_id: 4
+      scene_value_label: "Pressed 1 Time"
+  action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Living Room
+        scene_name: Savanna sunset
+    - wait_for_trigger:
+        - platform: event
+          event_type: ozw.scene_activated
+          event_data:
+            node_id: 9
+            scene_id: 4
+            scene_value_label: "Pressed 1 Time"
+      timeout: 00:00:03
+      continue_on_timeout: false
+    - service: light.turn_off
+      data:
+        entity_id: light.living_room

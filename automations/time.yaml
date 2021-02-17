@@ -27,7 +27,7 @@
 - alias: Fire EVENING event
   trigger:
     platform: time
-    at: "18:00:00"
+    at: "20:00:00"
   action:
     event: time_event
     event_data:
@@ -35,7 +35,7 @@
 - alias: Fire NIGHT event
   trigger:
     platform: time
-    at: "20:00:00"
+    at: "22:00:00"
   action:
     event: time_event
     event_data:
