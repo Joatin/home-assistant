@@ -7,4 +7,4 @@
     - service: light.turn_on
       data:
         entity_id: light.living_room
-        brightness: 1
+        brightness: 50

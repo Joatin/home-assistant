@@ -10,16 +10,16 @@
     - service: light.turn_on
       data:
         entity_id: light.color_temperature_light_1
-        brightness: 1
+        brightness: 100
     - service: light.turn_on
       data:
         entity_id: light.color_temperature_light_1_2
-        brightness: 1
+        brightness: 100
     - service: light.turn_on
       data:
         entity_id: light.color_temperature_light_1_16
-        brightness: 1
+        brightness: 100
     - service: light.turn_on
       data:
         entity_id: light.color_temperature_light_1_17
-        brightness: 1
+        brightness: 100
