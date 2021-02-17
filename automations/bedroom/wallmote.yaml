@@ -144,6 +144,62 @@
     - service: cover.toggle
       data:
         entity_id: cover.tradfri_blind
+- alias: "BEDROOM: Wallmote bedroom button 2 'Hold'"
+  mode: restart
+  trigger:
+    platform: event
+    event_type: ozw.scene_activated
+    event_data:
+      instance_id: 1
+      scene_id: 2
+      scene_value_label: "Key Held down"
+  action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Bedroom
+        scene_name: Tropical twilight
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Closet
+        scene_name: Tropical twilight
+    - service: script.sonos_play_list
+      data:
+        playlist: Party
+        media_player: media_player.sonos_living_room
+- alias: "BEDROOM: Wallmote bedroom button 3 'Hold'"
+  mode: restart
+  trigger:
+    platform: event
+    event_type: ozw.scene_activated
+    event_data:
+      instance_id: 1
+      scene_id: 3
+      scene_value_label: "Key Held down"
+  action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Bedroom
+        scene_name: Tropical twilight
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Closet
+        scene_name: Tropical twilight
+    - service: cover.turn_off
+      data:
+        entity_id: cover.tradfri_blind
+- alias: "BEDROOM: Wallmote bedroom button 4 'Hold'"
+  mode: restart
+  trigger:
+    platform: event
+    event_type: ozw.scene_activated
+    event_data:
+      instance_id: 1
+      scene_id: 4
+      scene_value_label: "Key Held down"
+  action:
+    - service: homeassistant.toggle
+      data:
+        entity_id: group.all_light_entities
 #Button 3
 
 #Button 4
