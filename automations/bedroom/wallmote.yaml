@@ -4,7 +4,7 @@
     platform: event
     event_type: ozw.scene_activated
     event_data:
-      instance_id: 1
+      node_id: 5
       scene_id: 1
       scene_value_label: "Pressed 1 Time"
   action:
@@ -40,7 +40,7 @@
     platform: event
     event_type: ozw.scene_activated
     event_data:
-      instance_id: 1
+      node_id: 5
       scene_id: 2
       scene_value_label: "Pressed 1 Time"
   action:
@@ -72,7 +72,7 @@
     platform: event
     event_type: ozw.scene_activated
     event_data:
-      instance_id: 1
+      node_id: 5
       scene_id: 3
       scene_value_label: "Pressed 1 Time"
   action:
@@ -104,7 +104,7 @@
     platform: event
     event_type: ozw.scene_activated
     event_data:
-      instance_id: 1
+      node_id: 5
       scene_id: 4
       scene_value_label: "Pressed 1 Time"
   action:
@@ -137,7 +137,7 @@
     platform: event
     event_type: ozw.scene_activated
     event_data:
-      instance_id: 1
+      node_id: 5
       scene_id: 1
       scene_value_label: "Key Held down"
   action:
@@ -150,7 +150,7 @@
     platform: event
     event_type: ozw.scene_activated
     event_data:
-      instance_id: 1
+      node_id: 5
       scene_id: 2
       scene_value_label: "Key Held down"
   action:
@@ -172,7 +172,7 @@
     platform: event
     event_type: ozw.scene_activated
     event_data:
-      instance_id: 1
+      node_id: 5
       scene_id: 3
       scene_value_label: "Key Held down"
   action:
@@ -193,7 +193,7 @@
     platform: event
     event_type: ozw.scene_activated
     event_data:
-      instance_id: 1
+      node_id: 5
       scene_id: 4
       scene_value_label: "Key Held down"
   action:
