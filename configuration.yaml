@@ -151,6 +151,8 @@ homekit:
         - light.closet
         - sensor.i_c_e_temperature_sensor_inside
         - sensor.i_c_e_mileage_sensor
+        - cover.tradfri_blind
+        - cover.zmnhod1_flush_shutter_dc_level
 
 shell_command: !include shell_commands.yaml
 sensor: !include sensors.yaml
@@ -165,17 +167,6 @@ input_boolean: !include input_booleans.yaml
 home_connect:
   client_id: !secret bosch_client_id
   client_secret: !secret bosch_client_secret
-
-device_tracker:
-  - platform: icloud3
-    username: !secret icloud_joatin_username
-    password: !secret icloud_joatin_password
-    tracking_method: famshr
-    track_devices:
-      - silver
-      - joatins_ipad
-      - joatins_iphone
-      - joatins_apple_watch
 
 lovelace:
   mode: yaml
