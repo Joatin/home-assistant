@@ -6,7 +6,7 @@
     for: '00:00:05'
   condition:
     condition: template
-    value_template: "{{ state_attr('media_player.living_room_2', 'app_id') == 'Netflix' }}"
+    value_template: "{{ state_attr('media_player.living_room_2', 'app_id') == 'com.netflix.Netflix' }}"
   action:
     - service: light.turn_on
       data:
