@@ -1,0 +1,8 @@
+- id: living_room_time_morning_light
+  alias: 'LIVING_ROOM: Turn on the lights when it is MORNING'
+  use_blueprint:
+    path: activate_hue_scene_at_time.yaml
+    input:
+      time: MORNING
+      room: Living Room
+      scene: Bright

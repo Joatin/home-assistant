@@ -1,5 +1,5 @@
 # Button 1
-- alias: "LIVING_ROOM: Wallmote bedroom button 1 'Single Tap'"
+- alias: "LIVING_ROOM: Wallmote living room button 1 'Single Tap'"
   trigger:
     platform: event
     event_type: ozw.scene_activated
@@ -12,6 +12,10 @@
       data:
         group_name: Living Room
         scene_name: Concentrate
+    - service: light.turn_on
+      data:
+        entity_id: light.living_room
+        brightness: 255
     - wait_for_trigger:
         - platform: event
           event_type: ozw.scene_activated
@@ -25,7 +29,7 @@
       data:
         entity_id: light.living_room
 # Button 2
-- alias: "LIVING_ROOM: Wallmote bedroom button 2 'Single Tap'"
+- alias: "LIVING_ROOM: Wallmote living room button 2 'Single Tap'"
   trigger:
     platform: event
     event_type: ozw.scene_activated
@@ -38,6 +42,10 @@
       data:
         group_name: Living Room
         scene_name: Bright
+    - service: light.turn_on
+      data:
+        entity_id: light.living_room
+        brightness: 255
     - wait_for_trigger:
         - platform: event
           event_type: ozw.scene_activated
@@ -51,7 +59,7 @@
       data:
         entity_id: light.living_room
 # Button 3
-- alias: "LIVING_ROOM: Wallmote bedroom button 3 'Single Tap'"
+- alias: "LIVING_ROOM: Wallmote living room button 3 'Single Tap'"
   trigger:
     platform: event
     event_type: ozw.scene_activated
@@ -77,7 +85,7 @@
       data:
         entity_id: light.living_room
 # Button 4
-- alias: "LIVING_ROOM: Wallmote bedroom button 4 'Single Tap'"
+- alias: "LIVING_ROOM: Wallmote living room button 4 'Single Tap'"
   trigger:
     platform: event
     event_type: ozw.scene_activated
@@ -102,3 +110,16 @@
     - service: light.turn_off
       data:
         entity_id: light.living_room
+- alias: "LIVING_ROOM: Wallmote living room button 1 'Hold'"
+  mode: restart
+  trigger:
+    platform: event
+    event_type: ozw.scene_activated
+    event_data:
+      node_id: 9
+      scene_id: 1
+      scene_value_label: "Key Held down"
+  action:
+    - service: cover.toggle
+      data:
+        entity_id: cover.zmnhod1_flush_shutter_dc_level
