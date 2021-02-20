@@ -2,6 +2,13 @@
 
 sync_ap_led_light:
   alias: Sync AP Led Lights
+  fields:
+    input_boolean:
+      description: The input that holds the led state
+    turn_on_command:
+      description: The shell command to turn on the led
+    turn_off_command:
+      description: The shell command to turn off the led
   sequence:
     - choose:
         - conditions:
