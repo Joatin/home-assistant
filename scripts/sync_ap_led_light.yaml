@@ -1,3 +1,5 @@
+---
+
 sync_ap_led_light:
   alias: Sync AP Led Lights
   fields:

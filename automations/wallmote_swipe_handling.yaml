@@ -1,9 +1,8 @@
 - id: wallmote_swipe_handling
   alias: Wallmote Swipe Handling
-  mode: parallel
   trigger:
     platform: mqtt
-    topic: "OpenZWave/1/node/+/instance/1/commandclass/112/value/+/"
+    topic: "OpenZWave/1/node/9/instance/1/commandclass/112/value/+/"
   action:
     - service: python_script.wallmote_handler
       data_template:
