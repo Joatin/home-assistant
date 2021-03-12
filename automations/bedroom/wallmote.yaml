@@ -164,14 +164,36 @@
       data:
         group_name: Closet
         scene_name: Savanna sunset
-    - service: script.sonos_play_list
-      data:
-        playlist: Bedroom
-        media_player: media_player.sonos_living_room
-        volume: 0.2
-    - service: cover.close_cover
-      data:
-        entity_id: cover.tradfri_blind
+    - choose:
+        - alias: "If the music is off, turn it on"
+          condition: not
+          conditions:
+            - condition: state
+              entity_id: media_player.sonos_living_room
+              state: playing
+          sequence:
+            - service: script.sonos_play_list
+              data:
+                playlist: Bedroom
+                media_player: media_player.sonos_living_room
+                volume: 0.2
+            - service: cover.close_cover
+              data:
+                entity_id: cover.tradfri_blind
+            - delay: 00:30:00
+            - service: media_player.volume_set
+              data:
+                entity_id: media_player.sonos_living_room
+                volume_level: 0.1
+            - delay: 00:30:00
+            - service: media_player.turn_off
+              data:
+                media_player: media_player.sonos_living_room
+      default:
+        - alias: "If the music is on, turn it off"
+        - service: media_player.turn_off
+          data:
+            entity_id: media_player.sonos_living_room
 - alias: "BEDROOM: Wallmote bedroom button 3 'Hold'"
   mode: restart
   trigger:
