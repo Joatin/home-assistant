@@ -2,11 +2,11 @@
 - alias: "BEDROOM: Wallmote bedroom button 1 'Single Tap'"
   trigger:
     platform: event
-    event_type: ozw.scene_activated
+    event_type: zwave_js_event
     event_data:
       node_id: 5
-      scene_id: 1
-      scene_value_label: "Pressed 1 Time"
+      label: Scene 001
+      value: KeyPressed
   action:
     - service: hue.hue_activate_scene
       data:
@@ -22,11 +22,11 @@
         brightness: 150
     - wait_for_trigger:
         - platform: event
-          event_type: ozw.scene_activated
+          event_type: zwave_js_event
           event_data:
             node_id: 5
-            scene_id: 1
-            scene_value_label: "Pressed 1 Time"
+            label: Scene 001
+            value: KeyPressed
       timeout: 00:00:03
       continue_on_timeout: false
     - service: light.turn_off
@@ -38,11 +38,11 @@
 - alias: "BEDROOM: Wallmote bedroom button 2 'Single Tap'"
   trigger:
     platform: event
-    event_type: ozw.scene_activated
+    event_type: zwave_js_event
     event_data:
       node_id: 5
-      scene_id: 2
-      scene_value_label: "Pressed 1 Time"
+      label: Scene 002
+      value: KeyPressed
   action:
     - service: hue.hue_activate_scene
       data:
@@ -54,11 +54,11 @@
         scene_name: Tropical twilight
     - wait_for_trigger:
         - platform: event
-          event_type: ozw.scene_activated
+          event_type: zwave_js_event
           event_data:
             node_id: 5
-            scene_id: 2
-            scene_value_label: "Pressed 1 Time"
+            label: Scene 002
+            value: KeyPressed
       timeout: 00:00:03
       continue_on_timeout: false
     - service: light.turn_off
@@ -70,11 +70,11 @@
 - alias: "BEDROOM: Wallmote bedroom button 3 'Single Tap'"
   trigger:
     platform: event
-    event_type: ozw.scene_activated
+    event_type: zwave_js_event
     event_data:
       node_id: 5
-      scene_id: 3
-      scene_value_label: "Pressed 1 Time"
+      label: Scene 003
+      value: KeyPressed
   action:
     - service: hue.hue_activate_scene
       data:
@@ -86,11 +86,11 @@
         scene_name: Savanna sunset
     - wait_for_trigger:
         - platform: event
-          event_type: ozw.scene_activated
+          event_type: zwave_js_event
           event_data:
             node_id: 5
-            scene_id: 3
-            scene_value_label: "Pressed 1 Time"
+            label: Scene 003
+            value: KeyPressed
       timeout: 00:00:03
       continue_on_timeout: false
     - service: light.turn_off
@@ -102,11 +102,11 @@
 - alias: "BEDROOM: Wallmote bedroom button 4 'Single Tap'"
   trigger:
     platform: event
-    event_type: ozw.scene_activated
+    event_type: zwave_js_event
     event_data:
       node_id: 5
-      scene_id: 4
-      scene_value_label: "Pressed 1 Time"
+      label: Scene 004
+      value: KeyPressed
   action:
     - service: hue.hue_activate_scene
       data:
@@ -118,11 +118,11 @@
         scene_name: Spring blossom
     - wait_for_trigger:
         - platform: event
-          event_type: ozw.scene_activated
+          event_type: zwave_js_event
           event_data:
             node_id: 5
-            scene_id: 4
-            scene_value_label: "Pressed 1 Time"
+            label: Scene 004
+            value: KeyPressed
       timeout: 00:00:03
       continue_on_timeout: false
     - service: light.turn_off
@@ -135,11 +135,11 @@
   mode: restart
   trigger:
     platform: event
-    event_type: ozw.scene_activated
+    event_type: zwave_js_event
     event_data:
       node_id: 5
-      scene_id: 1
-      scene_value_label: "Key Held down"
+      label: Scene 001
+      value: KeyReleased
   action:
     - service: cover.toggle
       data:
@@ -148,11 +148,11 @@
   mode: restart
   trigger:
     platform: event
-    event_type: ozw.scene_activated
+    event_type: zwave_js_event
     event_data:
       node_id: 5
-      scene_id: 2
-      scene_value_label: "Key Held down"
+      label: Scene 002
+      value: KeyReleased
   action:
     - service: hue.hue_activate_scene
       data:
@@ -170,11 +170,11 @@
   mode: restart
   trigger:
     platform: event
-    event_type: ozw.scene_activated
+    event_type: zwave_js_event
     event_data:
       node_id: 5
-      scene_id: 3
-      scene_value_label: "Key Held down"
+      label: Scene 003
+      value: KeyReleased
   action:
     - service: hue.hue_activate_scene
       data:
@@ -191,13 +191,13 @@
   mode: restart
   trigger:
     platform: event
-    event_type: ozw.scene_activated
+    event_type: zwave_js_event
     event_data:
       node_id: 5
-      scene_id: 4
-      scene_value_label: "Key Held down"
+      label: Scene 004
+      value: KeyReleased
   action:
-    - service: homeassistant.toggle
+    - service: homeassistant.turn_off
       data:
         entity_id: group.all_light_entities
 #Button 3
