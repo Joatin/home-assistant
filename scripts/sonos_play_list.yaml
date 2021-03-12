@@ -13,7 +13,7 @@ sonos_play_list:
     - service: media_player.repeat_set
       data:
         entity_id: "{{ media_player }}"
-        repeat: true
+        repeat: all
     - service: media_player.shuffle_set
       data:
         entity_id: "{{ media_player }}"

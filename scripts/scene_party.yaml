@@ -1,6 +1,0 @@
-scene_party:
-  alias: Scene Party
-  sequence:
-    - service: script.sonos_play_list
-      data:
-        playlist: Party
