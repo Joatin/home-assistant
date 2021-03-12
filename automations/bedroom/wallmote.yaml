@@ -177,7 +177,7 @@
               data:
                 playlist: Bedroom
                 media_player: media_player.sonos_living_room
-                volume: 0.2
+                volume: 0.15
             - service: cover.close_cover
               data:
                 entity_id: cover.tradfri_blind
@@ -185,7 +185,7 @@
             - service: media_player.volume_set
               data:
                 entity_id: media_player.sonos_living_room
-                volume_level: 0.1
+                volume_level: 0.05
             - delay: 00:30:00
             - service: media_player.media_stop
               data:

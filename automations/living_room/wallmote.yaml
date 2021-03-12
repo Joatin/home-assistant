@@ -2,11 +2,11 @@
 - alias: "LIVING_ROOM: Wallmote living room button 1 'Single Tap'"
   trigger:
     platform: event
-    event_type: ozw.scene_activated
+    event_type: zwave_js_event
     event_data:
       node_id: 9
-      scene_id: 1
-      scene_value_label: "Pressed 1 Time"
+      label: Scene 001
+      value: KeyPressed
   action:
     - service: hue.hue_activate_scene
       data:
@@ -18,11 +18,11 @@
         brightness: 255
     - wait_for_trigger:
         - platform: event
-          event_type: ozw.scene_activated
+          event_type: zwave_js_event
           event_data:
             node_id: 9
-            scene_id: 1
-            scene_value_label: "Pressed 1 Time"
+            label: Scene 001
+            value: KeyPressed
       timeout: 00:00:03
       continue_on_timeout: false
     - service: light.turn_off
@@ -32,11 +32,11 @@
 - alias: "LIVING_ROOM: Wallmote living room button 2 'Single Tap'"
   trigger:
     platform: event
-    event_type: ozw.scene_activated
+    event_type: zwave_js_event
     event_data:
       node_id: 9
-      scene_id: 2
-      scene_value_label: "Pressed 1 Time"
+      label: Scene 002
+      value: KeyPressed
   action:
     - service: hue.hue_activate_scene
       data:
@@ -48,11 +48,11 @@
         brightness: 255
     - wait_for_trigger:
         - platform: event
-          event_type: ozw.scene_activated
+          event_type: zwave_js_event
           event_data:
             node_id: 9
-            scene_id: 2
-            scene_value_label: "Pressed 1 Time"
+            label: Scene 002
+            value: KeyPressed
       timeout: 00:00:03
       continue_on_timeout: false
     - service: light.turn_off
@@ -62,11 +62,11 @@
 - alias: "LIVING_ROOM: Wallmote living room button 3 'Single Tap'"
   trigger:
     platform: event
-    event_type: ozw.scene_activated
+    event_type: zwave_js_event
     event_data:
       node_id: 9
-      scene_id: 3
-      scene_value_label: "Pressed 1 Time"
+      label: Scene 003
+      value: KeyPressed
   action:
     - service: hue.hue_activate_scene
       data:
@@ -74,11 +74,11 @@
         scene_name: Tropical twilight
     - wait_for_trigger:
         - platform: event
-          event_type: ozw.scene_activated
+          event_type: zwave_js_event
           event_data:
             node_id: 9
-            scene_id: 3
-            scene_value_label: "Pressed 1 Time"
+            label: Scene 003
+            value: KeyPressed
       timeout: 00:00:03
       continue_on_timeout: false
     - service: light.turn_off
@@ -88,11 +88,11 @@
 - alias: "LIVING_ROOM: Wallmote living room button 4 'Single Tap'"
   trigger:
     platform: event
-    event_type: ozw.scene_activated
+    event_type: zwave_js_event
     event_data:
       node_id: 9
-      scene_id: 4
-      scene_value_label: "Pressed 1 Time"
+      label: Scene 004
+      value: KeyPressed
   action:
     - service: hue.hue_activate_scene
       data:
@@ -100,11 +100,11 @@
         scene_name: Savanna sunset
     - wait_for_trigger:
         - platform: event
-          event_type: ozw.scene_activated
+          event_type: zwave_js_event
           event_data:
             node_id: 9
-            scene_id: 4
-            scene_value_label: "Pressed 1 Time"
+            label: Scene 004
+            value: KeyPressed
       timeout: 00:00:03
       continue_on_timeout: false
     - service: light.turn_off
@@ -114,7 +114,7 @@
   mode: restart
   trigger:
     platform: event
-    event_type: ozw.scene_activated
+    event_type: zwave_js_event
     event_data:
       node_id: 9
       scene_id: 1
@@ -122,4 +122,4 @@
   action:
     - service: cover.toggle
       data:
-        entity_id: cover.zmnhod1_flush_shutter_dc_level
+        entity_id: cover.flush_shutter_dc
