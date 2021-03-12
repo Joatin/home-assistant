@@ -8,6 +8,8 @@
       label: Scene 001
       value: KeyPressed
   action:
+    - service: script.turn_on
+      data:
     - service: hue.hue_activate_scene
       data:
         group_name: Bedroom
@@ -157,15 +159,19 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Bedroom
-        scene_name: Tropical twilight
+        scene_name: Savanna sunset
     - service: hue.hue_activate_scene
       data:
         group_name: Closet
-        scene_name: Tropical twilight
+        scene_name: Savanna sunset
     - service: script.sonos_play_list
       data:
-        playlist: Party
+        playlist: Bedroom
         media_player: media_player.sonos_living_room
+        volume: 0.2
+    - service: cover.close_cover
+      data:
+        entity_id: cover.tradfri_blind
 - alias: "BEDROOM: Wallmote bedroom button 3 'Hold'"
   mode: restart
   trigger:
@@ -184,7 +190,7 @@
       data:
         group_name: Closet
         scene_name: Tropical twilight
-    - service: cover.turn_off
+    - service: cover.open_cover
       data:
         entity_id: cover.tradfri_blind
 - alias: "BEDROOM: Wallmote bedroom button 4 'Hold'"
