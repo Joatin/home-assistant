@@ -166,11 +166,12 @@
         scene_name: Savanna sunset
     - choose:
         - alias: "If the music is off, turn it on"
-          condition: not
           conditions:
-            - condition: state
-              entity_id: media_player.sonos_living_room
-              state: playing
+            - condition: not
+              conditions:
+                - condition: state
+                  entity_id: media_player.sonos_living_room
+                  state: playing
           sequence:
             - service: script.sonos_play_list
               data:
