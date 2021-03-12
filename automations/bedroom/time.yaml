@@ -32,7 +32,7 @@
     input:
       time: LUNCH
       room: Bedroom
-      scene: Tropical twilight
+      scene: Bright
       light: light.bedroom
 - id: bedroom_closet_time_evening_light
   alias: 'BEDROOM: Set the lights in closet to tropical twilight when it is LUNCH'
@@ -41,7 +41,7 @@
     input:
       time: LUNCH
       room: Closet
-      scene: Tropical twilight
+      scene: Bright
       light: light.closet
 - id: bedroom_time_midnight_ap_led
   alias: 'BEDROOM: Turn off AP led when it is MIDNIGHT'

@@ -1,5 +1,3 @@
----
-
 sync_ap_led_light:
   alias: Sync AP Led Lights
   fields:
@@ -17,9 +15,5 @@ sync_ap_led_light:
               state: 'on'
           sequence:
             - service: "{{ turn_on_command }}"
-        - conditions:
-            - condition: state
-              entity_id: "{{ input_boolean }}"
-              state: 'off'
-          sequence:
-            - service: "{{ turn_off_command }}"
+      default:
+        - service: "{{ turn_off_command }}"
