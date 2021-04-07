@@ -1,12 +1,12 @@
 - alias: "STORAGE: Change storage light when door open/closes"
   trigger:
     platform: state
-    entity_id: binary_sensor.fgdw002_door_opening_sensor_2_access_control_door_window_open
+    entity_id: binary_sensor.fibaro_door_window_sensor_2_access_control_window_door_is_open
   action:
     - choose:
         - conditions:
             - condition: state
-              entity_id: binary_sensor.fgdw002_door_opening_sensor_2_access_control_door_window_open
+              entity_id: binary_sensor.fibaro_door_window_sensor_2_access_control_window_door_is_open
               state: 'on'
           sequence:
             - service: light.turn_on
@@ -15,7 +15,7 @@
                 brightness: 255
         - conditions:
             - condition: state
-              entity_id: binary_sensor.fgdw002_door_opening_sensor_2_access_control_door_window_open
+              entity_id: binary_sensor.fibaro_door_window_sensor_2_access_control_window_door_is_open
               state: 'off'
           sequence:
             - service: light.turn_off
