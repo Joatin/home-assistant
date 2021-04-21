@@ -8,8 +8,6 @@
       label: Scene 001
       value: KeyPressed
   action:
-    - service: script.turn_on
-      data:
     - service: hue.hue_activate_scene
       data:
         group_name: Bedroom
