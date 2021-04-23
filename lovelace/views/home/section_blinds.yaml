@@ -31,3 +31,7 @@ card:
           - ../../components/blind_card/blind_card.yaml
           - entity: cover.tradfri_blind
             title: Bedroom
+        - !include
+          - ../../components/blind_card/blind_card.yaml
+          - entity: cover.flush_shutter_dc
+            title: Living Room
