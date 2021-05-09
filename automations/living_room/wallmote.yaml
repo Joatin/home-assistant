@@ -121,7 +121,7 @@
       value: "KeyHeldDown"
   action:
     - service: cover.toggle
-      data:
+      target:
         entity_id: cover.flush_shutter_dc
 
 - alias: "LIVING_ROOM: Wallmote living room button 2 'Hold'"
@@ -134,6 +134,80 @@
       label: Scene 002
       value: "KeyHeldDown"
   action:
-    - service: media_player.turn_on
+    - alias: "Turn on receiver if off"
+      choose:
+        - alias: "Receiver is off"
+          conditions:
+            - condition: state
+              entity_id: media_player.receiver
+              state: off
+          sequence:
+            - service: media_player.turn_on
+              data: {}
+              target:
+                entity_id: media_player.receiver
+            - service: media_player.turn_on
+              data: {}
+              target:
+                entity_id: media_player.living_room_2
+            - service: media_player.onkyo_select_hdmi_output
+              data:
+                entity_id: media_player.receiver
+                hdmi_output: 'yes,out'
+            - service: media_player.select_source
+              target:
+                entity_id: media_player.receiver
+              data:
+                source: Bluray
+      default:
+        - alias: "Switch tv/projector"
+          choose:
+            - alias: "Projector is off"
+              conditions:
+                - condition: state
+                  entity_id: media_player.epson
+                  state: off
+              sequence:
+                - service: media_player.turn_on
+                  data:
+                    entity_id: media_player.epson
+                - service: media_player.onkyo_select_hdmi_output
+                  data:
+                    entity_id: media_player.receiver
+                    hdmi_output: 'out-sub,sub,hdbaset'
+                - service: light.turn_off
+                  data:
+                    entity_id: light.living_room
+          default:
+            - service: media_player.turn_off
+              data:
+                entity_id: media_player.epson
+            - service: light.turn_on
+              target:
+                entity_id: light.living_room
+            - service: media_player.onkyo_select_hdmi_output
+              data:
+                entity_id: media_player.receiver
+                hdmi_output: 'out-sub,sub,hdbaset'
+
+- alias: "LIVING_ROOM: Wallmote living room button 4 'Hold'"
+  mode: restart
+  trigger:
+    platform: event
+    event_type: zwave_js_value_notification
+    event_data:
+      node_id: 9
+      label: Scene 004
+      value: "KeyHeldDown"
+  action:
+    - service: media_player.turn_off
       data:
         entity_id: media_player.epson
+    - service: media_player.turn_off
+      data: {}
+      target:
+        entity_id: media_player.receiver
+    - service: media_player.turn_off
+      data: {}
+      target:
+        entity_id: media_player.living_room_2
