@@ -150,6 +150,12 @@
               data: {}
               target:
                 entity_id: media_player.living_room_2
+            - service: remote.send_command
+              target:
+                entity_id: remote.living_room
+              data:
+                command:
+                  - menu
             - service: media_player.onkyo_select_hdmi_output
               data:
                 entity_id: media_player.receiver
