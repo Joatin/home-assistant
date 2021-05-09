@@ -2,7 +2,7 @@
 - alias: "LIVING_ROOM: Wallmote living room button 1 'Single Tap'"
   trigger:
     platform: event
-    event_type: zwave_js_event
+    event_type: zwave_js_value_notification
     event_data:
       node_id: 9
       label: Scene 001
@@ -18,7 +18,7 @@
         brightness: 255
     - wait_for_trigger:
         - platform: event
-          event_type: zwave_js_event
+          event_type: zwave_js_value_notification
           event_data:
             node_id: 9
             label: Scene 001
@@ -32,7 +32,7 @@
 - alias: "LIVING_ROOM: Wallmote living room button 2 'Single Tap'"
   trigger:
     platform: event
-    event_type: zwave_js_event
+    event_type: zwave_js_value_notification
     event_data:
       node_id: 9
       label: Scene 002
@@ -48,7 +48,7 @@
         brightness: 255
     - wait_for_trigger:
         - platform: event
-          event_type: zwave_js_event
+          event_type: zwave_js_value_notification
           event_data:
             node_id: 9
             label: Scene 002
@@ -62,7 +62,7 @@
 - alias: "LIVING_ROOM: Wallmote living room button 3 'Single Tap'"
   trigger:
     platform: event
-    event_type: zwave_js_event
+    event_type: zwave_js_value_notification
     event_data:
       node_id: 9
       label: Scene 003
@@ -74,7 +74,7 @@
         scene_name: Tropical twilight
     - wait_for_trigger:
         - platform: event
-          event_type: zwave_js_event
+          event_type: zwave_js_value_notification
           event_data:
             node_id: 9
             label: Scene 003
@@ -88,7 +88,7 @@
 - alias: "LIVING_ROOM: Wallmote living room button 4 'Single Tap'"
   trigger:
     platform: event
-    event_type: zwave_js_event
+    event_type: zwave_js_value_notification
     event_data:
       node_id: 9
       label: Scene 004
@@ -100,7 +100,7 @@
         scene_name: Savanna sunset
     - wait_for_trigger:
         - platform: event
-          event_type: zwave_js_event
+          event_type: zwave_js_value_notification
           event_data:
             node_id: 9
             label: Scene 004
@@ -114,11 +114,11 @@
   mode: restart
   trigger:
     platform: event
-    event_type: zwave_js_event
+    event_type: zwave_js_value_notification
     event_data:
       node_id: 9
-      scene_id: 1
-      scene_value_label: "Key Held down"
+      label: Scene 001
+      value: "KeyHeldDown"
   action:
     - service: cover.toggle
       data:

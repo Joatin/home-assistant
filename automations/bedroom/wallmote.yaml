@@ -2,7 +2,7 @@
 - alias: "BEDROOM: Wallmote bedroom button 1 'Single Tap'"
   trigger:
     platform: event
-    event_type: zwave_js_event
+    event_type: zwave_js_value_notification
     event_data:
       node_id: 5
       label: Scene 001
@@ -22,7 +22,7 @@
         brightness: 150
     - wait_for_trigger:
         - platform: event
-          event_type: zwave_js_event
+          event_type: zwave_js_value_notification
           event_data:
             node_id: 5
             label: Scene 001
@@ -38,7 +38,7 @@
 - alias: "BEDROOM: Wallmote bedroom button 2 'Single Tap'"
   trigger:
     platform: event
-    event_type: zwave_js_event
+    event_type: zwave_js_value_notification
     event_data:
       node_id: 5
       label: Scene 002
@@ -54,7 +54,7 @@
         scene_name: Tropical twilight
     - wait_for_trigger:
         - platform: event
-          event_type: zwave_js_event
+          event_type: zwave_js_value_notification
           event_data:
             node_id: 5
             label: Scene 002
@@ -70,7 +70,7 @@
 - alias: "BEDROOM: Wallmote bedroom button 3 'Single Tap'"
   trigger:
     platform: event
-    event_type: zwave_js_event
+    event_type: zwave_js_value_notification
     event_data:
       node_id: 5
       label: Scene 003
@@ -86,7 +86,7 @@
         scene_name: Savanna sunset
     - wait_for_trigger:
         - platform: event
-          event_type: zwave_js_event
+          event_type: zwave_js_value_notification
           event_data:
             node_id: 5
             label: Scene 003
@@ -102,7 +102,7 @@
 - alias: "BEDROOM: Wallmote bedroom button 4 'Single Tap'"
   trigger:
     platform: event
-    event_type: zwave_js_event
+    event_type: zwave_js_value_notification
     event_data:
       node_id: 5
       label: Scene 004
@@ -118,7 +118,7 @@
         scene_name: Spring blossom
     - wait_for_trigger:
         - platform: event
-          event_type: zwave_js_event
+          event_type: zwave_js_value_notification
           event_data:
             node_id: 5
             label: Scene 004
@@ -135,7 +135,7 @@
   mode: restart
   trigger:
     platform: event
-    event_type: zwave_js_event
+    event_type: zwave_js_value_notification
     event_data:
       node_id: 5
       label: Scene 001
@@ -148,7 +148,7 @@
   mode: restart
   trigger:
     platform: event
-    event_type: zwave_js_event
+    event_type: zwave_js_value_notification
     event_data:
       node_id: 5
       label: Scene 002
@@ -196,7 +196,7 @@
   mode: restart
   trigger:
     platform: event
-    event_type: zwave_js_event
+    event_type: zwave_js_value_notification
     event_data:
       node_id: 5
       label: Scene 003
@@ -217,7 +217,7 @@
   mode: restart
   trigger:
     platform: event
-    event_type: zwave_js_event
+    event_type: zwave_js_value_notification
     event_data:
       node_id: 5
       label: Scene 004
