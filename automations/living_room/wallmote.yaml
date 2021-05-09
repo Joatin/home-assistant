@@ -140,7 +140,7 @@
           conditions:
             - condition: state
               entity_id: media_player.receiver
-              state: off
+              state: 'off'
           sequence:
             - service: media_player.turn_on
               data: {}
@@ -166,7 +166,7 @@
               conditions:
                 - condition: state
                   entity_id: media_player.epson
-                  state: off
+                  state: 'off'
               sequence:
                 - service: media_player.turn_on
                   data:
