@@ -159,7 +159,7 @@
             - service: media_player.onkyo_select_hdmi_output
               data:
                 entity_id: media_player.receiver
-                hdmi_output: 'yes,out'
+                hdmi_output: 'yes'
             - service: media_player.select_source
               target:
                 entity_id: media_player.receiver
@@ -180,7 +180,7 @@
                 - service: media_player.onkyo_select_hdmi_output
                   data:
                     entity_id: media_player.receiver
-                    hdmi_output: 'sub'
+                    hdmi_output: 'out-sub'
                 - service: light.turn_off
                   data:
                     entity_id: light.living_room
@@ -194,7 +194,7 @@
             - service: media_player.onkyo_select_hdmi_output
               data:
                 entity_id: media_player.receiver
-                hdmi_output: 'yes,out'
+                hdmi_output: 'yes'
 
 - alias: "LIVING_ROOM: Wallmote living room button 4 'Hold'"
   mode: restart
