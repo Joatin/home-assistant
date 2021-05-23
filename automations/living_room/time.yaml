@@ -6,3 +6,9 @@
       time: MORNING
       room: Living Room
       scene: Bright
+- id: living_room_time_morning_blinds
+  alias: 'LIVING_ROOM: Open the blinds when it is MORNING'
+  action:
+    - service: cover.open
+      target:
+        entity_id: cover.flush_shutter_dc

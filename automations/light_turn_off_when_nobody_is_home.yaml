@@ -1,7 +1,7 @@
 - alias: Turn off the lights when nobody is home
   trigger:
     platform: state
-    entity_id: group.home
-    from: "home"
+    entity_id: alarm_control_panel.verisure_alarm
+    to: "armed_away"
   action:
     - service: script.turn_off_lights

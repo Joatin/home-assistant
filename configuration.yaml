@@ -48,35 +48,6 @@ tesla:
   password: !secret tesla_password
   scan_interval: 60
 sonos:
-verisure:
-  username: !secret verisure_username
-  password: !secret verisure_password
-ios:
-  actions:
-    - name: party
-      background_color: "#000000"
-      label:
-        text: "Party Scene"
-        color: "#ff0000"
-      icon:
-        icon: emoticon-excited
-        color: "#ffffff"
-    - name: latin
-      background_color: "#000000"
-      label:
-        text: "Latin Scene"
-        color: "#ff0000"
-      icon:
-        icon: creation
-        color: "#ffffff"
-    - name: chill
-      background_color: "#000000"
-      label:
-        text: "Chill Scene"
-        color: "#ff0000"
-      icon:
-        icon: grill
-        color: "#ffffff"
 #  push:
 #    categories:
 #      - name: Open I.C.E
@@ -97,7 +68,6 @@ ios:
 #            authenticationRequired: false
 #            destructive: false
 #            behavior: 'default'
-upnp:
 hue:
   bridges:
     - host: 192.168.1.200
@@ -106,9 +76,6 @@ hue:
     - host: 192.168.1.238
       allow_unreachable: true
       allow_hue_groups: false
-duckdns:
-  domain: !secret duckdns_domain
-  access_token: !secret duckdns_access_token
 
 binary_sensor:
   - platform: iss
