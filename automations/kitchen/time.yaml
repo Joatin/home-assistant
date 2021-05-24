@@ -25,10 +25,12 @@
       light: light.kitchen
 - id: kitchen_time_night_light
   alias: 'KITCHEN: Set the lights to dimmed when it is NIGHT'
-  use_blueprint:
-    path: activate_hue_scene_at_time_if_already_on.yaml
-    input:
+  trigger:
+    platform: event
+    event_type: time_event
+    event_data:
       time: NIGHT
-      room: Kitchen
-      scene: Dimmed
-      light: light.kitchen
+  action:
+    - service: light.turn_off
+      data:
+        entity_id: light.kitchen
