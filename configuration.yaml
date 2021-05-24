@@ -126,28 +126,28 @@ homekit:
         - cover.flush_shutter_dc
         - lock.ytterdorr
     entity_config:
-      - sensor.i_c_e_temperature_sensor_inside:
-          name: I.C.E Temperature
-          linked_battery_sensor: sensor.i_c_e_battery_sensor
-      - cover.tradfri_blind:
-          name: Bedroom Blinds
-          linked_battery_sensor: sensor.tradfri_open_close_remote
-      - cover.flush_shutter_dc:
-          name: Living Room Blinds
-      - sensor.sovrum_temperature:
-          name: Bedroom Temperature
-      - sensor.hall_temperature:
-          name: Hallway Temperature
-      - sensor.fibaro_door_window_sensor_2_air_temperature:
-          name: Storage Temperature
-          linked_battery_sensor: sensor.fibaro_door_window_sensor_2_battery_level
-      - sensor.vardagsrum_temperature:
-          name: Living Room Temperature
-      - sensor.temperature_3:
-          name: Closet Temperature
-          linked_battery_sensor: sensor.motion_sensor_battery_level
-      - lock.ytterdorr:
-          name: Lock Front Door
+      sensor.i_c_e_temperature_sensor_inside:
+        name: I.C.E Temperature
+        linked_battery_sensor: sensor.i_c_e_battery_sensor
+      cover.tradfri_blind:
+        name: Bedroom Blinds
+        linked_battery_sensor: sensor.tradfri_open_close_remote
+      cover.flush_shutter_dc:
+        name: Living Room Blinds
+      sensor.sovrum_temperature:
+        name: Bedroom Temperature
+      sensor.hall_temperature:
+        name: Hallway Temperature
+      sensor.fibaro_door_window_sensor_2_air_temperature:
+        name: Storage Temperature
+        linked_battery_sensor: sensor.fibaro_door_window_sensor_2_battery_level
+      sensor.vardagsrum_temperature:
+        name: Living Room Temperature
+      sensor.temperature_3:
+        name: Closet Temperature
+        linked_battery_sensor: sensor.motion_sensor_battery_level
+      lock.ytterdorr:
+        name: Lock Front Door
 
 
 shell_command: !include shell_commands.yaml
