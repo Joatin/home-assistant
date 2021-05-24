@@ -115,8 +115,17 @@ homekit:
         - light.closet
         - sensor.i_c_e_temperature_sensor_inside
         - sensor.i_c_e_mileage_sensor
+        - sensor.i_c_e_battery_sensor
+        - sensor.openweathermap_condition
+        - sensor.openweathermap_temperature
+        - sensor.sovrum_temperature
+        - sensor.dishwasher_remaining_program_time
         - cover.tradfri_blind
-        - cover.zmnhod1_flush_shutter_dc_level
+        - cover.flush_shutter_dc
+        - lock.ytterdorr
+        - media_player.receiver
+        - person.joatin
+        - person.caroline
 
 shell_command: !include shell_commands.yaml
 sensor: !include sensors.yaml
