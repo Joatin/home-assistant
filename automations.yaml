@@ -91,7 +91,7 @@
   trigger:
     platform: event
     event_type: state_changed
-  conditions:
+  condition:
     condition: template
     value_template: "{{ is_state('lock.i_c_e_door_lock', 'opened') }}"
   action:
