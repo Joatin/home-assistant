@@ -104,6 +104,9 @@ emulated_hue:
 
 homekit:
   - filter:
+      include_domains:
+        - person
+        - alarm_control_panel
       include_entities:
         - light.kitchen
         - light.hallway
@@ -114,18 +117,38 @@ homekit:
         - light.bedroom
         - light.closet
         - sensor.i_c_e_temperature_sensor_inside
-        - sensor.i_c_e_mileage_sensor
-        - sensor.i_c_e_battery_sensor
-        - sensor.openweathermap_condition
-        - sensor.openweathermap_temperature
         - sensor.sovrum_temperature
-        - sensor.dishwasher_remaining_program_time
+        - sensor.hall_temperature
+        - sensor.fibaro_door_window_sensor_2_air_temperature
+        - sensor.vardagsrum_temperature
+        - sensor.temperature_3
         - cover.tradfri_blind
         - cover.flush_shutter_dc
         - lock.ytterdorr
-        - media_player.receiver
-        - person.joatin
-        - person.caroline
+    entity_config:
+      - sensor.i_c_e_temperature_sensor_inside:
+          name: I.C.E Temperature
+          linked_battery_sensor: sensor.i_c_e_battery_sensor
+      - cover.tradfri_blind:
+          name: Bedroom Blinds
+          linked_battery_sensor: sensor.tradfri_open_close_remote
+      - cover.flush_shutter_dc:
+          name: Living Room Blinds
+      - sensor.sovrum_temperature:
+          name: Bedroom Temperature
+      - sensor.hall_temperature:
+          name: Hallway Temperature
+      - sensor.fibaro_door_window_sensor_2_air_temperature:
+          name: Storage Temperature
+          linked_battery_sensor: sensor.fibaro_door_window_sensor_2_battery_level
+      - sensor.vardagsrum_temperature:
+          name: Living Room Temperature
+      - sensor.temperature_3:
+          name: Closet Temperature
+          linked_battery_sensor: sensor.motion_sensor_battery_level
+      - lock.ytterdorr:
+          name: Lock Front Door
+
 
 shell_command: !include shell_commands.yaml
 sensor: !include sensors.yaml
