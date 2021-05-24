@@ -50,10 +50,10 @@
     event_type: time_event
     event_data:
       time: MIDNIGHT
-    action:
-      - service: input_boolean.turn_off
-        data:
-          entity_id: input_boolean.unify_ap_bedroom_led
+  action:
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.unify_ap_bedroom_led
 - id: bedroom_time_goodnight_ap_led
   alias: 'BEDROOM: Turn off AP led when it is GOODNIGHT'
   trigger:
@@ -61,7 +61,7 @@
     event_type: time_event
     event_data:
       time: GOODNIGHT
-    action:
-      - service: input_boolean.turn_off
-        data:
-          entity_id: input_boolean.unify_ap_bedroom_led
+  action:
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.unify_ap_bedroom_led
