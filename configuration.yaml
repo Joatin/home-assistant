@@ -124,7 +124,6 @@ homekit:
         - sensor.temperature_3
         - cover.tradfri_blind
         - cover.flush_shutter_dc
-        - lock.ytterdorr
     entity_config:
       sensor.i_c_e_temperature_sensor_inside:
         name: I.C.E Temperature
@@ -146,9 +145,14 @@ homekit:
       sensor.temperature_3:
         name: Closet Temperature
         linked_battery_sensor: sensor.motion_sensor_battery_level
+  - name: Front Door Lock
+    port: 21065
+    mode: accessory
+    filter:
+      include_entities:
+        - lock.ytterdorr
       lock.ytterdorr:
         name: Lock Front Door
-
 
 shell_command: !include shell_commands.yaml
 sensor: !include sensors.yaml
