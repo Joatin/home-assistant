@@ -3,7 +3,7 @@
     platform: state
     entity_id: media_player.living_room_2
     to: 'idle'
-  condition:
+  conditions:
     condition: template
     value_template: "{{ state_attr('media_player.living_room_2', 'app_id') == 'com.netflix.Netflix' }}"
   action:

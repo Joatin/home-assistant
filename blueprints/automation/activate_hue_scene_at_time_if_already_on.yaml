@@ -17,7 +17,7 @@ trigger:
   event_type: time_event
   event_data:
     time: !input time
-condition:
+conditions:
   condition: and
   conditions:
     - condition: state
