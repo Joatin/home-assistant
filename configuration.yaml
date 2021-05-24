@@ -151,8 +151,9 @@ homekit:
     filter:
       include_entities:
         - lock.ytterdorr
-      lock.ytterdorr:
-        name: Lock Front Door
+      entity_config:
+        lock.ytterdorr:
+          name: Lock Front Door
 
 shell_command: !include shell_commands.yaml
 sensor: !include sensors.yaml
