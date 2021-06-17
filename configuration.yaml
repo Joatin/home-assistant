@@ -108,6 +108,7 @@ homekit:
       include_domains:
         - person
         - alarm_control_panel
+        - camera
       include_entities:
         - light.kitchen
         - light.hallway
