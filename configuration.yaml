@@ -27,6 +27,7 @@ updater:
 zeroconf:
 person:
 python_script:
+stream:
 
 tradfri:
   host: 192.168.1.249
