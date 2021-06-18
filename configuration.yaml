@@ -147,6 +147,9 @@ homekit:
       sensor.temperature_3:
         name: Closet Temperature
         linked_battery_sensor: sensor.motion_sensor_battery_level
+      camera.doorbell:
+        support_audio: True
+        max_fps: 45
   - name: Front Door Lock
     port: 21065
     mode: accessory
