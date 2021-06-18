@@ -1,0 +1,12 @@
+- alias: "HALLWAY: Announce when someone pressed the doorbell"
+  trigger:
+    platform: state
+    entity_id: binary_sensor.doorbell_doorbell
+    to: 'Detected'
+  action:
+    - service: script.sonos_say
+      data:
+        sonos_entity: media_player.bedroom
+        volume: 0.5
+        delay: 00:00:03
+        message: There is someone at the front door
