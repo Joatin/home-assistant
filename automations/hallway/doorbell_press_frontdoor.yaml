@@ -4,6 +4,19 @@
     entity_id: binary_sensor.doorbell_doorbell
     to: 'Detected'
   action:
+    - service: notify.mobile_app_joatins_iphone
+      data:
+        title: Knock, knock!
+        message: There seems to be someone at the front door
+        data:
+          push:
+            category: "home_assistant"
+          apns_headers:
+            'apns-collapse-id': 'restart'
+    - service: script.light_sequence
+      data:
+        entity_id: light.staircase
+        color: green
     - service: script.sonos_say
       data:
         sonos_entity: media_player.sonos_living_room
