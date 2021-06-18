@@ -2,7 +2,7 @@
   trigger:
     platform: state
     entity_id: binary_sensor.doorbell_doorbell
-    to: 'Detected'
+    to: 'on'
   action:
     - service: notify.mobile_app_joatins_iphone
       data:
