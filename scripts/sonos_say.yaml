@@ -11,6 +11,11 @@ sonos_say:
       data_template:
         entity_id: "{{ sonos_entity }}"
         volume_level: "{{ volume }}"
+    - service: media_player.play_media
+      data_template:
+        entity_id: "{{ sonos_entity }}"
+        media_content_id: http://homeassistant.example.com:8123/local/just-maybe-577.mp3
+        media_content_type: music
     - service: tts.amazon_polly_say
       data_template:
         entity_id: "{{ sonos_entity }}"
