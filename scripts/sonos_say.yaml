@@ -14,7 +14,7 @@ sonos_say:
     - service: media_player.play_media
       data_template:
         entity_id: "{{ sonos_entity }}"
-        media_content_id: http://homeassistant.example.com:8123/local/just-maybe-577.mp3
+        media_content_id: http://homeassistant.local:8123/local/just-maybe-577.mp3
         media_content_type: music
     - delay: 00:00:03
     - service: tts.amazon_polly_say
