@@ -16,7 +16,7 @@ sonos_say:
         entity_id: "{{ sonos_entity }}"
         media_content_id: http://joatin.duckdns.org:8123/local/just-maybe-577.mp3
         media_content_type: music
-    - delay: 00:00:02
+    - delay: 00:00:04
     - service: tts.amazon_polly_say
       data_template:
         entity_id: "{{ sonos_entity }}"

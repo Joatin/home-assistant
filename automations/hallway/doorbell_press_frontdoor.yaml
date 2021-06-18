@@ -13,10 +13,6 @@
             category: "home_assistant"
           apns_headers:
             'apns-collapse-id': 'restart'
-    - service: script.light_sequence
-      data:
-        entity_id: light.staircase
-        color: green
     - service: script.sonos_say
       data:
         sonos_entity: media_player.sonos_living_room
