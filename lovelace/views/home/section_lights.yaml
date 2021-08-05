@@ -105,7 +105,7 @@ card:
               - !include
                 - ../../components/light_card/light_card.yaml
                 - entity: light.guest_room
-                  title: Guest
+                  title: Bella's Room
                   hue_room: Guest Room
                   icon: mdi:bed
           - type: horizontal-stack

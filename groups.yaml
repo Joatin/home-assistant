@@ -17,3 +17,7 @@ all_light_entities:
     - light.guest_room
     - light.bedroom
     - light.closet
+cover_kitchen:
+  entities:
+    - cover.blind_kitchen_big
+    - cover.blind_kitchen_small
