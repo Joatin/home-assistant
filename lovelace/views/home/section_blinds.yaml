@@ -37,5 +37,13 @@ card:
             title: Living
         - !include
           - ../../components/blind_card/blind_card.yaml
-          - entity: group.cover_kitchen
-            title: Living
+          - entity: cover.blind_kitchen_big
+            title: Kitchen Big
+        - !include
+          - ../../components/blind_card/blind_card.yaml
+          - entity: cover.blind_kitchen_small
+            title: Kitchen Small
+        - !include
+          - ../../components/blind_card/blind_card.yaml
+          - entity: cover.blind_bellas_room
+            title: Bella's Room
