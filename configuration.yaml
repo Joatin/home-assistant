@@ -28,6 +28,13 @@ zeroconf:
 person:
 python_script:
 stream:
+cloud:
+  google_actions:
+    filter:
+      include_domains:
+        - light
+        - cover
+        - media_player
 
 tradfri:
   host: 192.168.1.249
