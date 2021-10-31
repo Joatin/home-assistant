@@ -17,14 +17,6 @@
     - service: input_boolean.turn_on
       data:
         entity_id: input_boolean.unify_ap_bedroom_led
-- id: bedroom_closet_time_morning_light
-  alias: 'BEDROOM: Turn on the lights in closet when it is MORNING'
-  use_blueprint:
-    path: activate_hue_scene_at_time.yaml
-    input:
-      time: MORNING
-      room: Closet
-      scene: Bright
 - id: bedroom_time_evening_light
   alias: 'BEDROOM: Set the lights to tropical twilight when it is LUNCH'
   use_blueprint:
@@ -34,22 +26,13 @@
       room: Bedroom
       scene: Bright
       light: light.bedroom
-- id: bedroom_closet_time_evening_light
-  alias: 'BEDROOM: Set the lights in closet to tropical twilight when it is LUNCH'
-  use_blueprint:
-    path: activate_hue_scene_at_time_if_already_on.yaml
-    input:
-      time: LUNCH
-      room: Closet
-      scene: Bright
-      light: light.closet
 - id: bedroom_time_midnight_ap_led
-  alias: 'BEDROOM: Turn off AP led when it is MIDNIGHT'
+  alias: 'BEDROOM: Turn off AP led when it is EVENING'
   trigger:
     platform: event
     event_type: time_event
     event_data:
-      time: MIDNIGHT
+      time: EVENING
   action:
     - service: input_boolean.turn_off
       data:
