@@ -3,25 +3,13 @@
     platform: state
     entity_id: binary_sensor.motion_doorbell
     to: 'on'
-  condition:
-    condition: and
-    conditions:
-      - "{{ (state_attr('light.front', 'brightness')|int) < 255 }}"
   action:
-    - service: scene.create
-      data:
-        scene_id: light_front_before
-        snapshot_entities: light.front
-    - service: light.turn_on
-      data:
-        entity_id: light.front
-        brightness: 255
-- alias: "HALLWAY: Turn off lights on front door when there is no motion"
-  trigger:
-    platform: state
-    entity_id: binary_sensor.motion_doorbell
-    to: 'off'
-  action:
-    - service: scene.turn_on
-      data:
-        entity_id: scene.light_front_before
+    - service: hue.hue_activate_scene
+      data_template:
+        group_name: front
+        scene_name: Bright
+    - delay: '00:00:30'
+    - service: hue.hue_activate_scene
+      data_template:
+        group_name: front
+        scene_name: Dimmed

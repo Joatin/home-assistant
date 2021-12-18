@@ -7,7 +7,7 @@
     - service: notify.mobile_app_joatins_iphone
       data:
         title: Knock, knock!
-        message: There seems to be someone at the front door
+        message: Someone is knocking on the fron door
         data:
           push:
             category: "home_assistant"
@@ -18,4 +18,4 @@
         sonos_entity: media_player.sonos_living_room
         volume: 0.8
         delay: 00:00:10
-        message: <speak>Hello there! There seems to be someone at the front door</speak>
+        message: <speak>Hello there! Someone is knocking on the front door</speak>
