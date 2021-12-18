@@ -51,10 +51,6 @@ tts:
     engine: neural
     text_type: ssml
 speedtestdotnet:
-tesla:
-  username: !secret tesla_username
-  password: !secret tesla_password
-  scan_interval: 60
 sonos:
 #  push:
 #    categories:
