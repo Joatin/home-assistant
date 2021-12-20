@@ -1,29 +1,5 @@
 ---
 
-tesla_range: &tesla_range
-  entity: sensor.i_c_e_range_sensor
-  type: gauge
-  name: Range
-  title: I.C.E Battery Range
-  unit: km
-  min: 0
-  max: 560
-  severity:
-    green: 112
-    yellow: 56
-    red: 0
-
-tesla_heat: &tesla_heat
-  type: button
-  name: Heat Tesla
-  show_state: true
-  tap_action:
-    action: call-service
-    service: script.heat_tesla
-  hold_action:
-    action: toggle
-  entity: climate.i_c_e_hvac_climate_system
-
 download_mbit: &download_mbit
   entity: sensor.speedtest_download
   type: gauge
@@ -53,25 +29,6 @@ internet_latency: &internet_latency
 title: Casita
 views:
   - !include views/home/home.yaml
-  - badges: []
-    title: Tesla
-    icon: mdi:car
-    cards:
-      - cards:
-          - *tesla_range
-          - *tesla_heat
-          - entities:
-              - entity: lock.i_c_e_door_lock
-              - entity: binary_sensor.i_c_e_charger_sensor
-              - entity: climate.i_c_e_hvac_climate_system
-            show_name: false
-            title: I.C.E
-            type: glance
-          - entity: sensor.i_c_e_battery_sensor
-            graph: line
-            hours_to_show: 72
-            type: sensor
-        type: vertical-stack
   - badges: []
     title: Extra
     icon: mdi:cog
