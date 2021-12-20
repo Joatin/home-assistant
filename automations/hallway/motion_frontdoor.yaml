@@ -1,4 +1,5 @@
 - alias: "HALLWAY: Turn on lights on front door when there is motion"
+  mode: restart
   trigger:
     platform: state
     entity_id: binary_sensor.motion_doorbell
@@ -6,10 +7,10 @@
   action:
     - service: hue.hue_activate_scene
       data_template:
-        group_name: front
+        group_name: Front
         scene_name: Bright
     - delay: '00:00:30'
     - service: hue.hue_activate_scene
       data_template:
-        group_name: front
+        group_name: Front
         scene_name: Dimmed
