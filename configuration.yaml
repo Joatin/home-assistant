@@ -120,6 +120,30 @@ homekit:
         - sensor.vardagsrum_temperature
         - sensor.temperature_3
         - cover.flush_shutter_dc
+        - media_player.receiver
+        - media_player.sonos_living_roomg
+        - light.color_temperature_light_1
+        - light.color_temperature_light_1_2
+        - light.color_temperature_light_1_3
+        - light.color_temperature_light_1_4
+        - light.color_temperature_light_1_5
+        - light.color_temperature_light_1_6
+        - light.color_temperature_light_1_7
+        - light.color_temperature_light_1_8
+        - light.color_temperature_light_1_9
+        - light.color_temperature_light_1_10
+        - light.color_temperature_light_1_11
+        - light.color_temperature_light_1_12
+        - light.color_temperature_light_1_13
+        - light.color_temperature_light_1_14
+        - light.color_temperature_light_1_15
+        - light.color_temperature_light_1_16
+        - light.color_temperature_light_1_17
+        - light.color_temperature_light_1_18
+        - light.color_temperature_light_1_19
+        - light.color_temperature_light_1_20
+        - light.color_temperature_light_1_21
+        - light.color_temperature_light_1_22
     entity_config:
       cover.flush_shutter_dc:
         name: Living Room Blinds
