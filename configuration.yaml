@@ -113,29 +113,14 @@ homekit:
         - alarm_control_panel
         - camera
       include_entities:
-        - light.kitchen
-        - light.hallway
-        - light.staircase
-        - light.living_room
-        - light.office
-        - light.guest_room
-        - light.bedroom
-        - light.closet
         - sensor.i_c_e_temperature_sensor_inside
         - sensor.sovrum_temperature
         - sensor.hall_temperature
         - sensor.fibaro_door_window_sensor_2_air_temperature
         - sensor.vardagsrum_temperature
         - sensor.temperature_3
-        - cover.tradfri_blind
         - cover.flush_shutter_dc
     entity_config:
-      sensor.i_c_e_temperature_sensor_inside:
-        name: I.C.E Temperature
-        linked_battery_sensor: sensor.i_c_e_battery_sensor
-      cover.tradfri_blind:
-        name: Bedroom Blinds
-        linked_battery_sensor: sensor.tradfri_open_close_remote
       cover.flush_shutter_dc:
         name: Living Room Blinds
       sensor.sovrum_temperature:
@@ -151,7 +136,7 @@ homekit:
         name: Closet Temperature
         linked_battery_sensor: sensor.motion_sensor_battery_level
       camera.doorbell:
-        support_audio: True
+        support_audio: False
         max_fps: 45
   - name: Front Door Lock
     port: 21065
