@@ -121,7 +121,7 @@ homekit:
         - sensor.temperature_3
         - cover.flush_shutter_dc
         - media_player.receiver
-        - media_player.sonos_living_roomg
+        - media_player.sonos_living_room
         - light.color_temperature_light_1
         - light.color_temperature_light_1_2
         - light.color_temperature_light_1_3
@@ -144,6 +144,11 @@ homekit:
         - light.color_temperature_light_1_20
         - light.color_temperature_light_1_21
         - light.color_temperature_light_1_22
+        - light.color_light_1
+        - light.color_light_1_2
+        - light.on_off_plug_1
+        - light.dimmable_light_1
+        - light.kitchen_4
     entity_config:
       cover.flush_shutter_dc:
         name: Living Room Blinds
